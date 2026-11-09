@@ -1,0 +1,2 @@
+run,model,task,imbalance,n_train,n_test,n_features_used,fit_seconds,predict_seconds_per_1k,recall,precision,f1,macro_f1,pr_auc,false_alarm_rate
+svm_linear_binary_none,linear_svm,binary,none,35003,15002,66,20.108900399995036,0.48812158355371915,0.958914342629482,0.9621887232447739,0.960548742465184,0.900513066811681,0.9952965888041234,0.041085657370517926
