@@ -62,10 +62,10 @@ def _stratified_sample(df: pd.DataFrame, n: int, seed: int) -> pd.DataFrame:
 
 
 def _prepare_task(y_raw: np.ndarray, task: str) -> np.ndarray:
-    """Convert encoded labels (0=BENIGN, 1..N=attack classes) to the task target."""
+    """Convert encoded labels (0=BENIGN, 1..N=attack classes) to the task target (binary: 1 = attack)."""
     y_raw = np.asarray(y_raw)
     if task == "binary":
-        return (y_raw == 0).astype(int)          # 1 = BENIGN, 0 = attack  (matches preprocessing)
+        return (y_raw != 0).astype(int)          # 1 = attack, 0 = BENIGN  (matches preprocessing)
     # multiclass / family: keep as-is
     return y_raw
 
@@ -159,6 +159,10 @@ def _build_estimator(cfg: dict):
         svc = LinearSVC(random_state=seed, max_iter=5000, **params)
         return Pipeline([("nystroem", nys), ("linearsvc", svc)])
 
+    if name == "knn":
+        from sklearn.neighbors import KNeighborsClassifier
+        return KNeighborsClassifier(n_jobs=-1, **dict(params))
+
     raise ValueError(f"Unknown model: {name}")
 
 
@@ -197,12 +201,13 @@ def _compute_metrics(y_true, y_pred, y_score, pos_label) -> dict:
         out["pr_auc"] = average_precision_score((np.asarray(y_true) == pos_label).astype(int), y_score)
     except Exception:
         out["pr_auc"] = float("nan")
-    # false alarm rate = FP / N_benign (for binary: benign=1)
+    # false alarm rate = benign flows predicted as attack / all benign flows (binary: attack=1, benign=0)
     if pos_label == 1:
-        benign_mask = (np.asarray(y_true) == 1)
+        y_true_arr, y_pred_arr = np.asarray(y_true), np.asarray(y_pred)
+        benign_mask = (y_true_arr == 0)
         if benign_mask.sum() > 0:
-            fp = ((y_pred == 0) & (np.asarray(y_true) == 1)).sum()
-            out["false_alarm_rate"] = fp / benign_mask.sum()
+            fp = ((y_pred_arr == 1) & benign_mask).sum()
+            out["false_alarm_rate"] = float(fp / benign_mask.sum())
         else:
             out["false_alarm_rate"] = float("nan")
     else:
