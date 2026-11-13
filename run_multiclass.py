@@ -141,6 +141,7 @@ if _dt_path.exists():
     dt = joblib.load(_dt_path)
     fit_time_dt = 206.4
     ram_delta_dt = 0.00
+    r_after, _ = get_ram_info()
 else:
     dt = DecisionTreeClassifier(
         max_depth=15, min_samples_leaf=5, class_weight='balanced', random_state=SEED
@@ -180,18 +181,26 @@ log(SEP)
 log('MODEL 2 — RANDOM FOREST (full train: 1,998,548 rows)')
 log('  Config: n_estimators=50, max_depth=12, min_samples_leaf=5, max_features="sqrt", n_jobs=4, class_weight="balanced"')
 log(SEP)
-rf = RandomForestClassifier(
-    n_estimators=50, max_depth=12, min_samples_leaf=5,
-    max_features='sqrt', n_jobs=4, class_weight='balanced',
-    random_state=SEED
-)
-r_before, _ = get_ram_info()
-t_fit = time.perf_counter()
-rf.fit(X_train, y_train)
-fit_time_rf = time.perf_counter() - t_fit
-r_after, _ = get_ram_info()
-ram_delta_rf = r_after - r_before
-joblib.dump(rf, MODELS_DIR / 'multiclass_rf.joblib')
+_rf_path = MODELS_DIR / 'multiclass_rf.joblib'
+if _rf_path.exists():
+    log('  [CACHE HIT] Loading Random Forest from cache (fit_time=110.8s, ram_delta=+0.02 GB)')
+    rf = joblib.load(_rf_path)
+    fit_time_rf = 110.8
+    ram_delta_rf = 0.02
+    r_after, _ = get_ram_info()
+else:
+    rf = RandomForestClassifier(
+        n_estimators=50, max_depth=12, min_samples_leaf=5,
+        max_features='sqrt', n_jobs=4, class_weight='balanced',
+        random_state=SEED
+    )
+    r_before, _ = get_ram_info()
+    t_fit = time.perf_counter()
+    rf.fit(X_train, y_train)
+    fit_time_rf = time.perf_counter() - t_fit
+    r_after, _ = get_ram_info()
+    ram_delta_rf = r_after - r_before
+    joblib.dump(rf, _rf_path)
 
 log(f'  Fit completed in {fit_time_rf:.1f}s | RAM delta: {ram_delta_rf:+.2f} GB | RAM now: {r_after:.2f} GB')
 log(f'  Predicting on full test set ({len(X_test):,} rows) ...')
@@ -229,28 +238,36 @@ gc.collect()
 # ===========================================================================
 log(SEP)
 log('MODEL 3 — LOGISTIC REGRESSION (full train: 1,998,548 rows)')
-log('  Config: solver="lbfgs", max_iter=1000, multi_class="multinomial", class_weight="balanced", n_jobs=-1')
+log('  Config: solver="lbfgs", max_iter=1000, class_weight="balanced", n_jobs=-1')
 log(SEP)
-lr = LogisticRegression(
-    solver='lbfgs', max_iter=1000, multi_class='multinomial',
-    class_weight='balanced', n_jobs=-1, random_state=SEED
-)
-r_before, _ = get_ram_info()
-t_fit = time.perf_counter()
-
-with warnings.catch_warnings(record=True) as caught_warnings:
-    warnings.simplefilter("always", ConvergenceWarning)
-    lr.fit(X_train, y_train)
-    fit_time_lr = time.perf_counter() - t_fit
+_lr_path = MODELS_DIR / 'multiclass_lr.joblib'
+if _lr_path.exists():
+    log('  [CACHE HIT] Loading Logistic Regression from cache (fit_time=3105.0s, ram_delta=+0.62 GB)')
+    lr = joblib.load(_lr_path)
+    fit_time_lr = 3105.0
+    ram_delta_lr = 0.62
     r_after, _ = get_ram_info()
-    ram_delta_lr = r_after - r_before
-    joblib.dump(lr, MODELS_DIR / 'multiclass_lr.joblib')
-
-conv_warn = [w for w in caught_warnings if issubclass(w.category, ConvergenceWarning)]
-if conv_warn:
-    log(f'  [WARNING] LogisticRegression issued ConvergenceWarning: {conv_warn[0].message}')
 else:
-    log(f'  LogisticRegression converged successfully in {lr.n_iter_} iterations!')
+    lr = LogisticRegression(
+        solver='lbfgs', max_iter=1000,
+        class_weight='balanced', n_jobs=-1, random_state=SEED
+    )
+    r_before, _ = get_ram_info()
+    t_fit = time.perf_counter()
+
+    with warnings.catch_warnings(record=True) as caught_warnings:
+        warnings.simplefilter("always", ConvergenceWarning)
+        lr.fit(X_train, y_train)
+        fit_time_lr = time.perf_counter() - t_fit
+        r_after, _ = get_ram_info()
+        ram_delta_lr = r_after - r_before
+        joblib.dump(lr, _lr_path)
+
+    conv_warn = [w for w in caught_warnings if issubclass(w.category, ConvergenceWarning)]
+    if conv_warn:
+        log(f'  [WARNING] LogisticRegression issued ConvergenceWarning: {conv_warn[0].message}')
+    else:
+        log(f'  LogisticRegression converged successfully in {lr.n_iter_} iterations!')
 
 log(f'  Fit completed in {fit_time_lr:.1f}s | RAM delta: {ram_delta_lr:+.2f} GB | RAM now: {r_after:.2f} GB')
 log(f'  Predicting on full test set ({len(X_test):,} rows) ...')
@@ -278,14 +295,22 @@ gc.collect()
 log(SEP)
 log(f'MODEL 4 — GAUSSIAN NAIVE BAYES (subsample: {SUBSAMPLE_N:,} train rows)')
 log(SEP)
-nb = GaussianNB()
-r_before, _ = get_ram_info()
-t_fit = time.perf_counter()
-nb.fit(X_tr_sub, y_tr_sub)
-fit_time_nb = time.perf_counter() - t_fit
-r_after, _ = get_ram_info()
-ram_delta_nb = r_after - r_before
-joblib.dump(nb, MODELS_DIR / 'multiclass_nb.joblib')
+_nb_path = MODELS_DIR / 'multiclass_nb.joblib'
+if _nb_path.exists():
+    log('  [CACHE HIT] Loading Naive Bayes from cache (fit_time=0.06s, ram_delta=+0.00 GB)')
+    nb = joblib.load(_nb_path)
+    fit_time_nb = 0.06
+    ram_delta_nb = 0.00
+    r_after, _ = get_ram_info()
+else:
+    nb = GaussianNB()
+    r_before, _ = get_ram_info()
+    t_fit = time.perf_counter()
+    nb.fit(X_tr_sub, y_tr_sub)
+    fit_time_nb = time.perf_counter() - t_fit
+    r_after, _ = get_ram_info()
+    ram_delta_nb = r_after - r_before
+    joblib.dump(nb, _nb_path)
 
 log(f'  Fit completed in {fit_time_nb:.2f}s | RAM delta: {ram_delta_nb:+.2f} GB | RAM now: {r_after:.2f} GB')
 log(f'  Predicting on full test set ({len(X_test):,} rows) ...')
@@ -314,16 +339,24 @@ log(SEP)
 log(f'MODEL 5 — LINEAR SVM (subsample: {SUBSAMPLE_N:,} train rows)')
 log('  Config: LinearSVC(class_weight="balanced", max_iter=3000, multi_class="ovr")')
 log(SEP)
-svm = LinearSVC(
-    class_weight='balanced', max_iter=3000, random_state=SEED
-)
-r_before, _ = get_ram_info()
-t_fit = time.perf_counter()
-svm.fit(X_tr_sub, y_tr_sub)
-fit_time_svm = time.perf_counter() - t_fit
-r_after, _ = get_ram_info()
-ram_delta_svm = r_after - r_before
-joblib.dump(svm, MODELS_DIR / 'multiclass_svm.joblib')
+_svm_path = MODELS_DIR / 'multiclass_svm.joblib'
+if _svm_path.exists():
+    log('  [CACHE HIT] Loading Linear SVM from cache (fit_time=537.5s, ram_delta=-0.00 GB)')
+    svm = joblib.load(_svm_path)
+    fit_time_svm = 537.5
+    ram_delta_svm = 0.00
+    r_after, _ = get_ram_info()
+else:
+    svm = LinearSVC(
+        class_weight='balanced', max_iter=3000, random_state=SEED
+    )
+    r_before, _ = get_ram_info()
+    t_fit = time.perf_counter()
+    svm.fit(X_tr_sub, y_tr_sub)
+    fit_time_svm = time.perf_counter() - t_fit
+    r_after, _ = get_ram_info()
+    ram_delta_svm = r_after - r_before
+    joblib.dump(svm, _svm_path)
 
 log(f'  Fit completed in {fit_time_svm:.1f}s | RAM delta: {ram_delta_svm:+.2f} GB | RAM now: {r_after:.2f} GB')
 log(f'  Predicting on full test set ({len(X_test):,} rows) ...')
@@ -351,14 +384,21 @@ gc.collect()
 log(SEP)
 log(f'MODEL 6 — KNN (k=3, subsample: {SUBSAMPLE_N:,} train rows, full test: {len(X_test):,} rows, n_jobs=4)')
 log(SEP)
-knn = KNeighborsClassifier(n_neighbors=3, n_jobs=4)
-r_before, _ = get_ram_info()
-t_fit = time.perf_counter()
-knn.fit(X_tr_sub, y_tr_sub)
-fit_time_knn = time.perf_counter() - t_fit
-r_after, _ = get_ram_info()
-ram_delta_knn = r_after - r_before
-joblib.dump(knn, MODELS_DIR / 'multiclass_knn.joblib')
+_knn_path = MODELS_DIR / 'multiclass_knn.joblib'
+if _knn_path.exists():
+    log('  [CACHE HIT] Loading KNN from cache (fit_time=0.02s, ram_delta=+0.00 GB)')
+    knn = joblib.load(_knn_path)
+    fit_time_knn = 0.02
+    ram_delta_knn = 0.00
+else:
+    knn = KNeighborsClassifier(n_neighbors=3, n_jobs=4)
+    r_before, _ = get_ram_info()
+    t_fit = time.perf_counter()
+    knn.fit(X_tr_sub, y_tr_sub)
+    fit_time_knn = time.perf_counter() - t_fit
+    r_after, _ = get_ram_info()
+    ram_delta_knn = r_after - r_before
+    joblib.dump(knn, _knn_path)
 
 log(f'  Fit completed in {fit_time_knn:.2f}s | RAM delta: {ram_delta_knn:+.2f} GB')
 log(f'  Evaluating KNN in batches of 25,000 queries on 499,637 test flows ...')

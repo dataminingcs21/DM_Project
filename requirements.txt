@@ -21,6 +21,7 @@ ipykernel>=6.0
 
 # Utilities
 tqdm>=4.66
+psutil>=5.9
 
 # Optional: Kaggle dataset download (k.py / download_dataset.py)
 kagglehub>=0.2
