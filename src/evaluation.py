@@ -112,6 +112,7 @@ def binary_metrics(
         # identification
         'model':          name,
         'data':           data_desc,
+        'n_test_evaluated': int(len(y_true)),
         'fit_seconds':    round(fit_time, 1),
         # primary metric (ATTACK class)
         'recall_attack':  round(recall_score(y_true, y_pred, pos_label=1, zero_division=0), 4),

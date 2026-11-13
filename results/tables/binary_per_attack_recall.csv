@@ -55,19 +55,20 @@ Naive Bayes,14,PortScan,18139,0.9708
 Naive Bayes,6,DoS GoldenEye,2057,0.9908
 Naive Bayes,5,DoS Hulk,34569,0.9964
 Naive Bayes,13,DDoS,25603,0.9996
-KNN,7,Heartbleed,1,0.0
-KNN,12,Bot,77,0.4026
-KNN,8,Web Attack Brute Force,64,0.7656
-KNN,9,Web Attack XSS,24,0.875
-KNN,14,PortScan,3622,0.8874
-KNN,6,DoS GoldenEye,437,0.9519
-KNN,3,DoS slowloris,217,0.9631
-KNN,2,SSH-Patator,118,0.9661
-KNN,4,DoS Slowhttptest,209,0.9761
-KNN,5,DoS Hulk,6971,0.9924
-KNN,13,DDoS,5082,0.9984
-KNN,1,FTP-Patator,218,1.0
-KNN,10,Web Attack Sql Injection,2,1.0
+KNN,7,Heartbleed,2,0.0
+KNN,11,Infiltration,7,0.0
+KNN,12,Bot,390,0.4308
+KNN,10,Web Attack Sql Injection,4,0.5
+KNN,8,Web Attack Brute Force,294,0.8197
+KNN,9,Web Attack XSS,130,0.8769
+KNN,14,PortScan,18139,0.8879
+KNN,3,DoS slowloris,1077,0.9489
+KNN,6,DoS GoldenEye,2057,0.9577
+KNN,2,SSH-Patator,644,0.9643
+KNN,4,DoS Slowhttptest,1046,0.9723
+KNN,1,FTP-Patator,1186,0.989
+KNN,5,DoS Hulk,34569,0.9927
+KNN,13,DDoS,25603,0.9977
 Linear SVM,7,Heartbleed,2,0.0
 Linear SVM,10,Web Attack Sql Injection,4,0.0
 Linear SVM,8,Web Attack Brute Force,294,0.0068

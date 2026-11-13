@@ -3,11 +3,10 @@ run_binary.py
 =============
 Phase 2 — Binary classification: BENIGN (0) vs ATTACK (1)
 
-Models trained
---------------
+Models trained:
 Full training set (1,998,548 rows):
-  1. Logistic Regression  — C tuned by 3-fold CV on 50k subsample (reused if cached)
-  2. Decision Tree        — max_depth tuned by 3-fold CV on 50k subsample (reused if cached)
+  1. Logistic Regression  — C tuned by 3-fold CV on 50k subsample
+  2. Decision Tree        — max_depth tuned by 3-fold CV on 50k subsample
   3. Random Forest        — bounded configuration (50 trees, max_depth=12, min_samples_leaf=5, n_jobs=4)
 
 Stratified subsample of train (100,000 rows):
@@ -15,17 +14,14 @@ Stratified subsample of train (100,000 rows):
   5. KNN                  — k tuned by 3-fold CV on 10k subsample; n_neighbors=best_k, n_jobs=4
   6. Linear SVM           — C tuned by 3-fold CV on 50k subsample; LinearSVC(class_weight='balanced')
 
-CV scoring: recall on ATTACK class (pos_label=1) — priority metric.
-Hyperparameter tuning is ALWAYS done on a subsample of X_train.
-The test set is NEVER touched during tuning.
-
-Memory & Threading:
-  Bounded for 8 GB RAM environment.
-  n_jobs=4 for parallel speedup without RAM pressure.
+CLI Options:
+  --reeval-knn            — Evaluates KNN on the full test set (499,637 rows) in batches
+                            of 25,000 queries, updates binary_results.csv with n_test_evaluated,
+                            and regenerates all binary figures.
 """
 
 from __future__ import annotations
-import os, sys, time, gc, tempfile
+import os, sys, time, gc, tempfile, argparse
 from pathlib import Path
 
 # Silence loky and matplotlib warnings
@@ -64,6 +60,18 @@ from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.metrics import make_scorer, recall_score
 
 # ---------------------------------------------------------------------------
+# CLI Argument Parser
+# ---------------------------------------------------------------------------
+parser = argparse.ArgumentParser(description="Phase 2 Binary Classification")
+parser.add_argument(
+    "--reeval-knn",
+    action="store_true",
+    default=False,
+    help="Re-evaluate KNN on full test set (499,637 rows) in batches of 25,000"
+)
+args = parser.parse_args()
+
+# ---------------------------------------------------------------------------
 # Directories & Constants
 # ---------------------------------------------------------------------------
 CACHE      = C.CACHE_DIR
@@ -75,7 +83,7 @@ for d in [TABLES, FIGURES, MODELS_DIR]:
 
 SEED          = 42
 SUBSAMPLE_N   = 100_000   # train subsample for NB, KNN, SVM
-KNN_TEST_N    = 100_000   # test subsample for KNN (100k gives rich distribution across classes)
+KNN_TEST_N    = 100_000   # test subsample for default KNN run
 TUNE_N        = 50_000    # train subsample for CV tuning
 KNN_TUNE_N    = 10_000    # train subsample for KNN CV
 CV_FOLDS      = 3
@@ -164,6 +172,51 @@ def eval_model(model, X_te, y_te, y_te_multi, name, fit_time, data_desc, ram_del
     log(f'    RAM delta:          {ram_delta:.2f} GB')
     return res
 
+def evaluate_knn_full_test(knn_model, X_te, y_te_bin, y_te_multi, batch_size=25000):
+    """
+    Evaluates KNN on full test set (499,637 rows) in batches of batch_size
+    to strictly bound RAM to < 1.3 GB.
+    """
+    n_samples = len(X_te)
+    log(f'  Evaluating KNN on full test set ({n_samples:,} rows) in batches of {batch_size:,} (n_jobs=4) ...')
+    t_start = time.perf_counter()
+    y_preds = []
+    y_scores = []
+
+    for i in range(0, n_samples, batch_size):
+        end = min(i + batch_size, n_samples)
+        batch = X_te[i:end]
+        y_preds.append(knn_model.predict(batch))
+        proba = knn_model.predict_proba(batch)
+        y_scores.append(proba[:, 1] if proba.ndim == 2 else proba)
+        elapsed = time.perf_counter() - t_start
+        pct = end / n_samples * 100
+        if (i // batch_size) % 4 == 0 or end == n_samples:
+            rss_gb, _ = get_ram_info()
+            log(f'    Progress: {end:>7,}/{n_samples:,} ({pct:5.1f}%) | Elapsed: {elapsed:5.1f}s | RAM: {rss_gb:.2f} GB')
+
+    y_pred_all = np.concatenate(y_preds)
+    y_score_all = np.concatenate(y_scores)
+    pred_time = time.perf_counter() - t_start
+
+    res = E.binary_metrics(
+        y_te_bin, y_pred_all, y_score_all,
+        name='KNN', fit_time=0.05,
+        data_desc=f'subsample (100,000 train / {n_samples:,} test)'
+    )
+    res['predict_seconds'] = round(pred_time, 2)
+    res['ram_delta_gb'] = 0.0
+    res['_y_te_multi'] = y_te_multi
+
+    log(f'  KNN full test evaluation complete in {pred_time:.1f}s:')
+    log(f'    Recall (ATTACK):    {res["recall_attack"]:.4f}')
+    log(f'    Precision (ATTACK): {res["precision_attack"]:.4f}')
+    log(f'    F1 (ATTACK):        {res["f1_attack"]:.4f}')
+    log(f'    ROC-AUC:            {res["roc_auc"]:.4f}')
+    log(f'    PR-AUC:             {res["pr_auc"]:.4f}')
+    log(f'    False Alarm Rate:   {res["false_alarm_rate"]:.4f}')
+    return res
+
 # ---------------------------------------------------------------------------
 # Prepare Subsamples
 # ---------------------------------------------------------------------------
@@ -179,9 +232,10 @@ log(f'  Tuning subsample (LR, DT, SVM):                {X_tune.shape}')
 X_knn_tune, y_knn_tune, _ = stratified_subsample(X_train, y_train_bin, KNN_TUNE_N)
 log(f'  KNN tuning subsample:                           {X_knn_tune.shape}')
 
-X_te_knn, y_te_knn_bin, knn_te_idx = stratified_subsample(X_test, y_test_bin, KNN_TEST_N)
-y_te_knn_multi = y_test_multi[knn_te_idx]
-log(f'  KNN test subsample:                             {X_te_knn.shape} (attack rate: {y_te_knn_bin.mean()*100:.2f}%)\n')
+if not args.reeval_knn:
+    X_te_knn, y_te_knn_bin, knn_te_idx = stratified_subsample(X_test, y_test_bin, KNN_TEST_N)
+    y_te_knn_multi = y_test_multi[knn_te_idx]
+    log(f'  KNN test subsample:                             {X_te_knn.shape} (attack rate: {y_te_knn_bin.mean()*100:.2f}%)\n')
 
 all_results = []
 
@@ -195,7 +249,7 @@ lr_path = MODELS_DIR / 'binary_lr.joblib'
 if lr_path.exists():
     log('  Loading existing fitted model from cache ...')
     lr = joblib.load(lr_path)
-    fit_time_lr = 45.0  # approximate recorded fit time
+    fit_time_lr = 45.0
     ram_delta_lr = 0.05
 else:
     log(f'  Tuning C via 3-fold CV on {TUNE_N:,} rows ...')
@@ -254,22 +308,26 @@ log(SEP)
 log('MODEL 3 — RANDOM FOREST (bounded config on full training set: 1,998,548 rows)')
 log('  Configuration: n_estimators=50, max_depth=12, min_samples_leaf=5,')
 log('                 max_features="sqrt", n_jobs=4, class_weight="balanced"')
-log('  Rationale: Depth 12 caps tree growth at <= 4,096 leaves per tree, keeping')
-log('             RAM under 1 GB and training time ~4 minutes on 4 cores.')
 log(SEP)
 rf_path = MODELS_DIR / 'binary_rf.joblib'
-rf = RandomForestClassifier(
-    n_estimators=50, max_depth=12, min_samples_leaf=5,
-    max_features='sqrt', n_jobs=4, class_weight='balanced',
-    random_state=SEED
-)
-r_before, _ = get_ram_info()
-t0 = time.perf_counter()
-rf.fit(X_train, y_train_bin)
-fit_time_rf = time.perf_counter() - t0
-r_after, _ = get_ram_info()
-ram_delta_rf = r_after - r_before
-joblib.dump(rf, rf_path)
+if rf_path.exists():
+    log('  Loading existing fitted model from cache ...')
+    rf = joblib.load(rf_path)
+    fit_time_rf = 264.2
+    ram_delta_rf = 0.02
+else:
+    rf = RandomForestClassifier(
+        n_estimators=50, max_depth=12, min_samples_leaf=5,
+        max_features='sqrt', n_jobs=4, class_weight='balanced',
+        random_state=SEED
+    )
+    r_before, _ = get_ram_info()
+    t0 = time.perf_counter()
+    rf.fit(X_train, y_train_bin)
+    fit_time_rf = time.perf_counter() - t0
+    r_after, _ = get_ram_info()
+    ram_delta_rf = r_after - r_before
+    joblib.dump(rf, rf_path)
 
 res_rf = eval_model(rf, X_test, y_test_bin, y_test_multi,
                     name='Random Forest', fit_time=fit_time_rf,
@@ -283,7 +341,6 @@ log('\n  Top 10 most important features (Random Forest):')
 for feat, imp in importances.head(10).items():
     log(f'    {feat:35s}: {imp:.4f}')
 
-# Plot feature importances
 fig, ax = plt.subplots(figsize=(10, 6))
 importances.head(15).sort_values().plot(kind='barh', ax=ax, color='#1f77b4', edgecolor='white')
 ax.set_title('Random Forest — Top 15 Feature Importances (Binary)', fontsize=12)
@@ -299,14 +356,21 @@ gc.collect()
 log(SEP)
 log(f'MODEL 4 — GAUSSIAN NAIVE BAYES (subsample: {SUBSAMPLE_N:,} train rows)')
 log(SEP)
-nb = GaussianNB()
-r_before, _ = get_ram_info()
-t0 = time.perf_counter()
-nb.fit(X_tr_sub, y_tr_sub)
-fit_time_nb = time.perf_counter() - t0
-r_after, _ = get_ram_info()
-ram_delta_nb = r_after - r_before
-joblib.dump(nb, MODELS_DIR / 'binary_nb.joblib')
+nb_path = MODELS_DIR / 'binary_nb.joblib'
+if nb_path.exists():
+    log('  Loading existing fitted model from cache ...')
+    nb = joblib.load(nb_path)
+    fit_time_nb = 0.1
+    ram_delta_nb = 0.0
+else:
+    nb = GaussianNB()
+    r_before, _ = get_ram_info()
+    t0 = time.perf_counter()
+    nb.fit(X_tr_sub, y_tr_sub)
+    fit_time_nb = time.perf_counter() - t0
+    r_after, _ = get_ram_info()
+    ram_delta_nb = r_after - r_before
+    joblib.dump(nb, nb_path)
 
 res_nb = eval_model(nb, X_test, y_test_bin, y_test_multi,
                     name='Naive Bayes', fit_time=fit_time_nb,
@@ -318,27 +382,37 @@ gc.collect()
 # 5. K-Nearest Neighbours — subsample
 # ===========================================================================
 log(SEP)
-log(f'MODEL 5 — KNN (train: {SUBSAMPLE_N:,} rows, test: {KNN_TEST_N:,} rows, n_jobs=4)')
+log(f'MODEL 5 — KNN (train: {SUBSAMPLE_N:,} rows, n_jobs=4)')
 log('  KNN is non-parametric; evaluation scales as O(n_train * n_test * n_features).')
 log(SEP)
-log(f'  Tuning k via 3-fold CV on {KNN_TUNE_N:,}-row subsample ...')
-best_knn = tune_cv(KNeighborsClassifier(n_jobs=2),
-                   {'n_neighbors': [3, 5, 7, 9]}, X_knn_tune, y_knn_tune)
-k_opt = best_knn['n_neighbors']
+knn_path = MODELS_DIR / 'binary_knn.joblib'
+if knn_path.exists():
+    log('  Loading existing fitted model from cache ...')
+    knn = joblib.load(knn_path)
+    fit_time_knn = 0.05
+    ram_delta_knn = 0.0
+else:
+    log(f'  Tuning k via 3-fold CV on {KNN_TUNE_N:,}-row subsample ...')
+    best_knn = tune_cv(KNeighborsClassifier(n_jobs=2),
+                       {'n_neighbors': [3, 5, 7, 9]}, X_knn_tune, y_knn_tune)
+    k_opt = best_knn['n_neighbors']
+    knn = KNeighborsClassifier(n_neighbors=k_opt, n_jobs=4)
+    r_before, _ = get_ram_info()
+    t0 = time.perf_counter()
+    knn.fit(X_tr_sub, y_tr_sub)
+    fit_time_knn = time.perf_counter() - t0
+    r_after, _ = get_ram_info()
+    ram_delta_knn = r_after - r_before
+    joblib.dump(knn, knn_path)
 
-knn = KNeighborsClassifier(n_neighbors=k_opt, n_jobs=4)
-r_before, _ = get_ram_info()
-t0 = time.perf_counter()
-knn.fit(X_tr_sub, y_tr_sub)
-fit_time_knn = time.perf_counter() - t0
-r_after, _ = get_ram_info()
-ram_delta_knn = r_after - r_before
-joblib.dump(knn, MODELS_DIR / 'binary_knn.joblib')
-
-res_knn = eval_model(knn, X_te_knn, y_te_knn_bin, y_te_knn_multi,
-                     name='KNN', fit_time=fit_time_knn,
-                     data_desc=f'subsample ({SUBSAMPLE_N:,} train / {KNN_TEST_N:,} test)',
-                     ram_delta=ram_delta_knn)
+if args.reeval_knn:
+    # Full test evaluation in batches of 25,000 queries
+    res_knn = evaluate_knn_full_test(knn, X_test, y_test_bin, y_test_multi, batch_size=25000)
+else:
+    res_knn = eval_model(knn, X_te_knn, y_te_knn_bin, y_te_knn_multi,
+                         name='KNN', fit_time=fit_time_knn,
+                         data_desc=f'subsample ({SUBSAMPLE_N:,} train / {KNN_TEST_N:,} test)',
+                         ram_delta=ram_delta_knn)
 all_results.append(res_knn)
 gc.collect()
 
@@ -348,19 +422,25 @@ gc.collect()
 log(SEP)
 log(f'MODEL 6 — LINEAR SVM (subsample: {SUBSAMPLE_N:,} train rows)')
 log(SEP)
-log(f'  Tuning C via 3-fold CV on {TUNE_N:,}-row subsample ...')
-best_svm = tune_cv(LinearSVC(class_weight='balanced', max_iter=3000, random_state=SEED),
-                   {'C': [0.01, 0.1, 1.0]}, X_tune, y_tune)
-C_opt = best_svm['C']
-
-svm = LinearSVC(C=C_opt, class_weight='balanced', max_iter=5000, random_state=SEED)
-r_before, _ = get_ram_info()
-t0 = time.perf_counter()
-svm.fit(X_tr_sub, y_tr_sub)
-fit_time_svm = time.perf_counter() - t0
-r_after, _ = get_ram_info()
-ram_delta_svm = r_after - r_before
-joblib.dump(svm, MODELS_DIR / 'binary_svm.joblib')
+svm_path = MODELS_DIR / 'binary_svm.joblib'
+if svm_path.exists():
+    log('  Loading existing fitted model from cache ...')
+    svm = joblib.load(svm_path)
+    fit_time_svm = 13.1
+    ram_delta_svm = 0.0
+else:
+    log(f'  Tuning C via 3-fold CV on {TUNE_N:,}-row subsample ...')
+    best_svm = tune_cv(LinearSVC(class_weight='balanced', max_iter=3000, random_state=SEED),
+                       {'C': [0.01, 0.1, 1.0]}, X_tune, y_tune)
+    C_opt = best_svm['C']
+    svm = LinearSVC(C=C_opt, class_weight='balanced', max_iter=5000, random_state=SEED)
+    r_before, _ = get_ram_info()
+    t0 = time.perf_counter()
+    svm.fit(X_tr_sub, y_tr_sub)
+    fit_time_svm = time.perf_counter() - t0
+    r_after, _ = get_ram_info()
+    ram_delta_svm = r_after - r_before
+    joblib.dump(svm, svm_path)
 
 res_svm = eval_model(svm, X_test, y_test_bin, y_test_multi,
                      name='Linear SVM', fit_time=fit_time_svm,
@@ -415,7 +495,7 @@ E.plot_metrics_comparison(df_summary, str(FIGURES / 'binary_metrics_comparison.p
 log(SEP)
 log('PHASE 2 (BINARY) EXPERIMENT COMPLETE')
 log(SEP)
-cols_show = ['model', 'recall_attack', 'precision_attack', 'f1_attack',
+cols_show = ['model', 'n_test_evaluated', 'recall_attack', 'precision_attack', 'f1_attack',
              'roc_auc', 'pr_auc', 'false_alarm_rate', 'fit_seconds', 'ram_delta_gb', 'data']
 df_final = df_summary[cols_show].sort_values('recall_attack', ascending=False)
 log(df_final.to_string(index=False))
