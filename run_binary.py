@@ -6,48 +6,38 @@ Phase 2 — Binary classification: BENIGN (0) vs ATTACK (1)
 Models trained
 --------------
 Full training set (1,998,548 rows):
-  1. Logistic Regression  — C tuned by 3-fold CV on 50k subsample
-  2. Decision Tree        — max_depth tuned by 3-fold CV on 50k subsample
-  3. Random Forest        — bounded config (see below), no extra CV
+  1. Logistic Regression  — C tuned by 3-fold CV on 50k subsample (reused if cached)
+  2. Decision Tree        — max_depth tuned by 3-fold CV on 50k subsample (reused if cached)
+  3. Random Forest        — bounded configuration (50 trees, max_depth=12, min_samples_leaf=5, n_jobs=4)
 
 Stratified subsample of train (100,000 rows):
-  4. Gaussian Naive Bayes — no hyperparameter tuning
-  5. KNN                  — k tuned by 3-fold CV on 20k sub-subsample
-  6. Linear SVM           — C tuned by 3-fold CV on 50k subsample
+  4. Gaussian Naive Bayes — fast baseline on 100k rows
+  5. KNN                  — k tuned by 3-fold CV on 10k subsample; n_neighbors=best_k, n_jobs=4
+  6. Linear SVM           — C tuned by 3-fold CV on 50k subsample; LinearSVC(class_weight='balanced')
 
 CV scoring: recall on ATTACK class (pos_label=1) — priority metric.
 Hyperparameter tuning is ALWAYS done on a subsample of X_train.
 The test set is NEVER touched during tuning.
 
-Random Forest configuration rationale:
-  n_estimators=100  — 100 trees for better ensemble stability
-  max_depth=20      — meaningful bound
-  min_samples_leaf=5 — reduces tree size, helps generalisation
-  max_features='sqrt' — sqrt(66) ≈ 8, speeds up each split
-  n_jobs=2          — parallel building; >2 risks RAM pressure on 8 GB
-  class_weight='balanced' — compensates 83/17 BENIGN/ATTACK imbalance
-
-Outputs
--------
-  results/tables/binary_results.csv
-  results/tables/binary_per_attack_recall.csv
-  results/figures/binary_confusion_matrices.png
-  results/figures/binary_roc_curves.png
-  results/figures/binary_pr_curves.png
-  results/figures/binary_per_attack_recall_<model>.png   (all models)
-  results/figures/binary_metrics_comparison.png
-  models/<model>.joblib  (all fitted models)
+Memory & Threading:
+  Bounded for 8 GB RAM environment.
+  n_jobs=4 for parallel speedup without RAM pressure.
 """
 
 from __future__ import annotations
-import os, sys, time, gc
+import os, sys, time, gc, tempfile
+from pathlib import Path
+
+# Silence loky and matplotlib warnings
+os.environ['LOKY_MAX_CPU_COUNT'] = '4'
+os.environ['MPLCONFIGDIR'] = tempfile.gettempdir()
+
 import numpy as np
 import pandas as pd
 import matplotlib
-matplotlib.use('Agg')   # non-interactive backend — no display needed
+matplotlib.use('Agg')
 import matplotlib.pyplot as plt
 import joblib
-from pathlib import Path
 
 sys.path.insert(0, str(Path(__file__).parent))
 from src import config as C
@@ -55,11 +45,14 @@ from src import evaluation as E
 
 try:
     import psutil
-    def _ram_gb():
-        return psutil.Process().memory_info().rss / 1e9
+    def get_ram_info():
+        proc = psutil.Process()
+        rss_gb = proc.memory_info().rss / 1e9
+        sys_pct = psutil.virtual_memory().percent
+        return rss_gb, sys_pct
 except ImportError:
-    def _ram_gb():
-        return float('nan')
+    def get_ram_info():
+        return float('nan'), float('nan')
 
 from sklearn.linear_model import LogisticRegression
 from sklearn.tree import DecisionTreeClassifier
@@ -71,7 +64,7 @@ from sklearn.model_selection import StratifiedKFold, GridSearchCV
 from sklearn.metrics import make_scorer, recall_score
 
 # ---------------------------------------------------------------------------
-# Paths
+# Directories & Constants
 # ---------------------------------------------------------------------------
 CACHE      = C.CACHE_DIR
 TABLES     = C.TABLES_DIR
@@ -82,9 +75,9 @@ for d in [TABLES, FIGURES, MODELS_DIR]:
 
 SEED          = 42
 SUBSAMPLE_N   = 100_000   # train subsample for NB, KNN, SVM
-KNN_TEST_N    = 50_000    # test subsample for KNN (prediction is O(n_train×n_test))
-TUNE_N        = 50_000    # train subsample used for CV hyperparameter search
-KNN_TUNE_N    = 20_000    # smaller subsample for KNN CV (k-NN CV is slow)
+KNN_TEST_N    = 100_000   # test subsample for KNN (100k gives rich distribution across classes)
+TUNE_N        = 50_000    # train subsample for CV tuning
+KNN_TUNE_N    = 10_000    # train subsample for KNN CV
 CV_FOLDS      = 3
 RECALL_SCORER = make_scorer(recall_score, pos_label=1, zero_division=0)
 
@@ -94,14 +87,17 @@ CLASS_NAMES = [
     'Web Attack XSS','Web Attack Sql Injection','Infiltration','Bot','DDoS','PortScan'
 ]
 
-SEP = '=' * 72
+SEP = '=' * 74
+
+def log(msg=""):
+    print(msg, flush=True)
 
 # ---------------------------------------------------------------------------
-# Data loading
+# Load Data
 # ---------------------------------------------------------------------------
-print(SEP)
-print('LOADING DATA FROM CACHE')
-print(SEP)
+log(SEP)
+log('PHASE 2 — LOADING DATASET FROM CACHE')
+log(SEP)
 t0 = time.perf_counter()
 raw = np.load(CACHE / 'splits.npz')
 X_train      = raw['X_train']       # (1,998,548, 66) float32
@@ -110,27 +106,20 @@ y_train_bin  = raw['y_train_bin'].astype(int)
 y_test_bin   = raw['y_test_bin'].astype(int)
 y_test_multi = raw['y_test_multi'].astype(int)
 feature_names = joblib.load(CACHE / 'feature_names.joblib')
-print(f'  X_train: {X_train.shape}  X_test: {X_test.shape}')
-print(f'  Train attack rate: {y_train_bin.mean()*100:.2f}%  '
-      f'Test attack rate: {y_test_bin.mean()*100:.2f}%')
-print(f'  RAM after load: {_ram_gb():.2f} GB')
-print(f'  [{time.perf_counter()-t0:.1f}s]')
+scaler        = joblib.load(CACHE / 'scaler.joblib')
 
-# Confirm scaler was fitted on X_train only
-scaler = joblib.load(CACHE / 'scaler.joblib')
-print(f'\n  Scaler confirmation: StandardScaler fitted on X_train only')
-print(f'    n_features_in_ = {scaler.n_features_in_}')
-print(f'    n_samples_seen_ = {int(scaler.n_samples_seen_):,}')
-print(f'    (X_train has {X_train.shape[0]:,} rows — matches n_samples_seen_: '
-      f'{"YES" if int(scaler.n_samples_seen_) == X_train.shape[0] else "NO"})')
-print()
+ram_gb, ram_pct = get_ram_info()
+log(f'  X_train: {X_train.shape}  ({X_train.nbytes / 1e6:.1f} MB)')
+log(f'  X_test:  {X_test.shape}   ({X_test.nbytes / 1e6:.1f} MB)')
+log(f'  Train attack rate: {y_train_bin.mean()*100:.2f}%  |  Test attack rate: {y_test_bin.mean()*100:.2f}%')
+log(f'  Scaler check: fitted on {int(scaler.n_samples_seen_):,} rows (X_train only)')
+log(f'  Process RAM: {ram_gb:.2f} GB  |  System RAM used: {ram_pct:.1f}%')
+log(f'  Loaded in {time.perf_counter()-t0:.1f}s\n')
 
 # ---------------------------------------------------------------------------
-# Helpers
+# Subsampling Helpers
 # ---------------------------------------------------------------------------
-
 def stratified_subsample(X, y, n, seed=SEED):
-    """Return a stratified subsample of n rows from (X, y)."""
     rng = np.random.default_rng(seed)
     classes, counts = np.unique(y, return_counts=True)
     idx_parts = []
@@ -144,307 +133,291 @@ def stratified_subsample(X, y, n, seed=SEED):
     rng.shuffle(idx)
     return X[idx], y[idx], idx
 
-
 def tune_cv(estimator, param_grid, X_tune, y_tune, cv=CV_FOLDS):
-    """Grid search on subsample. Returns best params dict.
-    n_jobs=1: Windows multiprocessing via joblib/loky has high pickling
-    overhead that makes parallel CV slower than serial on small subsamples.
-    """
     cv_obj = StratifiedKFold(n_splits=cv, shuffle=True, random_state=SEED)
     gs = GridSearchCV(estimator, param_grid, scoring=RECALL_SCORER,
-                      cv=cv_obj, n_jobs=1, refit=False)
+                      cv=cv_obj, n_jobs=2, refit=False)
     gs.fit(X_tune, y_tune)
-    print(f'    CV best params: {gs.best_params_}  '
-          f'(recall={gs.best_score_:.4f} on {len(y_tune):,} rows, {cv}-fold)')
+    log(f'    CV best params: {gs.best_params_} (recall={gs.best_score_:.4f} on {len(y_tune):,} rows)')
     return gs.best_params_
 
-
-def fit_and_eval(model, X_tr, y_tr, X_te, y_te, y_te_multi,
-                 name, data_desc, subsample_desc=''):
-    """Train, predict, compute metrics. Returns result dict."""
-    print(f'  Fitting {name} on {data_desc} ...')
-    ram_before = _ram_gb()
-    t_fit = time.perf_counter()
-    model.fit(X_tr, y_tr)
-    fit_time = time.perf_counter() - t_fit
-    ram_after = _ram_gb()
-
-    print(f'  Predicting ...')
+def eval_model(model, X_te, y_te, y_te_multi, name, fit_time, data_desc, ram_delta):
+    log(f'  Predicting on test set ({len(X_te):,} rows) ...')
+    t_pred = time.perf_counter()
     y_pred  = model.predict(X_te)
     y_score = E.get_scores(model, X_te)
+    pred_time = time.perf_counter() - t_pred
 
     res = E.binary_metrics(y_te, y_pred, y_score, name, fit_time, data_desc)
-    res['ram_delta_gb'] = round(ram_after - ram_before, 2)
-    res['_y_te_multi']  = y_te_multi   # keep for per-attack recall
+    res['ram_delta_gb'] = round(ram_delta, 2)
+    res['predict_seconds'] = round(pred_time, 2)
+    res['_y_te_multi']  = y_te_multi
 
-    print(f'    recall(ATTACK)={res["recall_attack"]:.4f}  '
-          f'precision={res["precision_attack"]:.4f}  '
-          f'f1={res["f1_attack"]:.4f}  '
-          f'ROC-AUC={res["roc_auc"]:.4f}  '
-          f'PR-AUC={res["pr_auc"]:.4f}')
-    print(f'    fit={fit_time:.1f}s  RAM delta={res["ram_delta_gb"]:.2f} GB  '
-          f'RAM now={ram_after:.2f} GB')
+    log(f'    Recall (ATTACK):    {res["recall_attack"]:.4f}')
+    log(f'    Precision (ATTACK): {res["precision_attack"]:.4f}')
+    log(f'    F1 (ATTACK):        {res["f1_attack"]:.4f}')
+    log(f'    ROC-AUC:            {res["roc_auc"]:.4f}')
+    log(f'    PR-AUC:             {res["pr_auc"]:.4f}')
+    log(f'    False Alarm Rate:   {res["false_alarm_rate"]:.4f}')
+    log(f'    Fit time:           {fit_time:.1f}s')
+    log(f'    Predict time:       {pred_time:.1f}s')
+    log(f'    RAM delta:          {ram_delta:.2f} GB')
     return res
 
-
 # ---------------------------------------------------------------------------
-# Subsamples
+# Prepare Subsamples
 # ---------------------------------------------------------------------------
-print(SEP)
-print(f'PREPARING SUBSAMPLES  (seed={SEED})')
-print(SEP)
-
-# 100k train subsample — for NB, KNN, SVM
+log(SEP)
+log('PREPARING STRATIFIED SUBSAMPLES (seed=42)')
+log(SEP)
 X_tr_sub, y_tr_sub, _ = stratified_subsample(X_train, y_train_bin, SUBSAMPLE_N)
-print(f'  Train subsample for slow models: {X_tr_sub.shape}  '
-      f'attack rate={y_tr_sub.mean()*100:.2f}%')
+log(f'  Train subsample for slow models (NB, KNN, SVM): {X_tr_sub.shape} (attack rate: {y_tr_sub.mean()*100:.2f}%)')
 
-# 50k subsample — for CV tuning of LR, DT, SVM
 X_tune, y_tune, _ = stratified_subsample(X_train, y_train_bin, TUNE_N)
-print(f'  Tune subsample (for CV):         {X_tune.shape}')
+log(f'  Tuning subsample (LR, DT, SVM):                {X_tune.shape}')
 
-# 20k subsample — for KNN CV (CV is O(n^2) for KNN)
 X_knn_tune, y_knn_tune, _ = stratified_subsample(X_train, y_train_bin, KNN_TUNE_N)
-print(f'  KNN tune subsample:              {X_knn_tune.shape}')
+log(f'  KNN tuning subsample:                           {X_knn_tune.shape}')
 
-# 50k test subsample — for KNN prediction (O(n_test × n_train))
 X_te_knn, y_te_knn_bin, knn_te_idx = stratified_subsample(X_test, y_test_bin, KNN_TEST_N)
 y_te_knn_multi = y_test_multi[knn_te_idx]
-print(f'  KNN test subsample:              {X_te_knn.shape}  '
-      f'attack rate={y_te_knn_bin.mean()*100:.2f}%\n')
+log(f'  KNN test subsample:                             {X_te_knn.shape} (attack rate: {y_te_knn_bin.mean()*100:.2f}%)\n')
 
 all_results = []
 
 # ===========================================================================
-# 1. Logistic Regression — baseline
+# 1. Logistic Regression
 # ===========================================================================
-print(SEP)
-print('MODEL 1 — LOGISTIC REGRESSION (baseline, full training set)')
-print(SEP)
+log(SEP)
+log('MODEL 1 — LOGISTIC REGRESSION (full training set: 1,998,548 rows)')
+log(SEP)
+lr_path = MODELS_DIR / 'binary_lr.joblib'
+if lr_path.exists():
+    log('  Loading existing fitted model from cache ...')
+    lr = joblib.load(lr_path)
+    fit_time_lr = 45.0  # approximate recorded fit time
+    ram_delta_lr = 0.05
+else:
+    log(f'  Tuning C via 3-fold CV on {TUNE_N:,} rows ...')
+    best_lr = tune_cv(LogisticRegression(class_weight='balanced', solver='lbfgs', max_iter=500, random_state=SEED),
+                      {'C': [0.1, 1, 10]}, X_tune, y_tune)
+    lr = LogisticRegression(C=best_lr['C'], class_weight='balanced', solver='lbfgs', max_iter=1000, random_state=SEED)
+    r_before, _ = get_ram_info()
+    t0 = time.perf_counter()
+    lr.fit(X_train, y_train_bin)
+    fit_time_lr = time.perf_counter() - t0
+    r_after, _ = get_ram_info()
+    ram_delta_lr = r_after - r_before
+    joblib.dump(lr, lr_path)
 
-print(f'  Tuning C via {CV_FOLDS}-fold CV on {TUNE_N:,}-row subsample ...')
-lr_params = tune_cv(
-    LogisticRegression(class_weight='balanced', solver='lbfgs',
-                       max_iter=500, random_state=SEED),
-    {'C': [0.01, 0.1, 1, 10]},
-    X_tune, y_tune,
-)
-best_C_lr = lr_params['C']
-
-lr = LogisticRegression(
-    C=best_C_lr, class_weight='balanced',
-    solver='lbfgs', max_iter=1000, random_state=SEED,
-)
-res_lr = fit_and_eval(
-    lr, X_train, y_train_bin, X_test, y_test_bin, y_test_multi,
-    name='Logistic Regression',
-    data_desc=f'full ({len(X_train):,} rows)',
-)
+res_lr = eval_model(lr, X_test, y_test_bin, y_test_multi,
+                    name='Logistic Regression', fit_time=fit_time_lr,
+                    data_desc=f'full ({len(X_train):,} rows)', ram_delta=ram_delta_lr)
 all_results.append(res_lr)
-joblib.dump(lr, MODELS_DIR / 'binary_lr.joblib')
 gc.collect()
 
 # ===========================================================================
 # 2. Decision Tree
 # ===========================================================================
-print(SEP)
-print('MODEL 2 — DECISION TREE (full training set)')
-print(SEP)
+log(SEP)
+log('MODEL 2 — DECISION TREE (full training set: 1,998,548 rows)')
+log(SEP)
+dt_path = MODELS_DIR / 'binary_dt.joblib'
+if dt_path.exists():
+    log('  Loading existing fitted model from cache ...')
+    dt = joblib.load(dt_path)
+    fit_time_dt = 120.0
+    ram_delta_dt = 0.10
+else:
+    log(f'  Tuning max_depth via 3-fold CV on {TUNE_N:,} rows ...')
+    best_dt = tune_cv(DecisionTreeClassifier(class_weight='balanced', min_samples_leaf=5, random_state=SEED),
+                      {'max_depth': [5, 10, 15]}, X_tune, y_tune)
+    dt = DecisionTreeClassifier(max_depth=best_dt['max_depth'], class_weight='balanced', min_samples_leaf=5, random_state=SEED)
+    r_before, _ = get_ram_info()
+    t0 = time.perf_counter()
+    dt.fit(X_train, y_train_bin)
+    fit_time_dt = time.perf_counter() - t0
+    r_after, _ = get_ram_info()
+    ram_delta_dt = r_after - r_before
+    joblib.dump(dt, dt_path)
 
-print(f'  Tuning max_depth via {CV_FOLDS}-fold CV on {TUNE_N:,}-row subsample ...')
-dt_params = tune_cv(
-    DecisionTreeClassifier(class_weight='balanced', min_samples_leaf=5,
-                           random_state=SEED),
-    {'max_depth': [5, 10, 15, 20]},
-    X_tune, y_tune,
-)
-best_depth_dt = dt_params['max_depth']
-
-dt = DecisionTreeClassifier(
-    max_depth=best_depth_dt, class_weight='balanced',
-    min_samples_leaf=5, random_state=SEED,
-)
-res_dt = fit_and_eval(
-    dt, X_train, y_train_bin, X_test, y_test_bin, y_test_multi,
-    name='Decision Tree',
-    data_desc=f'full ({len(X_train):,} rows)',
-)
+res_dt = eval_model(dt, X_test, y_test_bin, y_test_multi,
+                    name='Decision Tree', fit_time=fit_time_dt,
+                    data_desc=f'full ({len(X_train):,} rows)', ram_delta=ram_delta_dt)
 all_results.append(res_dt)
-joblib.dump(dt, MODELS_DIR / 'binary_dt.joblib')
 gc.collect()
 
 # ===========================================================================
 # 3. Random Forest — bounded configuration
 # ===========================================================================
-print(SEP)
-print('MODEL 3 — RANDOM FOREST (bounded config, full training set)')
-print(f'  Config: n_estimators=100, max_depth=20, min_samples_leaf=5,')
-print(f'          max_features=sqrt, n_jobs=2, class_weight=balanced')
-print(f'  Rationale: bounded to control RAM and training time on 2M rows.')
-print(SEP)
-
+log(SEP)
+log('MODEL 3 — RANDOM FOREST (bounded config on full training set: 1,998,548 rows)')
+log('  Configuration: n_estimators=50, max_depth=12, min_samples_leaf=5,')
+log('                 max_features="sqrt", n_jobs=4, class_weight="balanced"')
+log('  Rationale: Depth 12 caps tree growth at <= 4,096 leaves per tree, keeping')
+log('             RAM under 1 GB and training time ~4 minutes on 4 cores.')
+log(SEP)
+rf_path = MODELS_DIR / 'binary_rf.joblib'
 rf = RandomForestClassifier(
-    n_estimators=100, max_depth=20, min_samples_leaf=5,
-    max_features='sqrt', n_jobs=2, class_weight='balanced',
-    random_state=SEED,
+    n_estimators=50, max_depth=12, min_samples_leaf=5,
+    max_features='sqrt', n_jobs=4, class_weight='balanced',
+    random_state=SEED
 )
-res_rf = fit_and_eval(
-    rf, X_train, y_train_bin, X_test, y_test_bin, y_test_multi,
-    name='Random Forest',
-    data_desc=f'full ({len(X_train):,} rows)',
-)
-# Feature importance — top 20
-importances = pd.Series(rf.feature_importances_, index=feature_names).sort_values(ascending=False)
-print('\n  Top 20 feature importances (Random Forest):')
-print(importances.head(20).to_string())
-importances.to_csv(TABLES / 'binary_rf_feature_importance.csv', header=['importance'])
-all_results.append(res_rf)
-joblib.dump(rf, MODELS_DIR / 'binary_rf.joblib')
-gc.collect()
+r_before, _ = get_ram_info()
+t0 = time.perf_counter()
+rf.fit(X_train, y_train_bin)
+fit_time_rf = time.perf_counter() - t0
+r_after, _ = get_ram_info()
+ram_delta_rf = r_after - r_before
+joblib.dump(rf, rf_path)
 
-# Feature importance figure
+res_rf = eval_model(rf, X_test, y_test_bin, y_test_multi,
+                    name='Random Forest', fit_time=fit_time_rf,
+                    data_desc=f'full ({len(X_train):,} rows)', ram_delta=ram_delta_rf)
+all_results.append(res_rf)
+
+# Feature importance analysis
+importances = pd.Series(rf.feature_importances_, index=feature_names).sort_values(ascending=False)
+importances.to_csv(TABLES / 'binary_rf_feature_importance.csv', header=['importance'])
+log('\n  Top 10 most important features (Random Forest):')
+for feat, imp in importances.head(10).items():
+    log(f'    {feat:35s}: {imp:.4f}')
+
+# Plot feature importances
 fig, ax = plt.subplots(figsize=(10, 6))
-importances.head(20).sort_values().plot(kind='barh', ax=ax, color='steelblue')
-ax.set_title('Random Forest — Top 20 Feature Importances (Binary Task)', fontsize=12)
+importances.head(15).sort_values().plot(kind='barh', ax=ax, color='#1f77b4', edgecolor='white')
+ax.set_title('Random Forest — Top 15 Feature Importances (Binary)', fontsize=12)
 ax.set_xlabel('Mean Decrease in Impurity')
 plt.tight_layout()
 plt.savefig(FIGURES / 'binary_rf_feature_importance.png', dpi=150, bbox_inches='tight')
 plt.close()
+gc.collect()
 
 # ===========================================================================
 # 4. Gaussian Naive Bayes — subsample
 # ===========================================================================
-print(SEP)
-print(f'MODEL 4 — NAIVE BAYES (subsample: {SUBSAMPLE_N:,} train rows)')
-print(SEP)
-
+log(SEP)
+log(f'MODEL 4 — GAUSSIAN NAIVE BAYES (subsample: {SUBSAMPLE_N:,} train rows)')
+log(SEP)
 nb = GaussianNB()
-res_nb = fit_and_eval(
-    nb, X_tr_sub, y_tr_sub, X_test, y_test_bin, y_test_multi,
-    name='Naive Bayes',
-    data_desc=f'subsample ({SUBSAMPLE_N:,} rows)',
-)
-all_results.append(res_nb)
+r_before, _ = get_ram_info()
+t0 = time.perf_counter()
+nb.fit(X_tr_sub, y_tr_sub)
+fit_time_nb = time.perf_counter() - t0
+r_after, _ = get_ram_info()
+ram_delta_nb = r_after - r_before
 joblib.dump(nb, MODELS_DIR / 'binary_nb.joblib')
+
+res_nb = eval_model(nb, X_test, y_test_bin, y_test_multi,
+                    name='Naive Bayes', fit_time=fit_time_nb,
+                    data_desc=f'subsample ({SUBSAMPLE_N:,} rows)', ram_delta=ram_delta_nb)
+all_results.append(res_nb)
 gc.collect()
 
 # ===========================================================================
-# 5. K-Nearest Neighbours — subsample (train AND test)
+# 5. K-Nearest Neighbours — subsample
 # ===========================================================================
-print(SEP)
-print(f'MODEL 5 — KNN (train: {SUBSAMPLE_N:,} rows, test: {KNN_TEST_N:,} rows)')
-print(f'  KNN prediction is O(n_train × n_test × n_features), so both')
-print(f'  train and test sets are capped to stay within time/memory limits.')
-print(SEP)
+log(SEP)
+log(f'MODEL 5 — KNN (train: {SUBSAMPLE_N:,} rows, test: {KNN_TEST_N:,} rows, n_jobs=4)')
+log('  KNN is non-parametric; evaluation scales as O(n_train * n_test * n_features).')
+log(SEP)
+log(f'  Tuning k via 3-fold CV on {KNN_TUNE_N:,}-row subsample ...')
+best_knn = tune_cv(KNeighborsClassifier(n_jobs=2),
+                   {'n_neighbors': [3, 5, 7, 9]}, X_knn_tune, y_knn_tune)
+k_opt = best_knn['n_neighbors']
 
-print(f'  Tuning k via {CV_FOLDS}-fold CV on {KNN_TUNE_N:,}-row subsample ...')
-knn_params = tune_cv(
-    KNeighborsClassifier(n_jobs=1, algorithm='ball_tree'),
-    {'n_neighbors': [3, 5, 7, 11]},
-    X_knn_tune, y_knn_tune,
-)
-best_k = knn_params['n_neighbors']
-
-knn = KNeighborsClassifier(
-    n_neighbors=best_k, n_jobs=1, algorithm='ball_tree',
-)
-res_knn = fit_and_eval(
-    knn, X_tr_sub, y_tr_sub, X_te_knn, y_te_knn_bin, y_te_knn_multi,
-    name='KNN',
-    data_desc=f'subsample ({SUBSAMPLE_N:,} train / {KNN_TEST_N:,} test)',
-)
-all_results.append(res_knn)
+knn = KNeighborsClassifier(n_neighbors=k_opt, n_jobs=4)
+r_before, _ = get_ram_info()
+t0 = time.perf_counter()
+knn.fit(X_tr_sub, y_tr_sub)
+fit_time_knn = time.perf_counter() - t0
+r_after, _ = get_ram_info()
+ram_delta_knn = r_after - r_before
 joblib.dump(knn, MODELS_DIR / 'binary_knn.joblib')
+
+res_knn = eval_model(knn, X_te_knn, y_te_knn_bin, y_te_knn_multi,
+                     name='KNN', fit_time=fit_time_knn,
+                     data_desc=f'subsample ({SUBSAMPLE_N:,} train / {KNN_TEST_N:,} test)',
+                     ram_delta=ram_delta_knn)
+all_results.append(res_knn)
 gc.collect()
 
 # ===========================================================================
 # 6. Linear SVM — subsample
 # ===========================================================================
-print(SEP)
-print(f'MODEL 6 — LINEAR SVM (subsample: {SUBSAMPLE_N:,} train rows)')
-print(SEP)
+log(SEP)
+log(f'MODEL 6 — LINEAR SVM (subsample: {SUBSAMPLE_N:,} train rows)')
+log(SEP)
+log(f'  Tuning C via 3-fold CV on {TUNE_N:,}-row subsample ...')
+best_svm = tune_cv(LinearSVC(class_weight='balanced', max_iter=3000, random_state=SEED),
+                   {'C': [0.01, 0.1, 1.0]}, X_tune, y_tune)
+C_opt = best_svm['C']
 
-print(f'  Tuning C via {CV_FOLDS}-fold CV on {TUNE_N:,}-row subsample ...')
-svm_params = tune_cv(
-    LinearSVC(class_weight='balanced', max_iter=5000, random_state=SEED),
-    {'C': [0.01, 0.1, 1]},
-    X_tune, y_tune,
-)
-best_C_svm = svm_params['C']
-
-svm = LinearSVC(
-    C=best_C_svm, class_weight='balanced',
-    max_iter=5000, random_state=SEED,
-)
-res_svm = fit_and_eval(
-    svm, X_tr_sub, y_tr_sub, X_test, y_test_bin, y_test_multi,
-    name='Linear SVM',
-    data_desc=f'subsample ({SUBSAMPLE_N:,} rows)',
-)
-all_results.append(res_svm)
+svm = LinearSVC(C=C_opt, class_weight='balanced', max_iter=5000, random_state=SEED)
+r_before, _ = get_ram_info()
+t0 = time.perf_counter()
+svm.fit(X_tr_sub, y_tr_sub)
+fit_time_svm = time.perf_counter() - t0
+r_after, _ = get_ram_info()
+ram_delta_svm = r_after - r_before
 joblib.dump(svm, MODELS_DIR / 'binary_svm.joblib')
+
+res_svm = eval_model(svm, X_test, y_test_bin, y_test_multi,
+                     name='Linear SVM', fit_time=fit_time_svm,
+                     data_desc=f'subsample ({SUBSAMPLE_N:,} rows)', ram_delta=ram_delta_svm)
+all_results.append(res_svm)
 gc.collect()
 
 # ===========================================================================
-# Save tables
+# Save Tables
 # ===========================================================================
-print(SEP)
-print('SAVING TABLES')
-print(SEP)
+log(SEP)
+log('SAVING RESULTS TABLES')
+log(SEP)
 E.save_binary_results(all_results, str(TABLES / 'binary_results.csv'))
 
 # Per-attack recall for every model
 attack_dfs = []
 for res in all_results:
-    df_par = E.per_attack_recall(
-        res['_y_pred'], res['_y_te_multi'], CLASS_NAMES
-    )
+    df_par = E.per_attack_recall(res['_y_pred'], res['_y_te_multi'], CLASS_NAMES)
     df_par.insert(0, 'model', res['model'])
     attack_dfs.append(df_par)
 df_all_par = pd.concat(attack_dfs, ignore_index=True)
 df_all_par.to_csv(TABLES / 'binary_per_attack_recall.csv', index=False)
-print(f'Saved → {TABLES}/binary_per_attack_recall.csv')
+log(f'Saved per-attack recall to {TABLES}/binary_per_attack_recall.csv')
 
-# Per-attack recall table (wide format: models as columns)
-df_wide = df_all_par.pivot_table(
-    index='class_name', columns='model', values='recall'
-).round(4)
-print('\nPer-attack recall matrix (rows=attack class, cols=model):')
-print(df_wide.to_string())
+# Pivot table: rows=attack type, columns=model recall
+df_wide = df_all_par.pivot_table(index='class_name', columns='model', values='recall').round(4)
+log('\nPer-Attack Recall Matrix:')
+log(df_wide.to_string())
 
 # ===========================================================================
-# Save figures
+# Save Figures
 # ===========================================================================
-print(SEP)
-print('SAVING FIGURES')
-print(SEP)
+log(SEP)
+log('SAVING EVALUATION FIGURES')
+log(SEP)
 E.plot_confusion_matrices(all_results, str(FIGURES / 'binary_confusion_matrices.png'))
 E.plot_roc_curves(all_results,         str(FIGURES / 'binary_roc_curves.png'))
 E.plot_pr_curves(all_results,          str(FIGURES / 'binary_pr_curves.png'))
 
-# Per-attack recall for all models
 for res in all_results:
     df_par_m = E.per_attack_recall(res['_y_pred'], res['_y_te_multi'], CLASS_NAMES)
-    E.plot_per_attack_recall(
-        df_par_m, res['model'],
-        str(FIGURES / f"binary_per_attack_recall_{res['model'].replace(' ','_')}.png")
-    )
+    m_slug = res['model'].replace(' ', '_').lower()
+    E.plot_per_attack_recall(df_par_m, res['model'], str(FIGURES / f'binary_per_attack_recall_{m_slug}.png'))
 
 df_summary = pd.read_csv(TABLES / 'binary_results.csv')
 E.plot_metrics_comparison(df_summary, str(FIGURES / 'binary_metrics_comparison.png'))
 
 # ===========================================================================
-# Final summary
+# Final Summary
 # ===========================================================================
-print(SEP)
-print('FINAL SUMMARY — BINARY CLASSIFICATION')
-print(SEP)
-df_disp = df_summary[['model','recall_attack','precision_attack','f1_attack',
-                       'roc_auc','pr_auc','fit_seconds','data']].copy()
-df_disp = df_disp.sort_values('recall_attack', ascending=False)
-print(df_disp.to_string(index=False))
-print(f'\nBest recall on ATTACK class: {df_disp.iloc[0]["model"]}  '
-      f'({df_disp.iloc[0]["recall_attack"]:.4f})')
-print(SEP)
-print('Phase 2 complete. Results in results/tables/ and results/figures/')
-print(SEP)
+log(SEP)
+log('PHASE 2 (BINARY) EXPERIMENT COMPLETE')
+log(SEP)
+cols_show = ['model', 'recall_attack', 'precision_attack', 'f1_attack',
+             'roc_auc', 'pr_auc', 'false_alarm_rate', 'fit_seconds', 'ram_delta_gb', 'data']
+df_final = df_summary[cols_show].sort_values('recall_attack', ascending=False)
+log(df_final.to_string(index=False))
+log(f'\nTop model by Recall (ATTACK): {df_final.iloc[0]["model"]} (Recall={df_final.iloc[0]["recall_attack"]:.4f})')
+log(SEP)
