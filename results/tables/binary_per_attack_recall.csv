@@ -1,0 +1,84 @@
+model,class_id,class_name,n_test,recall
+Logistic Regression,7,Heartbleed,2,0.0
+Logistic Regression,10,Web Attack Sql Injection,4,0.0
+Logistic Regression,8,Web Attack Brute Force,294,0.0034
+Logistic Regression,9,Web Attack XSS,130,0.0077
+Logistic Regression,12,Bot,390,0.259
+Logistic Regression,11,Infiltration,7,0.2857
+Logistic Regression,1,FTP-Patator,1186,0.6897
+Logistic Regression,4,DoS Slowhttptest,1046,0.8767
+Logistic Regression,3,DoS slowloris,1077,0.8932
+Logistic Regression,6,DoS GoldenEye,2057,0.895
+Logistic Regression,2,SSH-Patator,644,0.9022
+Logistic Regression,14,PortScan,18139,0.9854
+Logistic Regression,5,DoS Hulk,34569,0.9941
+Logistic Regression,13,DDoS,25603,0.9992
+Decision Tree,7,Heartbleed,2,0.5
+Decision Tree,10,Web Attack Sql Injection,4,0.75
+Decision Tree,11,Infiltration,7,0.8571
+Decision Tree,12,Bot,390,0.9282
+Decision Tree,8,Web Attack Brute Force,294,0.9898
+Decision Tree,9,Web Attack XSS,130,0.9923
+Decision Tree,3,DoS slowloris,1077,0.9981
+Decision Tree,1,FTP-Patator,1186,0.9983
+Decision Tree,2,SSH-Patator,644,0.9984
+Decision Tree,4,DoS Slowhttptest,1046,0.999
+Decision Tree,6,DoS GoldenEye,2057,0.9995
+Decision Tree,13,DDoS,25603,0.9998
+Decision Tree,5,DoS Hulk,34569,0.9999
+Decision Tree,14,PortScan,18139,0.9999
+Random Forest,10,Web Attack Sql Injection,4,0.25
+Random Forest,11,Infiltration,7,0.5714
+Random Forest,12,Bot,390,0.6154
+Random Forest,8,Web Attack Brute Force,294,0.9048
+Random Forest,9,Web Attack XSS,130,0.9769
+Random Forest,2,SSH-Patator,644,0.9814
+Random Forest,3,DoS slowloris,1077,0.9916
+Random Forest,6,DoS GoldenEye,2057,0.9932
+Random Forest,4,DoS Slowhttptest,1046,0.9971
+Random Forest,13,DDoS,25603,0.9992
+Random Forest,5,DoS Hulk,34569,0.9996
+Random Forest,14,PortScan,18139,0.9998
+Random Forest,7,Heartbleed,2,1.0
+Random Forest,1,FTP-Patator,1186,1.0
+Naive Bayes,7,Heartbleed,2,0.0
+Naive Bayes,9,Web Attack XSS,130,0.0154
+Naive Bayes,8,Web Attack Brute Force,294,0.0578
+Naive Bayes,10,Web Attack Sql Injection,4,0.5
+Naive Bayes,11,Infiltration,7,0.5714
+Naive Bayes,12,Bot,390,0.6026
+Naive Bayes,1,FTP-Patator,1186,0.6897
+Naive Bayes,4,DoS Slowhttptest,1046,0.7304
+Naive Bayes,3,DoS slowloris,1077,0.7372
+Naive Bayes,2,SSH-Patator,644,0.9208
+Naive Bayes,14,PortScan,18139,0.9708
+Naive Bayes,6,DoS GoldenEye,2057,0.9908
+Naive Bayes,5,DoS Hulk,34569,0.9964
+Naive Bayes,13,DDoS,25603,0.9996
+KNN,7,Heartbleed,1,0.0
+KNN,12,Bot,77,0.4026
+KNN,8,Web Attack Brute Force,64,0.7656
+KNN,9,Web Attack XSS,24,0.875
+KNN,14,PortScan,3622,0.8874
+KNN,6,DoS GoldenEye,437,0.9519
+KNN,3,DoS slowloris,217,0.9631
+KNN,2,SSH-Patator,118,0.9661
+KNN,4,DoS Slowhttptest,209,0.9761
+KNN,5,DoS Hulk,6971,0.9924
+KNN,13,DDoS,5082,0.9984
+KNN,1,FTP-Patator,218,1.0
+KNN,10,Web Attack Sql Injection,2,1.0
+Linear SVM,7,Heartbleed,2,0.0
+Linear SVM,10,Web Attack Sql Injection,4,0.0
+Linear SVM,8,Web Attack Brute Force,294,0.0068
+Linear SVM,9,Web Attack XSS,130,0.0077
+Linear SVM,11,Infiltration,7,0.2857
+Linear SVM,12,Bot,390,0.2872
+Linear SVM,1,FTP-Patator,1186,0.6897
+Linear SVM,4,DoS Slowhttptest,1046,0.8394
+Linear SVM,3,DoS slowloris,1077,0.8877
+Linear SVM,6,DoS GoldenEye,2057,0.893
+Linear SVM,2,SSH-Patator,644,0.8991
+Linear SVM,14,PortScan,18139,0.9842
+Linear SVM,5,DoS Hulk,34569,0.9942
+Linear SVM,13,DDoS,25603,0.9995
