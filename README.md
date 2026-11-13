@@ -19,9 +19,10 @@ The system addresses two complementary security tasks:
 3. [Task 1 — Binary Classification Results](#-task-1--binary-classification-results)
 4. [Task 2 — Multiclass Classification Results (13 Classes)](#-task-2--multiclass-classification-results-13-classes)
 5. [Conflicting Labels Analysis](#-conflicting-labels-analysis)
-6. [Reproducibility Guide](#-reproducibility-guide)
-7. [Limitations & Threat Model](#-limitations--threat-model)
-8. [Project Structure](#-project-structure)
+6. [Web Interface (Django)](#-web-interface-django)
+7. [Reproducibility Guide](#-reproducibility-guide)
+8. [Limitations & Threat Model](#-limitations--threat-model)
+9. [Project Structure](#-project-structure)
 
 ---
 
@@ -106,13 +107,13 @@ The primary operational goal of binary network intrusion detection is **maximizi
 Logistic Regression and Linear SVM achieve ~97.5% overall attack recall but only ~74–75% attack precision. Their linear decision boundaries cannot separate stealthy attacks (Web Attacks, Bot traffic) that mimic normal HTTP flows in feature space—these models compensate by flagging BENIGN flows as attacks, generating high false-alarm rates (6.59% and 7.16%, or over 27,000 false alarms on benign test flows). This is not a bug but the expected mathematical behavior of linear hyperplanes on non-linearly separable network manifolds, providing empirical justification for non-linear tree ensembles.
 
 ### Binary Evaluation Figures
-![Binary Confusion Matrices](results/figures/binary_confusion_matrices.png)
+![Normalized Confusion Matrices for Binary Classifiers](results/figures/binary_confusion_matrices.png)
 *Figure 1: Normalized confusion matrices for all 6 binary classifiers on 499,637 test flows.*
 
-![Binary ROC and PR Curves](results/figures/binary_roc_curves.png)
+![Binary Receiver Operating Characteristic Curves](results/figures/binary_roc_curves.png)
 *Figure 2: Receiver Operating Characteristic (ROC) curves.*
 
-![Binary PR Curves](results/figures/binary_pr_curves.png)
+![Binary Precision-Recall Curves](results/figures/binary_pr_curves.png)
 *Figure 3: Precision-Recall (PR) curves emphasizing minority class detection fidelity.*
 
 ---
@@ -168,13 +169,13 @@ The original 15 CIC-IDS-2017 classes are consolidated into **13 classes**:
 * **Phase 3 Scaled Evaluation**: Batched at 25,000 queries across 4 CPU threads. Evaluation completed in **266.1 s (~4.4 min)** with process RSS stabilizing at **1.14 GB RAM**, confirming feasibility within 8 GB boundaries.
 
 ### Multiclass Evaluation Figures
-![Multiclass Confusion Matrices](results/figures/multiclass_confusion_matrices.png)
+![13x13 Normalized Confusion Matrices](results/figures/multiclass_confusion_matrices.png)
 *Figure 4: 13×13 Normalized Confusion Matrices across all 6 models.*
 
-![Multiclass Macro-F1 Comparison](results/figures/multiclass_macro_f1_comparison.png)
+![Multiclass Macro-F1 vs Accuracy Comparison](results/figures/multiclass_macro_f1_comparison.png)
 *Figure 5: Macro-F1 vs Accuracy comparison highlighting minority class robustness.*
 
-![Multiclass Per-Class Recall Heatmap](results/figures/multiclass_per_class_recall.png)
+![Per-Class Recall Heatmap Across 13 Classes](results/figures/multiclass_per_class_recall.png)
 *Figure 6: Per-class recall heatmap across the 13 classes.*
 
 ![Random Forest Feature Importance](results/figures/multiclass_rf_feature_importance.png)
@@ -194,6 +195,36 @@ After strict deduplication of identical feature rows carrying identical labels, 
 | **BENIGN / DoS slowloris** | 2 | Legitimate keep-alive HTTP connections |
 
 All conflicting groups are preserved in the dataset to reflect authentic network ambiguity; full pairs are recorded in [`results/tables/conflicting_label_pairs.csv`](results/tables/conflicting_label_pairs.csv).
+
+---
+
+## 🌐 Web Interface (Django)
+
+An interactive, production-ready web dashboard powered by **Django** and styled with **Bootstrap 5.3.0** has been implemented in [`ids_project/`](ids_project/) to enable real-time, low-latency inference on statistical NetFlow records.
+
+### Key Capabilities
+* **Dual Inference Engines**: Seamless switching between the **Binary model** (`BENIGN` vs `ATTACK`) and the **Multiclass model** (fine-grained categorization across 13 classes).
+* **One-Click Pre-filled Examples**:
+  * **🛡️ Bénin**: Instantly injects legitimate network flow features, producing a verified `BENIGN` classification (>99% confidence).
+  * **🚨 Attaque (DDoS)**: Injects an authentic malicious flow profile from CIC-IDS-2017, triggering an immediate `ATTACK` classification (100% confidence) highlighted in red.
+  * **0️⃣ Tout mettre à 0**: Quickly resets all 66 NetFlow feature fields to zero.
+* **Dynamic Probability & Top 3 Breakdown**:
+  * Prominent Bootstrap alert banners (`alert alert-danger` for detected attacks, `alert alert-success` for benign traffic).
+  * Animated Bootstrap progress bars (`progress` / `progress-bar`) displaying the **Top 3 class probabilities** and confidence percentages.
+* **Robust Input Validation & Debug Mode**: Comprehensive exception handling with on-page error alerts (`{% if error %}`) identifying missing, empty, or non-numeric inputs.
+* **REST API Endpoint**: Available at `/api/predict/` for programmatic JSON-based inference.
+
+### How to Run the Web Interface
+
+```bash
+cd ids_project
+python manage.py runserver
+```
+
+Once running, navigate to **`http://127.0.0.1:8000/`** in your web browser:
+* **`http://127.0.0.1:8000/`** : Overview dashboard listing deployed models, architecture highlights, and pipeline status.
+* **`http://127.0.0.1:8000/predict/`** : Real-time manual prediction form with 66 NetFlow inputs and preset buttons.
+* **`http://127.0.0.1:8000/api/predict/`** : REST API endpoint (POST JSON payload).
 
 ---
 
@@ -268,6 +299,18 @@ DM_Project/
 ├── models/                                    # Serialized fitted model artifacts
 │   ├── binary_*.joblib                        # 6 binary models
 │   └── multiclass_*.joblib                    # 6 multiclass models
+│
+├── ids_project/                               # Django real-time inference web application
+│   ├── manage.py                              # Django management CLI
+│   ├── detector/                              # Core IDS detector application
+│   │   ├── ml_loader.py                       # Model & scaler loader, single-flow inference
+│   │   ├── views.py                           # Web views (home, manual_predict, api_predict)
+│   │   ├── urls.py                            # Application URL routing
+│   │   └── templates/detector/                # Bootstrap 5.3.0 templates
+│   │       ├── home.html                      # Landing dashboard
+│   │       ├── form.html                      # 66-feature manual form with preset examples
+│   │       └── result.html                    # Verdict banner & Top 3 progress bars
+│   └── ids_project/                           # Project settings and root routing
 │
 └── results/
     ├── tables/
