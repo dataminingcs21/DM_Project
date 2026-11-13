@@ -2,128 +2,118 @@
 
 ## 📌 Project Overview
 
-This project focuses on **Network Attack Detection Using Machine Learning**.
+This project develops machine-learning classifiers for **Network Intrusion Detection** on the [CIC-IDS-2017](https://unb.ca/cic/datasets/ids-2017.html) dataset (2.8 M raw flow records, 15 traffic classes).
 
-The main objective is to develop a machine learning model capable of analyzing network traffic data and detecting whether a network activity corresponds to a normal behavior or a potential attack.
+Two tasks are addressed:
+1. **Binary classification** — BENIGN (0) vs ATTACK (1)
+2. **Multiclass classification** — 15 → 12 classes (see below)
 
-The project is developed as part of the **Data Mining** course.
-
-## 🎯 Project Information
-
-* **Project Title:** Network Attack Detection Using Machine Learning
-* **Chosen Approach:** Supervised Classification
-* **Domain:** Cybersecurity / Network Security
-* **Course:** Data Mining
+Developed for the **Data Mining** course — Team CS24.
 
 ## 📊 Dataset
 
-The project uses a network traffic dataset containing features describing network connections and their corresponding attack or normal traffic labels.
+**CIC-IDS-2017** — 8 CSV files (Mon–Fri), ~2.83 M rows × 79 raw columns.
 
-**Dataset:** `https://unb.ca/cic/datasets/ids-2017.html`
+After cleaning (inf→NaN, constant columns, NaN rows, deduplication):
+**2,498,185 rows × 66 features** (80/20 stratified train/test split).
 
-The dataset will be used to:
+### Encoding note
+The Thursday WebAttacks CSV contains an encoding issue in its label strings.
+Using `encoding='latin-1'` when reading, followed by label normalisation that
+strips non-alphabetic characters, resolves the issue without data loss.
 
-* Analyze and understand network traffic.
-* Preprocess and clean the data.
-* Select relevant features.
-* Train supervised machine learning models.
-* Evaluate the performance of the models.
-* Classify network traffic as normal or malicious.
+### Deduplication
+329,691 exact duplicate rows (identical feature values + identical label) were
+removed — 11.7% of the cleaned dataset.  Duplicates are rows with the same
+feature vector and the same label; the CSVs do not contain IP/port/timestamp
+columns.
 
-> **Note:** The exact dataset name and source will be added once the dataset is confirmed.
+### Conflicting-label rows
+After deduplication, a small number of feature-identical rows carry different
+labels.  These are kept in the dataset; their label pairs are reported in
+`results/tables/conflicting_label_pairs.csv`.
 
-## 🧠 Methodology
-
-The project will follow the following data mining pipeline:
+## 🧠 Pipeline
 
 ```text
-Dataset
-   ↓
-Data Exploration
-   ↓
-Data Preprocessing
-   ↓
-Feature Selection / Engineering
-   ↓
-Train / Test Split
-   ↓
-Supervised Classification
-   ↓
-Model Evaluation
-   ↓
-Network Attack Detection
+8 CSV files  → load (latin-1, float32 downcast per file)
+  ↓ clean: inf→NaN, constant cols, NaN rows, dedup
+  ↓ encode labels → (X, y_multi, y_bin)
+  ↓ 80/20 stratified split on y_multi (shared by both tasks)
+  ↓ near-zero column filter (computed on X_train only)
+  ↓ StandardScaler (fitted on X_train only, saved to cache/)
+  ↓ cache/splits.npz  (reused by notebooks 02 & 03)
 ```
 
-## 🤖 Machine Learning
+## 🤖 Models
 
-Several supervised classification algorithms may be investigated and compared, such as:
+### Task 1 — Binary (BENIGN vs ATTACK)
 
-* Decision Tree
-* Random Forest
-* Logistic Regression
-* K-Nearest Neighbors (KNN)
-* Support Vector Machine (SVM)
-* Naive Bayes
+| Model | Training data | Notes |
+|---|---|---|
+| Logistic Regression | full (2M rows) | C tuned by 3-fold CV on 50k subsample |
+| Decision Tree | full | max_depth tuned by 3-fold CV on 50k subsample |
+| Random Forest | full | bounded config (100 trees, max_depth=20, n_jobs=2) |
+| Naive Bayes (Gaussian) | 100k subsample | no tuning |
+| KNN | 100k subsample | k tuned by 3-fold CV on 20k subsample |
+| Linear SVM | 100k subsample | C tuned by 3-fold CV on 50k subsample |
 
-The final selection of models will depend on the characteristics of the dataset and the experimental results.
+### Task 2 — Multiclass (planned)
+
+**Rare-class strategy:**
+- The 3 Web Attack sub-types are merged into a single **"Web Attack"** class.
+- **Heartbleed** (11 samples) and **Infiltration** (36 samples) are excluded
+  from the main experiment — documented as a limitation.
+- An optional second run keeps all classes with `class_weight='balanced'` and
+  flags the per-class scores of Heartbleed and Infiltration as unreliable.
+- No SMOTE — the same saved split is reused (filter/merge on existing indices).
 
 ## 📈 Evaluation
 
-The classification models will be evaluated using appropriate metrics, including:
+**Binary task:** recall, precision, F1 of the ATTACK class, confusion matrix,
+ROC-AUC, PR-AUC, training time.  Also: per-attack-type recall using original
+multiclass labels (shows which attacks the binary classifier misses).
 
-* Accuracy
-* Precision
-* Recall
-* F1-score
-* Confusion Matrix
-
-For network attack detection, particular attention will be given to **Recall**, since failing to detect an actual attack can have significant security implications.
-
-## 🛠️ Technologies
-
-The project may use the following technologies:
-
-* **Python**
-* **Pandas**
-* **NumPy**
-* **Scikit-learn**
-* **Matplotlib**
-* **Seaborn**
-* **Jupyter Notebook**
+**Priority metric:** Recall on ATTACK — a missed attack has worse security
+consequences than a false alarm.
 
 ## 📁 Project Structure
 
 ```text
 DM_Project/
-│
 ├── README.md
-├── dataset/
-│   └── dataset.csv
+├── requirements.txt
+├── download_dataset.py
+├── run_binary.py           ← Phase 2 runner
 │
+├── dataset/                ← 8 CIC-IDS-2017 CSVs
 ├── notebooks/
-│   └── analysis.ipynb
+│   ├── 01_exploration_cleaning.ipynb
+│   ├── 02_binary_classification.ipynb       (planned)
+│   └── 03_multiclass_classification.ipynb   (planned)
 │
 ├── src/
+│   ├── config.py
 │   ├── preprocessing.py
 │   ├── feature_selection.py
 │   ├── training.py
 │   └── evaluation.py
 │
-└── results/
-    └── figures/
+├── results/
+│   ├── tables/             ← CSV result files
+│   └── figures/            ← PNG plots
+│
+├── models/                 ← fitted model .joblib files
+├── cache/                  ← splits.npz, scaler, indices
+├── documentation/          ← internal reference docs
+└── ids_project/            ← Django web dashboard (future)
 ```
 
-## 👥 Team
+## 🛠️ Technologies
 
-* **Team:** CS24
+Python, Pandas, NumPy, scikit-learn, Matplotlib, Seaborn, Jupyter Notebook, psutil.
 
-## 🚧 Project Status
+## 🚧 Status
 
-🟡 **In Progress**
-
-The project is currently under development. Data preprocessing, exploratory analysis, model training, and evaluation will be added progressively.
-
-## 📚 Objective
-
-The final objective is to build and evaluate a supervised machine learning solution capable of detecting network attacks from network traffic data and to analyze the performance of different classification approaches.
-
+🟡 **Phase 2 in progress** — binary classification models trained and evaluated.
+Phase 3 (multiclass) next.

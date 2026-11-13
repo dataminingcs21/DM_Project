@@ -68,11 +68,10 @@ def load_and_merge_datasets(dataset_dir: str = './dataset/') -> pd.DataFrame:
     reading and before being appended to the list, so at most two files
     reside in full float64 memory simultaneously.
 
-    B2-fix: uses encoding='latin-1' to avoid the UnicodeDecodeError caused
-    by the Windows-1252 en-dash (0x96) in the Thursday WebAttacks CSV labels
-    (e.g. 'Web Attack \x96 Brute Force').  latin-1 is a 1-to-1 byte mapping
-    that never raises a decode error; the norm() function in encode_labels()
-    strips the special character anyway.
+    B2-fix: uses encoding='latin-1' to handle an encoding issue in the
+    web-attack labels of the Thursday WebAttacks CSV.  latin-1 passes every
+    byte through unchanged; the norm() function in encode_labels() then
+    strips non-alphabetic characters during label normalisation.
 
     After merging, prints all unique raw label strings and their row counts
     so you can confirm:
@@ -158,8 +157,8 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     2. Drop truly constant columns using nunique()<=1  (B6-fix: catches
        non-zero constants; excludes Label from the check).
     3. Drop rows with NaN.
-    4. Drop exact duplicate rows (B3-fix: same flow cannot appear in both
-       train and test after the split).
+    4. Drop exact duplicate rows (B3-fix: identical feature rows + label
+       should only count once for training and evaluation).
 
     B6 note: near-zero column filtering is intentionally NOT done here.
     It is applied after the split, computed on X_TRAIN only, by
@@ -211,30 +210,45 @@ def clean_data(df: pd.DataFrame) -> pd.DataFrame:
     for lbl, n in before_counts.items():
         print(f"    {str(lbl)!r:45s}  {n:>9,}")
 
-    # ── B3: detect feature-identical rows with conflicting labels ─────────
-    feat_cols = [c for c in df_c.columns if c != 'Label']
-    print("\n  Checking for feature-identical rows with conflicting labels ...")
-    row_hash = pd.util.hash_pandas_object(df_c[feat_cols], index=False)
-    hash_lbl = pd.DataFrame(
-        {'hash': row_hash.values, 'Label': df_c['Label'].values}
-    )
-    unique_per_hash = hash_lbl.groupby('hash')['Label'].nunique()
-    n_conflict_groups = int((unique_per_hash > 1).sum())
-    n_conflict_rows   = int(
-        hash_lbl[hash_lbl['hash'].isin(
-            unique_per_hash[unique_per_hash > 1].index
-        )].shape[0]
-    )
-    del hash_lbl, row_hash, unique_per_hash   # free memory
-    print(f"    Feature groups with conflicting labels: {n_conflict_groups:,}")
-    print(f"    Rows involved in conflicts:             {n_conflict_rows:,}")
-
     # ── Step 4: drop duplicate rows (B3-fix) ─────────────────────────────
     r_before_dup = len(df_c)
     df_c = df_c.drop_duplicates()
     r_dup = r_before_dup - len(df_c)
     print(f"\n  Exact duplicate rows dropped: {r_dup:,}  "
           f"({r_dup / r_before_dup * 100:.2f}%)")
+
+    # ── B3: detect feature-identical rows with conflicting labels ─────────
+    #    Computed AFTER dedup so counts reflect the deduplicated dataset.
+    feat_cols = [c for c in df_c.columns if c != 'Label']
+    print("\n  Checking for feature-identical rows with conflicting labels "
+          "(after dedup) ...")
+    row_hash = pd.util.hash_pandas_object(df_c[feat_cols], index=False)
+    hash_lbl = pd.DataFrame(
+        {'hash': row_hash.values, 'Label': df_c['Label'].values}
+    )
+    unique_per_hash = hash_lbl.groupby('hash')['Label'].nunique()
+    conflict_hashes = unique_per_hash[unique_per_hash > 1].index
+    n_conflict_groups = int(len(conflict_hashes))
+    conflict_rows = hash_lbl[hash_lbl['hash'].isin(conflict_hashes)]
+    n_conflict_rows = int(len(conflict_rows))
+
+    # Report which label pairs are involved
+    pair_counts: dict[tuple[str, str], int] = {}
+    for h, grp in conflict_rows.groupby('hash'):
+        labels = sorted(grp['Label'].unique())
+        for i in range(len(labels)):
+            for j in range(i + 1, len(labels)):
+                pair = (labels[i], labels[j])
+                pair_counts[pair] = pair_counts.get(pair, 0) + 1
+    pair_counts = dict(sorted(pair_counts.items(), key=lambda kv: -kv[1]))
+
+    del hash_lbl, row_hash, unique_per_hash, conflict_rows  # free memory
+    print(f"    Feature groups with conflicting labels: {n_conflict_groups:,}")
+    print(f"    Rows involved in conflicts:             {n_conflict_rows:,}")
+    if pair_counts:
+        print("    Conflicting label pairs (groups):")
+        for (a, b), cnt in pair_counts.items():
+            print(f"      {a!r:30s} vs {b!r:30s}  → {cnt:,} groups")
 
     # ── B3: per-class counts after deduplication ──────────────────────────
     after_counts = df_c['Label'].value_counts().sort_values(ascending=False)

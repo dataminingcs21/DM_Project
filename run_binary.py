@@ -1,12 +1,12 @@
 """
-run_binary.py  (temporary — deleted after run)
-===============================================
+run_binary.py
+=============
 Phase 2 — Binary classification: BENIGN (0) vs ATTACK (1)
 
 Models trained
 --------------
 Full training set (1,998,548 rows):
-  1. Logistic Regression  — baseline, C tuned by 3-fold CV on 50k subsample
+  1. Logistic Regression  — C tuned by 3-fold CV on 50k subsample
   2. Decision Tree        — max_depth tuned by 3-fold CV on 50k subsample
   3. Random Forest        — bounded config (see below), no extra CV
 
@@ -20,11 +20,10 @@ Hyperparameter tuning is ALWAYS done on a subsample of X_train.
 The test set is NEVER touched during tuning.
 
 Random Forest configuration rationale:
-  n_estimators=50   — capped to control wall time on 2M rows
-  max_depth=20      — meaningful bound; with min_samples_leaf=5 on 2M rows
-                      actual depth is bounded by ~log2(2M/5)≈18
+  n_estimators=100  — 100 trees for better ensemble stability
+  max_depth=20      — meaningful bound
   min_samples_leaf=5 — reduces tree size, helps generalisation
-  max_features='sqrt' — sqrt(66)≈8, speeds up each split
+  max_features='sqrt' — sqrt(66) ≈ 8, speeds up each split
   n_jobs=2          — parallel building; >2 risks RAM pressure on 8 GB
   class_weight='balanced' — compensates 83/17 BENIGN/ATTACK imbalance
 
@@ -35,9 +34,9 @@ Outputs
   results/figures/binary_confusion_matrices.png
   results/figures/binary_roc_curves.png
   results/figures/binary_pr_curves.png
-  results/figures/binary_per_attack_recall_<model>.png   (best model)
+  results/figures/binary_per_attack_recall_<model>.png   (all models)
   results/figures/binary_metrics_comparison.png
-  models/  <model>.joblib  (all fitted models)
+  models/<model>.joblib  (all fitted models)
 """
 
 from __future__ import annotations
@@ -115,7 +114,16 @@ print(f'  X_train: {X_train.shape}  X_test: {X_test.shape}')
 print(f'  Train attack rate: {y_train_bin.mean()*100:.2f}%  '
       f'Test attack rate: {y_test_bin.mean()*100:.2f}%')
 print(f'  RAM after load: {_ram_gb():.2f} GB')
-print(f'  [{time.perf_counter()-t0:.1f}s]\n')
+print(f'  [{time.perf_counter()-t0:.1f}s]')
+
+# Confirm scaler was fitted on X_train only
+scaler = joblib.load(CACHE / 'scaler.joblib')
+print(f'\n  Scaler confirmation: StandardScaler fitted on X_train only')
+print(f'    n_features_in_ = {scaler.n_features_in_}')
+print(f'    n_samples_seen_ = {int(scaler.n_samples_seen_):,}')
+print(f'    (X_train has {X_train.shape[0]:,} rows — matches n_samples_seen_: '
+      f'{"YES" if int(scaler.n_samples_seen_) == X_train.shape[0] else "NO"})')
+print()
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -270,14 +278,13 @@ gc.collect()
 # ===========================================================================
 print(SEP)
 print('MODEL 3 — RANDOM FOREST (bounded config, full training set)')
-print(f'  Config: n_estimators=50, max_depth=20, min_samples_leaf=5,')
+print(f'  Config: n_estimators=100, max_depth=20, min_samples_leaf=5,')
 print(f'          max_features=sqrt, n_jobs=2, class_weight=balanced')
 print(f'  Rationale: bounded to control RAM and training time on 2M rows.')
-print(f'             With min_samples_leaf=5, effective depth ≈ log2(2M/5) ≈ 18.')
 print(SEP)
 
 rf = RandomForestClassifier(
-    n_estimators=50, max_depth=20, min_samples_leaf=5,
+    n_estimators=100, max_depth=20, min_samples_leaf=5,
     max_features='sqrt', n_jobs=2, class_weight='balanced',
     random_state=SEED,
 )
@@ -296,7 +303,6 @@ joblib.dump(rf, MODELS_DIR / 'binary_rf.joblib')
 gc.collect()
 
 # Feature importance figure
-import matplotlib.pyplot as plt
 fig, ax = plt.subplots(figsize=(10, 6))
 importances.head(20).sort_values().plot(kind='barh', ax=ax, color='steelblue')
 ax.set_title('Random Forest — Top 20 Feature Importances (Binary Task)', fontsize=12)
@@ -416,16 +422,7 @@ E.plot_confusion_matrices(all_results, str(FIGURES / 'binary_confusion_matrices.
 E.plot_roc_curves(all_results,         str(FIGURES / 'binary_roc_curves.png'))
 E.plot_pr_curves(all_results,          str(FIGURES / 'binary_pr_curves.png'))
 
-# Per-attack recall for the best model (by recall_attack)
-best_res = max(all_results, key=lambda r: r['recall_attack'])
-df_best_par = E.per_attack_recall(
-    best_res['_y_pred'], best_res['_y_te_multi'], CLASS_NAMES
-)
-E.plot_per_attack_recall(
-    df_best_par, best_res['model'],
-    str(FIGURES / f"binary_per_attack_recall_{best_res['model'].replace(' ','_')}.png")
-)
-# Also for all models side by side
+# Per-attack recall for all models
 for res in all_results:
     df_par_m = E.per_attack_recall(res['_y_pred'], res['_y_te_multi'], CLASS_NAMES)
     E.plot_per_attack_recall(
