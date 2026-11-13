@@ -38,7 +38,7 @@ _DEFAULT_CONFIG = {
     "max_rows": None,                 # global cap on rows (debug)
     "train_max_rows": None,           # cap on training rows
     "cv_max_rows": None,              # cap on rows used during tuning
-    "test_size": 0.3,
+    "test_size": 0.2,                 # B4-fix: 80/20 split (was 0.3)
     "dataset_dir": str(DATASET_DIR),
     "model": {
         "name": "linear_svm",         # linear_svm | svm_nystroem | svm_rbf

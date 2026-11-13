@@ -1,0 +1,5 @@
+label_A,label_B,conflicting_groups
+BENIGN,PortScan,564
+BENIGN,DoS Hulk,149
+BENIGN,DDoS,3
+BENIGN,DoS slowloris,2

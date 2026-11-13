@@ -65,7 +65,8 @@ def _prepare_task(y_raw: np.ndarray, task: str) -> np.ndarray:
     """Convert encoded labels (0=BENIGN, 1..N=attack classes) to the task target (binary: 1 = attack)."""
     y_raw = np.asarray(y_raw)
     if task == "binary":
-        return (y_raw != 0).astype(int)          # 1 = attack, 0 = BENIGN  (matches preprocessing)
+        # B1-fix: 1 = ATTACK, 0 = BENIGN  (original had this reversed: (y_raw == 0))
+        return (y_raw != 0).astype(int)
     # multiclass / family: keep as-is
     return y_raw
 
@@ -92,13 +93,15 @@ def load_xy(cfg: dict, rebuild: bool = False) -> dict:
         df.to_pickle(CACHE)
         print(f"[load_xy] cached to {CACHE}")
 
-    # encode labels: keep raw 0=BENIGN, 1..N as encoded class index
-    X, y_encoded = P.encode_labels(df, binary=False)
+    # encode labels: encode_labels now returns 3 values (X, y_multi, y_bin)
+    # training.py always uses y_multi (multiclass) so tasks can be re-derived
+    X, y_encoded, _y_bin = P.encode_labels(df)
 
     # split + scale
-    X_tr, X_te, y_tr_raw, y_te_raw = P.split_and_scale(
+    # B4-fix: default test_size is now 0.2 (80/20); B5-fix: unpack scaler
+    X_tr, X_te, y_tr_raw, y_te_raw, _scaler = P.split_and_scale(
         X, y_encoded,
-        test_size=cfg.get("test_size", 0.3),
+        test_size=cfg.get("test_size", 0.2),
         random_state=cfg["seed"],
     )
 
