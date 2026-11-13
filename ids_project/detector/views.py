@@ -46,10 +46,13 @@ def manual_predict(request):
             for i, name in enumerate(feature_names):
                 raw = request.POST.get(f"feat_{i}", "").strip()
                 if raw == "":
-                    raise ValueError(f"Missing value for {name}.")
+                    raise ValueError(f"Valeur manquante pour le champ '{name}' (feat_{i}).")
                 features.append(float(raw))
+            print(f"[DEBUG manual_predict] Processing prediction: task='{task}', features_count={len(features)}")
             result = predict_single(features, task)
-        except (TypeError, ValueError) as exc:
+            print(f"[DEBUG manual_predict] Prediction successful: {result}")
+        except Exception as exc:
+            print(f"[ERROR manual_predict] Exception during prediction: {exc}")
             context["error"] = str(exc)
         else:
             return render(request, "detector/result.html", {"result": result})

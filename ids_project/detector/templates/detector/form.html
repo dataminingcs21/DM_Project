@@ -1,0 +1,221 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield IDS - Prédiction Manuelle</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light min-vh-100 d-flex flex-column">
+
+    <!-- Barre de Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-4 py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="{% url 'home' %}">
+                🛡️ CyberShield IDS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="{% url 'home' %}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary fw-bold" href="{% url 'manual_predict' %}">🔍 Prédire un flux</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="container my-5 flex-grow-1">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+                <h2 class="fw-bold mb-1">🔍 Prédiction Manuelle de Flux Réseau</h2>
+                <p class="text-secondary mb-0">Renseignez les 66 caractéristiques statistiques ou utilisez les exemples pré-remplis.</p>
+            </div>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary">← Retour à l'accueil</a>
+        </div>
+
+        <!-- Section Debug : Affichage des erreurs en rouge -->
+        {% if error %}
+        <div class="alert alert-danger d-flex align-items-center mb-4 shadow-sm border-danger" role="alert">
+            <div class="fs-2 me-3">⚠️</div>
+            <div>
+                <h5 class="alert-heading fw-bold mb-1">Erreur de prédiction détectée</h5>
+                <p class="mb-0 font-monospace">{{ error }}</p>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- Barre d'outils : Exemples Pré-remplis -->
+        <div class="card bg-body-tertiary border-secondary shadow-sm mb-4">
+            <div class="card-body p-4">
+                <div class="d-flex align-items-center justify-content-between flex-wrap gap-3">
+                    <div>
+                        <h5 class="fw-bold mb-1">⚡ Exemples Pré-remplis Rapides</h5>
+                        <small class="text-secondary">Injecte instantanément des valeurs pour tester le modèle en un clic :</small>
+                    </div>
+                    <div class="d-flex flex-wrap gap-2">
+                        <button type="button" class="btn btn-success fw-bold px-3 py-2" id="btn-fill-benign" onclick="fillBenign()">
+                            🛡️ Remplir avec un exemple : Bénin
+                        </button>
+                        <button type="button" class="btn btn-danger fw-bold px-3 py-2" id="btn-fill-attack" onclick="fillAttack()">
+                            🚨 Remplir avec un exemple : Attaque (DDoS)
+                        </button>
+                        <button type="button" class="btn btn-outline-secondary fw-semibold px-3 py-2" onclick="fillZeros()">
+                            0️⃣ Tout mettre à 0
+                        </button>
+                    </div>
+                </div>
+                <div id="fill-alert" class="alert alert-info py-2 px-3 mt-3 mb-0 d-none" role="alert">
+                    <span id="fill-alert-msg"></span>
+                </div>
+            </div>
+        </div>
+
+        <!-- Formulaire de Saisie -->
+        <form method="POST" action="{% url 'manual_predict' %}" id="predictForm">
+            {% csrf_token %}
+
+            <!-- Configuration de la tâche -->
+            <div class="card bg-body-tertiary border-secondary shadow-sm mb-4">
+                <div class="card-header border-secondary fw-bold">
+                    ⚙️ Paramètres du Modèle
+                </div>
+                <div class="card-body">
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <label for="taskSelect" class="form-label fw-semibold">Type de Modèle / Tâche :</label>
+                            <select name="task" id="taskSelect" class="form-select bg-dark text-light border-secondary">
+                                <option value="binary" {% if task == 'binary' %}selected{% endif %}>
+                                    Modèle Binaire (Random Forest) - BENIGN vs ATTACK
+                                </option>
+                                <option value="multiclass" {% if task == 'multiclass' %}selected{% endif %}>
+                                    Modèle Multiclasse (Random Forest) - 13 Classes d'Attaques
+                                </option>
+                            </select>
+                        </div>
+                        <div class="col-md-6 mt-3 mt-md-0">
+                            <small class="text-secondary d-block">
+                                <strong>Binaire :</strong> Prédit si le flux est sain ou malveillant avec la probabilité associée.<br>
+                                <strong>Multiclasse :</strong> Prédit la catégorie précise parmi les 13 classes CIC-IDS-2017 et affiche le Top 3.
+                            </small>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Grille des 66 caractéristiques -->
+            <div class="card bg-body-tertiary border-secondary shadow-sm mb-4">
+                <div class="card-header border-secondary d-flex justify-content-between align-items-center py-3">
+                    <span class="fw-bold">📋 Caractéristiques NetFlow du Flux (66 variables)</span>
+                    <span class="badge bg-primary">StandardScaler compatible</span>
+                </div>
+                <div class="card-body p-4">
+                    <div class="row g-3">
+                        {% for field in fields %}
+                        <div class="col-lg-4 col-md-6">
+                            <div class="p-2 border border-secondary rounded bg-dark">
+                                <label for="feat_{{ field.index }}" class="form-label small text-truncate d-block mb-1 text-light fw-semibold" title="{{ field.name }}">
+                                    <span class="badge bg-secondary me-1">#{{ field.index }}</span> {{ field.name }}
+                                </label>
+                                <input type="number" step="any" 
+                                       class="form-control form-control-sm bg-body-tertiary text-light border-secondary feature-input" 
+                                       id="feat_{{ field.index }}" 
+                                       name="feat_{{ field.index }}" 
+                                       value="0" 
+                                       required>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+
+            <!-- Boutons de soumission -->
+            <div class="d-grid gap-2 d-md-flex justify-content-md-end mb-5">
+                <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg px-4 me-md-2">Annuler</a>
+                <button type="submit" class="btn btn-primary btn-lg fw-bold px-5">
+                    🔍 Prédire (Predict)
+                </button>
+            </div>
+        </form>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-black border-top border-secondary text-secondary py-3 text-center mt-auto">
+        <div class="container">
+            <small>CyberShield IDS &copy; 2026 - Prédiction de Flux Réseau</small>
+        </div>
+    </footer>
+
+    <!-- Scripts Bootstrap et Injection des Exemples -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+        // Vecteur d'attaque réaliste (DoS / DDoS issu du jeu CIC-IDS-2017 déclenchant ATTACK à ~100%)
+        const ATTACK_VECTOR = [
+            80.0, 83931200.0, 9.0, 6.0, 317.0, 11595.0, 311.0, 0.0, 35.2222, 103.4357, 
+            5792.0, 0.0, 1932.5, 2181.0083, 141.875, 0.1797, 5995085.5, 22400000.0, 83800000.0, 1.0, 
+            83800000.0, 10500000.0, 29600000.0, 83800000.0, 1.0, 149462.0, 29892.5, 59700.625, 136223.0, 46.0, 
+            0.0, 284.0005, 200.0, 0.1055, 0.0713, 0.0, 5792.0, 744.5, 1579.4429, 2494639.5, 
+            0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 794.1334, 35.2222, 1932.5, 284.0005, 
+            9.0, 317.0, 6.0, 11595.0, 251.0, 235.0, 2.0, 19.9998, 1989.0, 0.0, 
+            1989.0, 1989.0, 83800000.0, 0.0, 83800000.0, 83800000.0
+        ];
+
+        // Vecteur bénin réaliste (trafic normal issu du jeu CIC-IDS-2017 déclenchant BENIGN à 99.5%)
+        const BENIGN_VECTOR = [
+            54043.0, 10887.0, 3.0, 1.0, 50.0, 6.0, 38.0, 6.0, 16.6667, 18.4752, 
+            6.0, 6.0, 6.0, 0.0, 5143.75, 367.4102, 3629.0, 6174.25, 10758.0, 3.0, 
+            10887.0, 5443.5, 7694.0, 10884.0, 3.0, 0.0, 0.0, 0.0, 0.0, 0.0, 
+            0.0, 60.0, 20.0, 275.5586, 91.8525, 6.0, 38.0, 12.4, 14.3108, 204.8125, 
+            0.0, 0.0, 0.0, 1.0, 0.0, 0.0, 15.5, 16.6667, 6.0, 60.0, 
+            3.0, 50.0, 1.0, 6.0, 31.0, 0.0, 2.0, 19.9998, 0.0, 0.0, 
+            0.0, 0.0, 0.0, 0.0, 0.0, 0.0
+        ];
+
+        function showNotification(msg, isSuccess = true) {
+            const alertBox = document.getElementById('fill-alert');
+            const alertMsg = document.getElementById('fill-alert-msg');
+            alertBox.className = 'alert ' + (isSuccess ? 'alert-success' : 'alert-info') + ' py-2 px-3 mt-3 mb-0';
+            alertMsg.innerHTML = msg;
+            alertBox.classList.remove('d-none');
+        }
+
+        // Remplir avec exemple bénin (0 ou valeurs bénignes)
+        function fillBenign() {
+            for (let i = 0; i < 66; i++) {
+                const el = document.getElementById('feat_' + i);
+                if (el) {
+                    el.value = BENIGN_VECTOR[i] !== undefined ? BENIGN_VECTOR[i] : 0;
+                }
+            }
+            showNotification('✅ <strong>Exemple Bénin chargé !</strong> 66 caractéristiques réalistes de trafic sain injectées.');
+        }
+
+        // Remplir avec exemple Attaque (DDoS)
+        function fillAttack() {
+            for (let i = 0; i < 66; i++) {
+                const el = document.getElementById('feat_' + i);
+                if (el) {
+                    el.value = ATTACK_VECTOR[i] !== undefined ? ATTACK_VECTOR[i] : 1000;
+                }
+            }
+            showNotification('🚨 <strong>Exemple Attaque (DDoS) chargé !</strong> Caractéristiques du flux malveillant injectées. Cliquez sur "Prédire (Predict)" pour voir le résultat.');
+        }
+
+        // Tout mettre à 0
+        function fillZeros() {
+            for (let i = 0; i < 66; i++) {
+                const el = document.getElementById('feat_' + i);
+                if (el) el.value = 0;
+            }
+            showNotification('0️⃣ Tous les 66 champs ont été réinitialisés à 0.');
+        }
+    </script>
+</body>
+</html>

@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield IDS - Résultat de la Détection</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light min-vh-100 d-flex flex-column">
+
+    <!-- Barre de Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-4 py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="{% url 'home' %}">
+                🛡️ CyberShield IDS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link fw-semibold" href="{% url 'home' %}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary fw-bold" href="{% url 'manual_predict' %}">🔍 Prédire un flux</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="container my-5 flex-grow-1" style="max-width: 900px;">
+        <div class="d-flex justify-content-between align-items-center mb-4 flex-wrap gap-2">
+            <div>
+                <h2 class="fw-bold mb-1">📊 Résultat de l'Analyse du Flux</h2>
+                <p class="text-secondary mb-0">Verdict délivré par le classifieur Random Forest.</p>
+            </div>
+            <a href="{% url 'manual_predict' %}" class="btn btn-outline-secondary">← Nouvelle analyse</a>
+        </div>
+
+        <!-- 4. Alerte Bootstrap : alert-danger pour ATTACK, alert-success pour BENIGN -->
+        {% if result.prediction == "ATTACK" or result.task == "multiclass" and result.prediction != "BENIGN" %}
+        <div class="alert alert-danger border-danger shadow p-4 mb-4" role="alert">
+            <div class="d-flex align-items-start">
+                <div class="fs-1 me-3">🚨</div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <h3 class="alert-heading fw-bold mb-0">MENACE DÉTECTÉE : ATTACK</h3>
+                        <span class="badge bg-danger fs-6 px-3 py-2">Attaque Suspectée</span>
+                    </div>
+                    <hr class="border-danger opacity-50 my-3">
+                    <p class="fs-5 mb-1">
+                        Le flux réseau analysé a été formellement classifié comme une <strong>ATTAQUE</strong>
+                        {% if result.task == "multiclass" %}
+                            (type précis : <strong class="text-uppercase">{{ result.prediction }}</strong>)
+                        {% endif %}.
+                    </p>
+                    <div class="fs-6 text-light opacity-75">
+                        Indice de confiance du modèle : <strong class="text-light">{{ result.percent }}%</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% else %}
+        <div class="alert alert-success border-success shadow p-4 mb-4" role="alert">
+            <div class="d-flex align-items-start">
+                <div class="fs-1 me-3">🛡️</div>
+                <div class="flex-grow-1">
+                    <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+                        <h3 class="alert-heading fw-bold mb-0">TRAFIC LÉGITIME : BENIGN</h3>
+                        <span class="badge bg-success fs-6 px-3 py-2">Flux Normal</span>
+                    </div>
+                    <hr class="border-success opacity-50 my-3">
+                    <p class="fs-5 mb-1">
+                        Aucune anomalie malveillante détectée. Ce flux correspond aux signatures d'un trafic réseau légitime standard (<strong>BENIGN</strong>).
+                    </p>
+                    <div class="fs-6 text-light opacity-75">
+                        Indice de confiance du modèle : <strong class="text-light">{{ result.percent }}%</strong>
+                    </div>
+                </div>
+            </div>
+        </div>
+        {% endif %}
+
+        <!-- 4. Barres de progression Bootstrap pour le Top 3 -->
+        <div class="card bg-body-tertiary border-secondary shadow-sm mb-4">
+            <div class="card-header border-secondary py-3 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-bold">
+                    📈 Distribution des Probabilités ({% if result.task == 'binary' %}Classification Binaire{% else %}Top 3 Classes Multiclasse{% endif %})
+                </h5>
+                <span class="badge bg-primary">Modèle : {{ result.task|title }}</span>
+            </div>
+            <div class="card-body p-4">
+                {% for item in result.top3 %}
+                <div class="mb-4 last-no-mb">
+                    <div class="d-flex justify-content-between align-items-center mb-1">
+                        <span class="fw-semibold fs-6">
+                            {% if item.class == 'BENIGN' %}
+                                <span class="badge bg-success me-2">Légitime</span>
+                            {% else %}
+                                <span class="badge bg-danger me-2">Attaque</span>
+                            {% endif %}
+                            {{ item.class }}
+                        </span>
+                        <span class="fw-bold font-monospace fs-6">{{ item.percent }}%</span>
+                    </div>
+                    <div class="progress" style="height: 26px;" role="progressbar" aria-valuenow="{{ item.percent }}" aria-valuemin="0" aria-valuemax="100">
+                        <div class="progress-bar progress-bar-striped progress-bar-animated {% if item.class == 'BENIGN' %}bg-success{% else %}bg-danger{% endif %}" 
+                             style="width: {{ item.percent }}%;">
+                            {% if item.percent > 7 %}{{ item.percent }}%{% endif %}
+                        </div>
+                    </div>
+                </div>
+                {% empty %}
+                <p class="text-secondary mb-0">Aucune probabilité disponible.</p>
+                {% endfor %}
+            </div>
+        </div>
+
+        <!-- Tableau Récapitulatif -->
+        <div class="card bg-body-tertiary border-secondary shadow-sm mb-5">
+            <div class="card-header border-secondary py-3 fw-bold">
+                📑 Détails Techniques de l'Inférence
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover mb-0">
+                        <tbody>
+                            <tr>
+                                <th scope="row" class="ps-4 w-50">Tâche évaluée</th>
+                                <td class="text-capitalize">{{ result.task }}</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Verdict principal</th>
+                                <td>
+                                    {% if result.prediction == "ATTACK" or result.task == "multiclass" and result.prediction != "BENIGN" %}
+                                        <span class="badge bg-danger fs-6">{{ result.prediction }}</span>
+                                    {% else %}
+                                        <span class="badge bg-success fs-6">{{ result.prediction }}</span>
+                                    {% endif %}
+                                </td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Score de probabilité (confiance)</th>
+                                <td class="font-monospace fw-bold">{{ result.percent }}% ({{ result.probability|floatformat:4 }})</td>
+                            </tr>
+                            {% if result.probabilities %}
+                            <tr>
+                                <th scope="row" class="ps-4">Probabilité BENIGN</th>
+                                <td class="font-monospace text-success">{{ result.probabilities_pct.BENIGN }}%</td>
+                            </tr>
+                            <tr>
+                                <th scope="row" class="ps-4">Probabilité ATTACK</th>
+                                <td class="font-monospace text-danger">{{ result.probabilities_pct.ATTACK }}%</td>
+                            </tr>
+                            {% endif %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Boutons d'action -->
+        <div class="d-flex justify-content-between align-items-center flex-wrap gap-2">
+            <a href="{% url 'manual_predict' %}" class="btn btn-primary btn-lg fw-bold px-4">
+                🔄 Tester un autre flux
+            </a>
+            <a href="{% url 'home' %}" class="btn btn-outline-secondary btn-lg px-4">
+                🏠 Retour à l'accueil
+            </a>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-black border-top border-secondary text-secondary py-3 text-center mt-auto">
+        <div class="container">
+            <small>CyberShield IDS &copy; 2026 - Prédiction de Flux Réseau</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

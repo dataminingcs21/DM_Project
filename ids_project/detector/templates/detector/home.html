@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="fr" data-bs-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CyberShield IDS - Détection d'Intrusions Réseau</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+</head>
+<body class="bg-dark text-light min-vh-100 d-flex flex-column">
+
+    <!-- Barre de Navigation -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-black border-bottom border-secondary px-4 py-3">
+        <div class="container-fluid">
+            <a class="navbar-brand fw-bold text-primary fs-4" href="{% url 'home' %}">
+                🛡️ CyberShield IDS
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto gap-2">
+                    <li class="nav-item">
+                        <a class="nav-link active fw-semibold" href="{% url 'home' %}">Accueil</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="btn btn-primary fw-bold" href="{% url 'manual_predict' %}">🔍 Prédire un flux</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contenu Principal -->
+    <main class="container my-5 flex-grow-1">
+        <!-- Hero Section -->
+        <div class="p-5 mb-5 rounded-3 bg-body-tertiary border border-secondary shadow">
+            <div class="container-fluid py-2">
+                <span class="badge bg-primary px-3 py-2 mb-3 fs-6">CIC-IDS-2017 Classifier</span>
+                <h1 class="display-5 fw-bold">Système Intelligent de Détection d'Intrusions</h1>
+                <p class="col-md-10 fs-5 text-secondary mt-3">
+                    CyberShield IDS analyse les flux réseau statistiques (NetFlow/IPFIX) à l'aide d'algorithmes de Machine Learning entraînés sur le benchmark de référence <strong>CIC-IDS-2017</strong> (66 caractéristiques par flux).
+                </p>
+                <div class="d-flex flex-wrap gap-3 mt-4">
+                    <a href="{% url 'manual_predict' %}" class="btn btn-primary btn-lg fw-bold px-4">
+                        🚀 Lancer une Prédiction Manuelle
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <!-- Section Modèles Disponibles -->
+        <div class="card bg-body-tertiary border-secondary shadow-sm mb-5">
+            <div class="card-header border-secondary py-3 d-flex justify-content-between align-items-center">
+                <h5 class="mb-0 fw-bold">📦 Modèles de Machine Learning Déployés</h5>
+                <span class="badge bg-success">Production Ready</span>
+            </div>
+            <div class="card-body p-0">
+                <div class="table-responsive">
+                    <table class="table table-striped table-hover mb-0 align-middle">
+                        <thead class="table-dark border-secondary">
+                            <tr>
+                                <th scope="col" class="py-3 ps-4">Fichier du Modèle</th>
+                                <th scope="col" class="py-3">Tâche</th>
+                                <th scope="col" class="py-3">Algorithme</th>
+                                <th scope="col" class="py-3">Classes de Sortie</th>
+                                <th scope="col" class="py-3 text-end pe-4">Action</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {% for m in models %}
+                            <tr>
+                                <td class="ps-4 font-monospace fw-bold text-info"><code>{{ m.file }}</code></td>
+                                <td>
+                                    {% if m.task == 'Binary' %}
+                                        <span class="badge bg-primary">Binaire</span>
+                                    {% else %}
+                                        <span class="badge bg-warning text-dark">Multiclasse</span>
+                                    {% endif %}
+                                </td>
+                                <td class="fw-semibold">{{ m.algorithm }}</td>
+                                <td>{{ m.output }}</td>
+                                <td class="text-end pe-4">
+                                    <a href="{% url 'manual_predict' %}" class="btn btn-sm btn-outline-primary fw-semibold">
+                                        Tester ce modèle
+                                    </a>
+                                </td>
+                            </tr>
+                            {% empty %}
+                            <tr>
+                                <td colspan="5" class="text-center py-4 text-secondary">Aucun modèle configuré.</td>
+                            </tr>
+                            {% endfor %}
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+
+        <!-- Cartes Récapitulatives -->
+        <div class="row g-4">
+            <div class="col-md-4">
+                <div class="card bg-body-tertiary border-secondary h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-primary">⚡ 66 Caractéristiques NetFlow</h5>
+                        <p class="card-text text-secondary">
+                            Normalisation automatique par StandardScaler des débits, tailles de paquets, durées de flux et compteurs de drapeaux TCP.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-body-tertiary border-secondary h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-success">🎯 Détection Binaire & Multiclasse</h5>
+                        <p class="card-text text-secondary">
+                            Classification instantanée entre trafic sain (BENIGN) et attaques (DDoS, DoS Hulk, PortScan, FTP-Patator, Bot, Infiltration...).
+                        </p>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="card bg-body-tertiary border-secondary h-100 shadow-sm">
+                    <div class="card-body">
+                        <h5 class="card-title fw-bold text-warning">📊 Probabilités & Top 3</h5>
+                        <p class="card-text text-secondary">
+                            Affichage transparent des probabilités de prédiction avec barres de progression dynamiques Bootstrap.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Pied de page -->
+    <footer class="bg-black border-top border-secondary text-secondary py-3 text-center mt-auto">
+        <div class="container">
+            <small>CyberShield IDS &copy; 2026 - Projet Data Mining & Machine Learning</small>
+        </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
