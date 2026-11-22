@@ -1,0 +1,22 @@
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "nids-project"
+version = "0.1.0"
+description = "Network attack detection on CIC-IDS2017 with 11 supervised classifiers and majority voting"
+requires-python = ">=3.11"
+# Runtime dependencies are pinned in requirements.txt (the single source of truth).
+
+[tool.setuptools]
+# Two import roots: the "nids" package lives in src/, the "config" package at the project root.
+package-dir = { "nids" = "src/nids", "config" = "config" }
+packages = { find = { where = ["src", "."], include = ["nids*", "config*"] } }
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]
+addopts = "-ra -p no:cacheprovider"
+markers = [
+    "real_data: tests that need the real CIC-IDS2017 artifacts (skipped when they are absent)",
+]

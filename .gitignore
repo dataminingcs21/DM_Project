@@ -1,1 +1,45 @@
-dataset/
+# ============================================================
+# DM_Project - files that must never be committed
+# Rules starting with "/" apply only at the project root, so the
+# source package src/nids/data/ is NOT ignored by the /data/ rule.
+# ============================================================
+
+# --- Dataset and generated outputs (all regenerable) ---------
+/data/
+/dataset/
+/artifacts/
+/reports/
+/logs/
+
+# --- Trained model files, wherever they are saved ------------
+*.joblib
+*.pkl
+
+# --- Python ---------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+build/
+dist/
+.pytest_cache/
+.coverage
+htmlcov/
+
+# --- Virtual environments ------------------------------------
+.venv/
+venv/
+env/
+
+# --- Local secrets and Streamlit private settings ------------
+.env
+.streamlit/secrets.toml
+
+# --- Editors and notebooks ------------------------------------
+.vscode/
+.idea/
+.ipynb_checkpoints/
+
+# --- Operating system files ----------------------------------
+.DS_Store
+Thumbs.db
+desktop.ini
