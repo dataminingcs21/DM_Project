@@ -33,3 +33,7 @@ env/
 .DS_Store
 Thumbs.db
 desktop.ini
+# --- Local inference assets, datasets, and runtime logs ------
+/artifacts/
+/data/
+/logs/
