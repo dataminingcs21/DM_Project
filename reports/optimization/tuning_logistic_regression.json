@@ -1,0 +1,155 @@
+{
+  "key": "logistic_regression",
+  "display_name": "Logistic Regression",
+  "status": "ok",
+  "n_combinations": 8,
+  "failed_combinations": 0,
+  "folds": 5,
+  "tuning_rows": 100000,
+  "outer_jobs": 14,
+  "selection_score": "macro_f1_corrected",
+  "best_params": {
+    "C": 10.0,
+    "class_weight": null
+  },
+  "best_score": {
+    "corrected_mean": 0.6613231131428793,
+    "corrected_std": 0.021493250564243213,
+    "plain_mean": 0.8098787650893812,
+    "plain_std": 0.01840298656239545
+  },
+  "baseline_params": {
+    "C": 1.0,
+    "class_weight": null
+  },
+  "baseline_score": {
+    "corrected_mean": 0.6491025416157366,
+    "corrected_std": 0.03025571366820847,
+    "plain_mean": 0.8131310459633833
+  },
+  "best_is_baseline": false,
+  "improvement_corrected": 0.012220571527142843,
+  "improvement_fold_spread": 0.022475782867901507,
+  "improvement_beyond_noise": false,
+  "seconds": 107.2,
+  "table": [
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "macro_f1_corrected_mean": 0.6613231131428793,
+      "macro_f1_corrected_std": 0.021493250564243213,
+      "macro_f1_plain_mean": 0.8098787650893812,
+      "macro_f1_plain_std": 0.01840298656239545,
+      "fit_seconds_mean": 36.28215093612671,
+      "is_baseline": false,
+      "is_best": true,
+      "rank": 1
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": null
+      },
+      "macro_f1_corrected_mean": 0.6491025416157366,
+      "macro_f1_corrected_std": 0.03025571366820847,
+      "macro_f1_plain_mean": 0.8131310459633833,
+      "macro_f1_plain_std": 0.01162944466052377,
+      "fit_seconds_mean": 26.226394271850587,
+      "is_baseline": true,
+      "is_best": false,
+      "rank": 2
+    },
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": "balanced"
+      },
+      "macro_f1_corrected_mean": 0.5929609616282143,
+      "macro_f1_corrected_std": 0.022865662734587854,
+      "macro_f1_plain_mean": 0.8186167339129751,
+      "macro_f1_plain_std": 0.013814562234777748,
+      "fit_seconds_mean": 49.45533833503723,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 3
+    },
+    {
+      "params": {
+        "C": 0.1,
+        "class_weight": null
+      },
+      "macro_f1_corrected_mean": 0.5899534597658909,
+      "macro_f1_corrected_std": 0.04326644571249139,
+      "macro_f1_plain_mean": 0.7772666184775467,
+      "macro_f1_plain_std": 0.027580773214223857,
+      "fit_seconds_mean": 15.842771863937378,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 4
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": "balanced"
+      },
+      "macro_f1_corrected_mean": 0.5589088738550319,
+      "macro_f1_corrected_std": 0.01744303841864288,
+      "macro_f1_plain_mean": 0.7923291551834213,
+      "macro_f1_plain_std": 0.010165503879006336,
+      "fit_seconds_mean": 47.963950109481814,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 5
+    },
+    {
+      "params": {
+        "C": 0.1,
+        "class_weight": "balanced"
+      },
+      "macro_f1_corrected_mean": 0.5033985451732269,
+      "macro_f1_corrected_std": 0.02863327142444899,
+      "macro_f1_plain_mean": 0.7541212849357006,
+      "macro_f1_plain_std": 0.015551542513331634,
+      "fit_seconds_mean": 33.61202511787415,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 6
+    },
+    {
+      "params": {
+        "C": 0.01,
+        "class_weight": null
+      },
+      "macro_f1_corrected_mean": 0.47739603625976734,
+      "macro_f1_corrected_std": 0.009904672956625536,
+      "macro_f1_plain_mean": 0.672037700146816,
+      "macro_f1_plain_std": 0.0018824283991076903,
+      "fit_seconds_mean": 11.984768962860107,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 7
+    },
+    {
+      "params": {
+        "C": 0.01,
+        "class_weight": "balanced"
+      },
+      "macro_f1_corrected_mean": 0.40989481004160877,
+      "macro_f1_corrected_std": 0.008831924977703076,
+      "macro_f1_plain_mean": 0.6990720233467714,
+      "macro_f1_plain_std": 0.010815990651433996,
+      "fit_seconds_mean": 19.01128249168396,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 8
+    }
+  ],
+  "fingerprint": "a11b3e852cd583d1",
+  "tuned_at": "2026-11-21T15:28:36",
+  "class_weights_min_max": [
+    1.0,
+    92.34594207686378
+  ]
+}

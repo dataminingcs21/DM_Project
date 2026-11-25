@@ -1,0 +1,106 @@
+{
+  "key": "gaussian_nb",
+  "display_name": "Gaussian Naive Bayes",
+  "status": "ok",
+  "n_combinations": 5,
+  "failed_combinations": 0,
+  "folds": 5,
+  "tuning_rows": 100000,
+  "outer_jobs": 14,
+  "selection_score": "macro_f1_corrected",
+  "best_params": {
+    "var_smoothing": 1e-09
+  },
+  "best_score": {
+    "corrected_mean": 0.48414235490187013,
+    "corrected_std": 0.012508345106299163,
+    "plain_mean": 0.6581719899017433,
+    "plain_std": 0.009022864169589122
+  },
+  "baseline_params": {
+    "var_smoothing": 1e-09
+  },
+  "baseline_score": {
+    "corrected_mean": 0.48414235490187013,
+    "corrected_std": 0.012508345106299163,
+    "plain_mean": 0.6581719899017433
+  },
+  "best_is_baseline": true,
+  "improvement_corrected": 0.0,
+  "improvement_fold_spread": 0.0,
+  "improvement_beyond_noise": false,
+  "seconds": 5.9,
+  "table": [
+    {
+      "params": {
+        "var_smoothing": 1e-09
+      },
+      "macro_f1_corrected_mean": 0.48414235490187013,
+      "macro_f1_corrected_std": 0.012508345106299163,
+      "macro_f1_plain_mean": 0.6581719899017433,
+      "macro_f1_plain_std": 0.009022864169589122,
+      "fit_seconds_mean": 0.3264904499053955,
+      "is_baseline": true,
+      "is_best": true,
+      "rank": 1
+    },
+    {
+      "params": {
+        "var_smoothing": 1e-05
+      },
+      "macro_f1_corrected_mean": 0.4626880807437589,
+      "macro_f1_corrected_std": 0.016572925949823833,
+      "macro_f1_plain_mean": 0.6298121957430695,
+      "macro_f1_plain_std": 0.0104118267529187,
+      "fit_seconds_mean": 0.4423999786376953,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 2
+    },
+    {
+      "params": {
+        "var_smoothing": 0.001
+      },
+      "macro_f1_corrected_mean": 0.4542842849884347,
+      "macro_f1_corrected_std": 0.012463875399585595,
+      "macro_f1_plain_mean": 0.6038693853824759,
+      "macro_f1_plain_std": 0.010589058367984037,
+      "fit_seconds_mean": 0.32239184379577634,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 3
+    },
+    {
+      "params": {
+        "var_smoothing": 1e-07
+      },
+      "macro_f1_corrected_mean": 0.4248898935415741,
+      "macro_f1_corrected_std": 0.015634063758464593,
+      "macro_f1_plain_mean": 0.6029654019626195,
+      "macro_f1_plain_std": 0.01054185072657432,
+      "fit_seconds_mean": 0.36295490264892577,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 4
+    },
+    {
+      "params": {
+        "var_smoothing": 0.1
+      },
+      "macro_f1_corrected_mean": 0.2933860412698003,
+      "macro_f1_corrected_std": 0.030614039709194605,
+      "macro_f1_plain_mean": 0.5298836504328802,
+      "macro_f1_plain_std": 0.013242246491902716,
+      "fit_seconds_mean": 0.35729122161865234,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 5
+    }
+  ],
+  "fingerprint": "627c470e3282d28d",
+  "tuned_at": "2026-11-21T15:26:13",
+  "class_weights_min_max": [
+    1.0,
+    92.34594207686378
+  ]
+}

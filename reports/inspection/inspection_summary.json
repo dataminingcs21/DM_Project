@@ -1,0 +1,90 @@
+{
+  "n_rows": 2830743,
+  "n_feature_columns": 78,
+  "memory_mb": 2078.1,
+  "n_source_files": 8,
+  "labels": {
+    "n_classes": 15,
+    "n_missing_labels": 0,
+    "classes_below_min_samples": [],
+    "min_class_samples_rule": 7,
+    "classes_in_a_single_file": [
+      "DoS Hulk",
+      "PortScan",
+      "DDoS",
+      "DoS GoldenEye",
+      "FTP-Patator",
+      "SSH-Patator",
+      "DoS slowloris",
+      "DoS Slowhttptest",
+      "Bot",
+      "Web Attack � Brute Force",
+      "Web Attack � XSS",
+      "Infiltration",
+      "Web Attack � Sql Injection",
+      "Heartbleed"
+    ],
+    "labels_with_odd_characters": [
+      "Web Attack � Brute Force",
+      "Web Attack � Sql Injection",
+      "Web Attack � XSS"
+    ]
+  },
+  "values": {
+    "n_cells": 220797954,
+    "n_missing": 1358,
+    "n_infinite": 4376,
+    "rows_with_missing_or_infinite": 2867,
+    "columns_with_missing": [
+      "Flow Bytes/s"
+    ],
+    "columns_with_infinite": [
+      "Flow Bytes/s",
+      "Flow Packets/s"
+    ],
+    "columns_with_negative": [
+      "Flow Duration",
+      "Flow Bytes/s",
+      "Flow Packets/s",
+      "Flow IAT Mean",
+      "Flow IAT Max",
+      "Flow IAT Min",
+      "Fwd IAT Min",
+      "Fwd Header Length",
+      "Bwd Header Length",
+      "Fwd Header Length.1",
+      "Init_Win_bytes_forward",
+      "Init_Win_bytes_backward",
+      "min_seg_size_forward"
+    ],
+    "constant_columns": [
+      "Bwd PSH Flags",
+      "Bwd URG Flags",
+      "Fwd Avg Bytes/Bulk",
+      "Fwd Avg Packets/Bulk",
+      "Fwd Avg Bulk Rate",
+      "Bwd Avg Bytes/Bulk",
+      "Bwd Avg Packets/Bulk",
+      "Bwd Avg Bulk Rate"
+    ]
+  },
+  "duplicates": {
+    "n_duplicate_rows": 308381,
+    "n_conflicting_feature_vectors": 698,
+    "n_rows_in_conflicting_vectors": 7020
+  },
+  "load": {
+    "n_files": 8,
+    "encodings": {
+      "Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv": "utf-8",
+      "Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv": "utf-8",
+      "Friday-WorkingHours-Morning.pcap_ISCX.csv": "utf-8",
+      "Monday-WorkingHours.pcap_ISCX.csv": "utf-8",
+      "Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv": "utf-8",
+      "Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv": "utf-8",
+      "Tuesday-WorkingHours.pcap_ISCX.csv": "utf-8",
+      "Wednesday-workingHours.pcap_ISCX.csv": "utf-8"
+    },
+    "non_numeric_values_coerced": {}
+  }
+}

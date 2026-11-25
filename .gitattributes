@@ -1,0 +1,13 @@
+/artifacts/models/trained/random_forest.joblib filter=lfs diff=lfs merge=lfs -text
+/artifacts/models/tuned/random_forest.joblib filter=lfs diff=lfs merge=lfs -text
+/data/cleaned/cleaned.parquet filter=lfs diff=lfs merge=lfs -text
+/data/preprocessed/X_test.npy filter=lfs diff=lfs merge=lfs -text
+/data/preprocessed/X_train.npy filter=lfs diff=lfs merge=lfs -text
+/data/raw/Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Friday-WorkingHours-Morning.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Monday-WorkingHours.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Tuesday-WorkingHours.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text
+/data/raw/Wednesday-workingHours.pcap_ISCX.csv filter=lfs diff=lfs merge=lfs -text

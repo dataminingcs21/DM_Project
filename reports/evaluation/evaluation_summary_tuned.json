@@ -1,0 +1,75 @@
+{
+  "generated_at": "2026-11-21T22:44:52",
+  "scope": {
+    "test rows": "504,473",
+    "classes": 15,
+    "tie rule of the vote": "prefer_non_benign",
+    "random seed": 42,
+    "cross-validation": "not repeated for tuned models (tuning used cross-validation on training rows only)"
+  },
+  "final_set": {
+    "knn": "tuned",
+    "decision_tree": "tuned",
+    "random_forest": "baseline",
+    "gaussian_nb": "baseline",
+    "svm": "tuned",
+    "bernoulli_nb": "tuned",
+    "logistic_regression": "baseline",
+    "sgd": "tuned",
+    "adaboost": "tuned",
+    "gradient_boosting": "tuned",
+    "xgboost": "baseline"
+  },
+  "rule_reasons": {
+    "knn": "tuning improvement beyond fold noise",
+    "decision_tree": "tuning improvement beyond fold noise",
+    "random_forest": "tuning improvement within fold noise",
+    "gaussian_nb": "the baseline setting was already the best",
+    "svm": "tuning improvement beyond fold noise",
+    "bernoulli_nb": "tuning improvement beyond fold noise",
+    "logistic_regression": "tuning improvement within fold noise",
+    "sgd": "tuning improvement beyond fold noise",
+    "adaboost": "tuning improvement beyond fold noise",
+    "gradient_boosting": "tuning improvement beyond fold noise",
+    "xgboost": "tuning improvement within fold noise"
+  },
+  "checks": [
+    {
+      "name": "all 11 tuned models scored on the test set",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "all 11 baseline test results found for the same test rows",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "final set equals the set recorded in Checkpoint 5 (decided before any tuned test score)",
+      "passed": true,
+      "detail": "rule gave: knn, decision_tree, svm, bernoulli_nb, sgd, adaboost, gradient_boosting"
+    },
+    {
+      "name": "final-set vote has all 11 voters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every score is on the same test rows",
+      "passed": true,
+      "detail": "[504473]"
+    },
+    {
+      "name": "class supports are identical for every model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no missing or infinite macro F1",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "missing": {},
+  "final_vote_missing": {}
+}

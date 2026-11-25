@@ -1,0 +1,155 @@
+{
+  "key": "knn",
+  "display_name": "KNN",
+  "status": "ok",
+  "n_combinations": 8,
+  "failed_combinations": 0,
+  "folds": 5,
+  "tuning_rows": 50000,
+  "outer_jobs": 1,
+  "selection_score": "macro_f1_corrected",
+  "best_params": {
+    "n_neighbors": 5,
+    "weights": "distance"
+  },
+  "best_score": {
+    "corrected_mean": 0.7142323242938234,
+    "corrected_std": 0.04120532247785631,
+    "plain_mean": 0.8768891250641506,
+    "plain_std": 0.01807016745093671
+  },
+  "baseline_params": {
+    "n_neighbors": 5,
+    "weights": "uniform"
+  },
+  "baseline_score": {
+    "corrected_mean": 0.6858651810606236,
+    "corrected_std": 0.03267858496566688,
+    "plain_mean": 0.8581093564547683
+  },
+  "best_is_baseline": false,
+  "improvement_corrected": 0.028367143233199842,
+  "improvement_fold_spread": 0.027690602244180334,
+  "improvement_beyond_noise": true,
+  "seconds": 15.6,
+  "table": [
+    {
+      "params": {
+        "n_neighbors": 5,
+        "weights": "distance"
+      },
+      "macro_f1_corrected_mean": 0.7142323242938234,
+      "macro_f1_corrected_std": 0.04120532247785631,
+      "macro_f1_plain_mean": 0.8768891250641506,
+      "macro_f1_plain_std": 0.01807016745093671,
+      "fit_seconds_mean": 0.006291770935058593,
+      "is_baseline": false,
+      "is_best": true,
+      "rank": 1
+    },
+    {
+      "params": {
+        "n_neighbors": 11,
+        "weights": "distance"
+      },
+      "macro_f1_corrected_mean": 0.710573522936302,
+      "macro_f1_corrected_std": 0.021122983756680754,
+      "macro_f1_plain_mean": 0.8641147348823015,
+      "macro_f1_plain_std": 0.01825094807848607,
+      "fit_seconds_mean": 0.0061343669891357425,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 2
+    },
+    {
+      "params": {
+        "n_neighbors": 3,
+        "weights": "distance"
+      },
+      "macro_f1_corrected_mean": 0.707062417654752,
+      "macro_f1_corrected_std": 0.030715643939772344,
+      "macro_f1_plain_mean": 0.8863659125106234,
+      "macro_f1_plain_std": 0.006429008360623003,
+      "fit_seconds_mean": 0.006028318405151367,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 3
+    },
+    {
+      "params": {
+        "n_neighbors": 3,
+        "weights": "uniform"
+      },
+      "macro_f1_corrected_mean": 0.7034136985044913,
+      "macro_f1_corrected_std": 0.031100113113386996,
+      "macro_f1_plain_mean": 0.8706648403661312,
+      "macro_f1_plain_std": 0.01993463350947014,
+      "fit_seconds_mean": 0.006362247467041016,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 4
+    },
+    {
+      "params": {
+        "n_neighbors": 5,
+        "weights": "uniform"
+      },
+      "macro_f1_corrected_mean": 0.6858651810606236,
+      "macro_f1_corrected_std": 0.03267858496566688,
+      "macro_f1_plain_mean": 0.8581093564547683,
+      "macro_f1_plain_std": 0.01796273300705568,
+      "fit_seconds_mean": 0.006751632690429688,
+      "is_baseline": true,
+      "is_best": false,
+      "rank": 5
+    },
+    {
+      "params": {
+        "n_neighbors": 21,
+        "weights": "distance"
+      },
+      "macro_f1_corrected_mean": 0.6487207406799705,
+      "macro_f1_corrected_std": 0.018174546960423758,
+      "macro_f1_plain_mean": 0.8324908927744037,
+      "macro_f1_plain_std": 0.010692467306619048,
+      "fit_seconds_mean": 0.007355308532714844,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 6
+    },
+    {
+      "params": {
+        "n_neighbors": 11,
+        "weights": "uniform"
+      },
+      "macro_f1_corrected_mean": 0.6303914272062661,
+      "macro_f1_corrected_std": 0.04239183702542166,
+      "macro_f1_plain_mean": 0.8199685973870929,
+      "macro_f1_plain_std": 0.03048150250352766,
+      "fit_seconds_mean": 0.007231616973876953,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 7
+    },
+    {
+      "params": {
+        "n_neighbors": 21,
+        "weights": "uniform"
+      },
+      "macro_f1_corrected_mean": 0.5150641734721739,
+      "macro_f1_corrected_std": 0.023172082341714074,
+      "macro_f1_plain_mean": 0.7292027790436431,
+      "macro_f1_plain_std": 0.01094283870890322,
+      "fit_seconds_mean": 0.0060408592224121095,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 8
+    }
+  ],
+  "fingerprint": "8fe42a7e9de984ea",
+  "tuned_at": "2026-11-21T15:17:26",
+  "class_weights_min_max": [
+    1.0,
+    271.60923076923075
+  ]
+}

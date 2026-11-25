@@ -1,0 +1,16 @@
+Label,Friday-WorkingHours-Afternoon-DDos.pcap_ISCX.csv,Friday-WorkingHours-Afternoon-PortScan.pcap_ISCX.csv,Friday-WorkingHours-Morning.pcap_ISCX.csv,Monday-WorkingHours.pcap_ISCX.csv,Thursday-WorkingHours-Afternoon-Infilteration.pcap_ISCX.csv,Thursday-WorkingHours-Morning-WebAttacks.pcap_ISCX.csv,Tuesday-WorkingHours.pcap_ISCX.csv,Wednesday-workingHours.pcap_ISCX.csv
+BENIGN,97718,127537,189067,529918,288566,168186,432074,440031
+Bot,0,0,1966,0,0,0,0,0
+DDoS,128027,0,0,0,0,0,0,0
+DoS GoldenEye,0,0,0,0,0,0,0,10293
+DoS Hulk,0,0,0,0,0,0,0,231073
+DoS Slowhttptest,0,0,0,0,0,0,0,5499
+DoS slowloris,0,0,0,0,0,0,0,5796
+FTP-Patator,0,0,0,0,0,0,7938,0
+Heartbleed,0,0,0,0,0,0,0,11
+Infiltration,0,0,0,0,36,0,0,0
+PortScan,0,158930,0,0,0,0,0,0
+SSH-Patator,0,0,0,0,0,0,5897,0
+Web Attack � Brute Force,0,0,0,0,0,1507,0,0
+Web Attack � Sql Injection,0,0,0,0,0,21,0,0
+Web Attack � XSS,0,0,0,0,0,652,0,0
