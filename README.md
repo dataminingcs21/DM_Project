@@ -276,6 +276,6 @@ The pipeline (inspection, cleaning, preprocessing, training, evaluation, tuning)
 
 **Not done:** the comparison without `Destination Port`; a split by source file or attack campaign; a wider search around the edge-of-grid winners; a weighted vote; any test on traffic from another network (no such data was available).
 
-## 📚 Objective
+## 📚 Objective:
 
 The objective is to build and evaluate a supervised machine learning solution that detects network attacks from network traffic data, to compare eleven classification approaches and their majority vote, and to state clearly what the measured performance does and does not show.
