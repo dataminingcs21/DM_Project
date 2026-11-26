@@ -13,6 +13,12 @@ scikit-learn==1.8.0    # 10 of the 11 models + preprocessing + metrics
 xgboost==3.1.3         # 11th model (GPU capable)
 joblib==1.5.3          # model persistence
 
+# --- Data mining extensions (scripts 09-17) ---
+mlxtend==0.25.0        # FP-Growth and association rules
+imbalanced-learn==0.14.2  # SMOTE
+dpkt==1.9.8            # reading .pcap / .pcapng captures in the app
+reportlab==4.5.1       # the PDF report (scripts/18); 5.x needs Pillow 13, which Streamlit 1.52 refuses
+
 # --- Visualisation ---
 matplotlib==3.10.8
 seaborn==0.13.2

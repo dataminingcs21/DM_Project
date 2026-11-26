@@ -467,12 +467,28 @@ class TestModelPanelTable:
 # ===========================================================================
 # 2. the whole page, run headlessly
 # ===========================================================================
+class TestCaptureTab:
+    def test_demo_capture_is_analysed_without_error(self, env):
+        app = start(env)
+        button(app, "Try the demo capture").click().run()
+        assert not app.exception
+        headings = [m.value for m in app.markdown]
+        assert "#### Results for `demo_capture.pcap`" in headings
+        assert "##### Every flow" in headings
+        assert [d for d in app.get("download_button") if "flows, features and predictions" in d.proto.label]
+
+    def test_nothing_is_analysed_before_a_click(self, env):
+        app = start(env)
+        assert not [m for m in app.markdown if m.value.startswith("#### Results for")]
+        assert not [b for b in app.button if b.label == "Analyze this capture"]  # appears only once a file is chosen
+
+
 class TestPageLoads:
     def test_no_exception_and_the_main_parts_are_there(self, env, names):
         app = start(env)
         assert not app.exception
         assert [t.value for t in app.title] == ["Network intrusion detection"]
-        assert [t.label for t in app.tabs] == ["Single flow", "Upload a CSV file", "About the models"]
+        assert [t.label for t in app.tabs] == ["Analyze a capture", "Single flow", "Upload a CSV file", "About the models"]
         assert metric_in_sidebar(app, "Models loaded") == f"{len(KEYS)} of {len(KEYS)}"
 
     def test_every_feature_has_a_field_filled_with_its_median(self, env, predictor, names):
@@ -492,7 +508,7 @@ class TestPageLoads:
 
     def test_upload_tab_has_uploader_and_example_download(self, env):
         app = start(env)
-        assert len(app.get("file_uploader")) == 1
+        assert len(app.get("file_uploader")) == 2  # the packet-capture tab and the CSV tab
         assert len(app.get("download_button")) >= 1
 
     def test_models_tab_and_limits(self, env):
@@ -837,7 +853,11 @@ def upload_page():
         def size(self):
             return len(self.getvalue())
 
+    real_uploader = st.file_uploader
+
     def fake_uploader(*args, **kwargs):
+        if kwargs.get("key") != "csv_upload":  # the packet-capture uploader stays a real (empty) widget
+            return real_uploader(*args, **kwargs)
         data = st.session_state.get("csv_bytes")
         return None if data is None else FakeUpload(data)
 

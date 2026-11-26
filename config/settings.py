@@ -47,6 +47,10 @@ EDA_FIGURES_DIR = EDA_DIR / "figures"
 EDA_TABLES_DIR = EDA_DIR / "tables"
 EVALUATION_REPORT_DIR = REPORTS_DIR / "evaluation"
 OPTIMIZATION_REPORT_DIR = REPORTS_DIR / "optimization"
+# Data mining extensions (scripts 09-17)
+MINING_REPORT_DIR = REPORTS_DIR / "mining"
+EXPERIMENTS_REPORT_DIR = REPORTS_DIR / "experiments"
+TEST_PREDICTIONS_DIR = EXPERIMENTS_REPORT_DIR / "test_predictions"
 
 LOGS_DIR = PROJECT_ROOT / "logs"
 
@@ -184,6 +188,46 @@ PRIMARY_METRIC = "f1_macro"         # model comparison and GridSearchCV scoring
 TIE_BREAK_RULE = "prefer_non_benign"
 ALLOWED_TIE_BREAK_RULES = ("prefer_non_benign", "lowest_index")
 
+# ---------------------------------------------------------------------------
+# Data mining extensions (unsupervised mining and extra experiments, scripts 09-17)
+# None of these values changes data/preprocessed/, so they are NOT part of preprocessing_config().
+# ---------------------------------------------------------------------------
+MINING_SAMPLE_SIZE = 60_000         # class-capped training sample for clustering and rule mining
+PROJECTION_SAMPLE_SIZE = 15_000     # class-capped sample for the PCA / t-SNE maps (t-SNE is O(n log n))
+CLUSTER_K_VALUES = (2, 4, 6, 8, 10, 12, 15, 20, 25, 30, 40, 50)
+SILHOUETTE_SAMPLE_SIZE = 10_000     # silhouette is O(n^2); computed on a random subset
+DBSCAN_SAMPLE_SIZE = 20_000
+
+ANOMALY_BENIGN_TRAIN_SIZE = 300_000  # BENIGN training rows used to fit the anomaly detectors
+ANOMALY_FALSE_ALARM_TARGETS = (0.001, 0.01, 0.05)  # thresholds set on held-out BENIGN training rows
+
+RULE_BINS = 3                       # quantile bins per feature for association rules (low / mid / high)
+RULE_MIN_SUPPORT = 0.002            # FP-Growth minimum support (fraction of transactions)
+RULE_MIN_CONFIDENCE = 0.8
+RULE_MAX_LEN = 4
+
+IMPORTANCE_SAMPLE_SIZE = 50_000     # class-capped TEST slice for permutation importance
+IMPORTANCE_REPEATS = 5
+
+# Attack families for the coarse-label experiment (every class must be mapped).
+ATTACK_FAMILIES: dict[str, str] = {
+    "BENIGN": "BENIGN",
+    "DoS Hulk": "DoS",
+    "DoS GoldenEye": "DoS",
+    "DoS slowloris": "DoS",
+    "DoS Slowhttptest": "DoS",
+    "Heartbleed": "DoS",
+    "DDoS": "DDoS",
+    "PortScan": "PortScan",
+    "FTP-Patator": "Brute Force",
+    "SSH-Patator": "Brute Force",
+    "Web Attack - Brute Force": "Web Attack",
+    "Web Attack - XSS": "Web Attack",
+    "Web Attack - Sql Injection": "Web Attack",
+    "Bot": "Bot",
+    "Infiltration": "Infiltration",
+}
+
 
 # ---------------------------------------------------------------------------
 # Helpers
@@ -241,6 +285,9 @@ def all_directories() -> list[Path]:
         EDA_TABLES_DIR,
         EVALUATION_REPORT_DIR,
         OPTIMIZATION_REPORT_DIR,
+        MINING_REPORT_DIR,
+        EXPERIMENTS_REPORT_DIR,
+        TEST_PREDICTIONS_DIR,
         LOGS_DIR,
     ]
 

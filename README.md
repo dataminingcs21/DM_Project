@@ -1,114 +1,45 @@
-# Network Attack Detection Using Machine Learning
+# Network intrusion detection on CIC-IDS2017
 
-## 📌 Project Overview
+A modular Python system that classifies network flows into **BENIGN or one of 14 attack types** with **eleven supervised models**, combines them by **majority vote**, and serves the result in a **Streamlit app** where you can analyse a **packet capture (.pcap / .pcapng)**, type the features of a flow, load a real example, or upload a CSV file.
 
-This project develops a machine learning system that analyzes network traffic data and decides whether a network flow is **normal (BENIGN)** or belongs to one of **14 attack types**.
+On top of the classification pipeline, the **data mining extensions** (scripts 09-17) add clustering, unsupervised anomaly detection, association rules, projections and feature importance, and five experiments that test how far the classification scores carry (see "Data mining extensions").
 
-Eleven supervised classifiers are trained, evaluated and tuned on the CIC-IDS2017 dataset, then combined by a **majority vote**. A **Streamlit application** lets a user type the features of one flow, load a real example, or upload a CSV file and see the prediction and how each model voted.
+Every number in this file comes from a report the scripts wrote on the real data; where a figure is not stated here, the named report has it.
 
-The project is developed as part of the **Data Mining** course.
+## Read this first: what the results do and do not mean
 
-## 🎯 Project Information
+1. **The split is random, so the scores are optimistic.** The 80/20 split is stratified but random. Flows of the same attack session (and near-identical flows) can land on both sides. The scores say how well the models recognise flows like those they trained on, not how they would do on another network or a new capture. Every attack class sits in one source file of the dataset, so a split by file would test attacks the models have never seen; that harder test was not run.
+2. **Three classes are too small to judge.** After cleaning, the test set holds **2 Heartbleed, 4 Web Attack - Sql Injection and 7 Infiltration** flows. One flow more or less moves their scores by tens of percent. Scores for these classes, and the all-class macro F1 that includes them, are indicative only. The app and the reports show the test support next to every per-class score.
+3. **Three models were trained on a class-capped subsample** (KNN 100,000 rows, SVC 50,000, Gradient Boosting 100,000 of 2,017,889). Their class mix differs from real traffic, so their predictions are shifted toward the small classes.
+4. **Tuning used even smaller samples.** Hyperparameters were searched on class-capped samples of at most 100,000 training rows (KNN 50,000; SVC and Gradient Boosting 30,000) and the winners were refitted on the sizes above. Several winners sit at the edge of their grid (Gaussian NB `var_smoothing=1e-9`, Bernoulli NB `alpha=0.1`, Logistic Regression `C=10`, SGD `alpha=1e-6`, AdaBoost depth 4), so a wider grid might do better. The grids were not widened, because the selection rule was fixed beforehand.
+5. **The majority vote is not clearly better than its best members.** See "Results". The vote of the final model set has the lowest all-class macro F1 of the three votes that were computed.
+6. **`Destination Port` is a model feature, and the most important one.** Attack classes tie to specific ports in this lab capture. Without it, macro F1 drops by 0.035 (Decision Tree), 0.043 (Random Forest) and 0.006 (XGBoost); see "Data mining extensions".
+7. **Attacks of a type never seen in training are mostly missed.** Holding out one capture day at a time, a binary detector catches 33% of the unseen attack flows (pooled), against 99.98% with the random split.
+8. **A prediction is a vote, not proof.** The input check catches impossible values (text, negatives where impossible, a port above 65535) and warns about values outside the training range. It cannot tell whether a combination of values is a realistic flow.
 
-* **Project Title:** Network Attack Detection Using Machine Learning
-* **Chosen Approach:** Supervised multiclass classification (15 classes: BENIGN + 14 attacks), 11 models, equal-weight majority vote
-* **Domain:** Cybersecurity / Network Security
-* **Course:** Data Mining
-* **Not used:** clustering and association rules (not part of this project)
+## Data
 
-## 📊 Dataset
+- **Dataset:** CIC-IDS2017 (Canadian Institute for Cybersecurity, University of New Brunswick). It is **not included**. Put the eight CSV files in `data\raw\`.
+- **As found:** 2,830,743 rows, 78 feature columns, 15 classes, BENIGN 80.3%. The smallest raw classes are Heartbleed (11), Web Attack - Sql Injection (21) and Infiltration (36).
+- **Cleaning** (`03_clean_data.py`): removed 308,381 exact duplicates (10.89%) and 12 identical copy columns; fixed the three web-attack labels that contain a damaged character; set impossible negatives (2,926 rows, 93% BENIGN) to missing; infinite values (2,867 rows, all with a flow duration of 0) are treated as missing. Result: **2,522,362 rows, 66 feature columns**. 698 feature vectors carry two different labels (1,396 rows, 0.055%); they were kept and are an unavoidable error floor.
+- **Preprocessing** (`04_preprocess.py`): stratified split, seed 42, **2,017,889 train / 504,473 test**. The pipeline (median imputation, signed log1p, removal of constant and correlated columns at 0.95, standard scaling) is fitted on the training rows only and keeps **40 of 66 features**.
 
-**Dataset:** CIC-IDS2017, Canadian Institute for Cybersecurity, University of New Brunswick: [https://www.unb.ca/cic/datasets/ids-2017.html](https://www.unb.ca/cic/datasets/ids-2017.html)
+## The eleven models
 
-The dataset is **not included** in this repository. Download the eight CSV files with the flow features (78 feature columns plus `Label`) from the page above, read the terms of use there, cite the dataset in any report, and put the files in `data\raw\`. The dataset is only needed to rebuild everything from scratch; to just look at the results or use the app, see "Open the App From a Clone".
+K-Nearest Neighbours, Decision Tree, Random Forest, Gaussian Naive Bayes, SVC (RBF), Bernoulli Naive Bayes, Logistic Regression, SGD Classifier, AdaBoost, Gradient Boosting and XGBoost. Each exists in a **baseline** version (default-style settings, unweighted) and a **tuned** version (GridSearchCV, 5-fold, score = prior-corrected macro F1, class weighting chosen by cross-validation where the model supports it).
 
-What the real data looks like (from the inspection and cleaning reports):
-
-| Step | Result |
-|---|---|
-| Raw | 2,830,743 rows, 78 feature columns, 15 classes, BENIGN 80.3% |
-| Smallest raw classes | Heartbleed (11), Web Attack - Sql Injection (21), Infiltration (36) |
-| Cleaning | 308,381 exact duplicates removed, 12 identical copy columns dropped, damaged web-attack labels fixed, impossible negatives and infinite values treated as missing |
-| After cleaning | 2,522,362 rows, 66 feature columns |
-| Split (stratified, seed 42) | 2,017,889 training rows, 504,473 test rows |
-| Used by the models | 40 features (1 constant and 25 highly correlated columns dropped, on training data only) |
-
-The dataset is used to:
-
-* Analyze and understand network traffic.
-* Preprocess and clean the data.
-* Select relevant features.
-* Train supervised machine learning models.
-* Evaluate the performance of the models.
-* Classify network traffic as normal or malicious.
-
-## 🧠 Methodology
-
-```text
-CIC-IDS2017 CSV files
-   ↓
-Data Inspection (scripts/01)  ·  Data Exploration (scripts/02)
-   ↓
-Data Cleaning (scripts/03)
-   ↓
-Preprocessing (scripts/04): stratified train/test split, then, fitted on training rows only:
-   median imputation → signed log transform → constant/correlated feature removal → standardisation
-   ↓
-Supervised Classification (scripts/05): 11 baseline models
-   ↓
-Model Evaluation (scripts/06): test set, 5-fold cross-validation, majority vote
-   ↓
-Hyperparameter Tuning (scripts/07): GridSearchCV → evidence rule → final model set
-   ↓
-Evaluation of the tuned models and the three votes (scripts/06 --stage tuned)
-   ↓
-Network Attack Detection: Streamlit app (app/streamlit_app.py)
-```
-
-## 🤖 Machine Learning
-
-All eleven required supervised models are trained, each in a **baseline** and a **tuned** version:
-
-* K-Nearest Neighbors (KNN)
-* Decision Tree
-* Random Forest
-* Gaussian Naive Bayes
-* Support Vector Machine (SVC, RBF kernel)
-* Bernoulli Naive Bayes
-* Logistic Regression
-* SGD Classifier
-* AdaBoost
-* Gradient Boosting
-* XGBoost
-
-**Tuning:** GridSearchCV with stratified 5-fold cross-validation (3 folds for Gradient Boosting), scored by a prior-corrected macro F1, on class-capped samples of the training rows. The test set is never used for tuning or for choosing the final set.
-
-**Which version the final system uses** was fixed by a rule before any tuned model was scored on the test set: use the tuned model if its mean paired improvement over the baseline across the tuning folds is larger than the standard deviation of the paired fold differences; otherwise use the baseline.
+**Which version the final system uses** was fixed by a rule, before any tuned model was scored on the test set, and never changed afterwards: *use the tuned model if its mean paired improvement over the baseline across the tuning folds is larger than the standard deviation of the paired fold differences; otherwise use the baseline.* This is a pragmatic threshold, not a significance test.
 
 | Final set uses | Models |
 |---|---|
 | Tuned (7) | KNN, Decision Tree, SVC, Bernoulli NB, SGD, AdaBoost, Gradient Boosting |
 | Baseline (4) | Random Forest, XGBoost, Logistic Regression, Gaussian NB |
 
-**Majority vote:** one equal vote per model, no weights. On a tie the attack class wins over BENIGN (`prefer_non_benign`).
+**Majority vote:** one equal vote per model, no weights. On a tie the class that is not BENIGN wins (`prefer_non_benign`). A weighted vote (weights from training-data cross-validation only) is a possible later variant; it was not built.
 
-## 📈 Evaluation
+## Results (held-out test set, 504,473 flows)
 
-The models are evaluated on the held-out test set (504,473 flows) and, for the baselines, with stratified cross-validation on the training rows. Metrics:
-
-* Accuracy
-* Precision, Recall and F1-score per class
-* **Macro F1** (all classes count equally; the main comparison metric, because BENIGN is 80% of the data)
-* Detection rate and false-alarm rate (attack versus benign)
-* Confusion matrix and the most frequent confusions
-* ROC and precision-recall curves per class
-* Support (number of test flows) next to every per-class score
-
-For network attack detection, particular attention is given to **Recall**, since failing to detect an actual attack has security implications.
-
-### Results
-
-Macro F1 of the three majority votes on the test set:
+Macro F1 of the three votes (all classes, and the classes with enough test flows to be reliable):
 
 | Vote | Macro F1, all classes | Macro F1, reliable classes |
 |---|---:|---:|
@@ -116,85 +47,51 @@ Macro F1 of the three majority votes on the test set:
 | Tuned models only | **0.9142** | **0.9155** |
 | Final set (evidence rule) | 0.9054 | 0.9138 |
 
-The final set has the lowest all-class macro F1 of the three; the differences are small and none of the votes can be called clearly better. The final set was kept because its rule was fixed beforehand, not because it won.
+The final set has the lowest all-class macro F1. The differences are small and the all-class figure is moved by the three tiny classes, so none of the three votes can be called clearly better. The final set was kept because its rule was fixed beforehand, not because it won.
 
-Test macro F1 of each **tuned** version (for the four models where the final set uses the baseline, this number is for reporting only): KNN 0.6831, Decision Tree 0.8979, Random Forest 0.9158, Gaussian NB 0.4790, SVC 0.7078, Bernoulli NB 0.3869, Logistic Regression 0.7138, SGD 0.6523, AdaBoost 0.7908, Gradient Boosting 0.6101, XGBoost 0.9183.
+Test macro F1 of each **tuned** version (for the four models where the final set uses the baseline, this number is shown for reporting only and is not what the final set uses): KNN 0.6831, Decision Tree 0.8979, Random Forest 0.9158, Gaussian NB 0.4790, SVC 0.7078, Bernoulli NB 0.3869, Logistic Regression 0.7138, SGD 0.6523, AdaBoost 0.7908, Gradient Boosting 0.6101, XGBoost 0.9183. The tree ensembles are far ahead; several single models are well below the vote and drag the equal-weight vote down, which is the reason the weighted vote is worth trying later.
 
-Main mistakes of the final vote: Web Attack - XSS labelled Brute Force (90 flows, 69.23% of XSS); Brute Force labelled XSS (38 flows, 12.93%); Bot labelled BENIGN (55 flows, 14.07%, missed attacks); BENIGN labelled PortScan (183), DoS Hulk (89) and Bot (58).
+Main mistakes of the final vote:
 
-Full tables, per-class scores, confusion matrices and figures are in `reports\evaluation\` and `reports\optimization\tuning_report.md` after running the pipeline.
+- Web Attack - XSS is labelled Web Attack - Brute Force: 90 flows (69.23% of XSS). The reverse, Brute Force labelled XSS: 38 flows (12.93%). These two classes are close in the feature space.
+- Bot labelled BENIGN: 55 flows (14.07% of Bot), that is, missed attacks.
+- BENIGN labelled PortScan 183, DoS Hulk 89, Bot 58 (false alarms; BENIGN is the large class, so the shares are small).
 
-### ⚠️ Limits of these results
+Full tables, per-class scores, confusion matrices and figures are in `reports\evaluation\` (`evaluation_report_tuned.md`, `model_comparison_tuned.md`) and `reports\optimization\tuning_report.md`.
 
-1. **The split is random, so the scores are optimistic.** Flows of the same attack session can land on both sides. The scores do not show how the models would do on another network. A split by source file (every attack class sits in one file) was not run.
-2. **Three classes are too small to judge:** the test set has only **2 Heartbleed, 4 Web Attack - Sql Injection and 7 Infiltration** flows. Their scores, and the all-class macro F1, are indicative only.
-3. **KNN, SVC and Gradient Boosting were trained on class-capped subsamples** (100,000, 50,000 and 100,000 of 2,017,889 rows), so their class mix differs from real traffic.
-4. **Tuning used smaller samples** (at most 100,000 training rows; KNN 50,000; SVC and Gradient Boosting 30,000). Several winners sit at the edge of their grid (Gaussian NB `var_smoothing=1e-9`, Bernoulli NB `alpha=0.1`, Logistic Regression `C=10`, SGD `alpha=1e-6`, AdaBoost depth 4); a wider grid might do better.
-5. **`Destination Port` is a model feature.** Attack classes tie to specific ports in this lab capture, so the models may partly learn the lab setup. The comparison without it was **not run**.
-6. A prediction is a vote, not proof. The input check catches impossible values but cannot tell whether a combination of values is a realistic flow.
+## Data mining extensions (scripts 09-17)
 
-## 🛠️ Technologies
+Everything here reuses the cleaned and preprocessed data and never rewrites `data\` or `artifacts\`. Every fitted object (clusters, rule bins, anomaly thresholds, ensemble weights, SMOTE) learns from **training rows only**; the test set only scores. Clustering, rules, projections and importance use **class-capped samples** (small classes kept whole), so they over-represent the rare attacks. Design and module reference: `docs\project\data_mining_extensions.md`. Full reports: `reports\mining\` and `reports\experiments\`.
 
-* **Python 3.13**
-* **Pandas** 2.3.3, **NumPy** 2.3.5, **PyArrow** (Parquet files)
-* **Scikit-learn** 1.8.0 (10 of the 11 models, preprocessing, metrics, GridSearchCV)
-* **XGBoost** 3.1.3 (GPU used when available)
-* **Matplotlib**, **Seaborn** (figures)
-* **Streamlit** 1.52.2 (application)
-* **Pytest** (tests); no notebooks: the work is done by scripts
+### Unsupervised mining
 
-Pinned versions are in `requirements.txt`.
+| Task | Script | Main result |
+|---|---|---|
+| **Clustering** (k-means k = 2-50, Ward, DBSCAN) | `09_cluster.py` | Without labels, clusters recover much of the class structure: purity 0.77 at k = 15 and 0.92 at k = 50 (cluster-majority macro F1 on other rows 0.63). Silhouette is best at k = 40 (0.57). On the same 10,000 rows, Ward beats k-means (ARI 0.45 vs 0.40). DBSCAN reaches purity 0.94 with 8% noise points. |
+| **Anomaly detection** (trained on BENIGN only) | `10_anomaly.py` | Autoencoder ROC-AUC **0.964**, LOF 0.918, Isolation Forest 0.860 on the full test set. At a 1% false-alarm rate (threshold set on BENIGN training rows; 0.99% measured on the test set) the autoencoder catches 28% of attack flows (51% of DoS Hulk), the two others almost none. Brute force (FTP/SSH-Patator), web attacks and Bot look normal to all three (0-1% flagged). Supervised XGBoost: 99.9% at 0.07%. |
+| **Association rules** (FP-Growth on cleaned flows, original units) | `11_association_rules.py` | 96,388 frequent itemsets, 121,822 rules (confidence >= 0.8). Class rules mined inside each class, e.g. `{port=SSH, Flow IAT Mean=mid} -> SSH-Patator` (coverage 0.92, confidence 1.0), `{port=444, Bwd Packet Length Mean=high} -> Heartbleed`. **No rule** reaches 0.8 confidence for the three web attacks. As a classifier, the 60 class rules give macro F1 0.58 on held-out test flows. |
+| **Projections** (PCA, t-SNE) | `12_explain.py` | PC1 + PC2 hold 54% of the variance; 11 components are needed for 90%. On the t-SNE map most attacks form their own islands; Web Attack Brute Force and XSS share one. |
+| **Feature importance** (built-in and permutation) | `12_explain.py` | `Destination Port` ranks **#1** by permutation importance for both Random Forest and XGBoost, followed by the initial TCP window sizes. The two models share 7 of their top 10 features (Spearman 0.69). |
 
-## 📁 Project Structure
+### How far the classification scores carry
 
-```text
-DM_Project/
-│
-├── README.md
-├── requirements.txt          pinned dependencies
-├── pyproject.toml            packaging (editable install)
-├── .gitignore                keeps the raw data, big arrays, logs and editor files out of Git
-├── .gitattributes            stores *.joblib model files with Git LFS
-│
-├── config/
-│   ├── settings.py           paths, seed, split, cleaning and preprocessing rules
-│   └── model_params.py       model keys, default parameters, tuning grids
-│
-├── src/nids/
-│   ├── data/                 loading and inspection of the raw files
-│   ├── cleaning/             cleaning rules
-│   ├── eda/                  exploratory statistics and plots
-│   ├── preprocessing/        split, pipeline, feature filter, feature schema
-│   ├── models/               the 11 classifiers and the registry
-│   ├── persistence/          saving and loading models with metadata
-│   ├── training/             baseline training
-│   ├── evaluation/           metrics, curves, cross-validation, comparison, plots
-│   ├── optimization/         GridSearchCV tuning
-│   ├── voting/               majority vote
-│   ├── prediction/           input validator and predictor
-│   └── utils/                logging and file helpers
-│
-├── scripts/                  the pipeline, one step per script
-│   ├── 01_inspect_dataset.py     02_run_eda.py        03_clean_data.py
-│   ├── 04_preprocess.py          05_train.py          06_evaluate.py
-│   ├── 07_optimize.py            08_make_comparison_files.py
-│   └── 09_package_app_assets.py  (optional: zips the files the app needs)
-│
-├── app/
-│   ├── streamlit_app.py      the application
-│   └── ui_components.py      form, upload and result views
-│
-├── tests/                    pytest suite (synthetic data only)
-├── docs/                     one .md per code file, plus docs/project/ decision records
-│
-├── data/preprocessed/        fitted pipeline, label encoder, feature schema, example flows (raw/cleaned data and big arrays are not in Git)
-├── artifacts/models/         trained and tuned models (*.joblib via Git LFS) with their metadata
-└── reports/                  inspection, EDA, training, evaluation, tuning and comparison reports and figures
-```
+| Experiment | Script | Main result |
+|---|---|---|
+| **Better ensembles** (weights and stackers learnt from the 5-fold out-of-fold predictions) | `13_ensembles.py` | The equal vote of the 11 baseline models reproduces the evaluation exactly (macro F1 0.9095). Weighting by OOF F1 (0.9113; F1^4: 0.9134) or voting with the top 3 models (0.9149) helps, but **Random Forest alone (0.9150) is as good as any combination**. Stacking (XGBoost 0.894, logistic 0.885) and per-class weights (0.772: every model's BENIGN votes outweigh its small-class votes) do worse. |
+| **Without `Destination Port`** | `14_port_ablation.py` | Macro F1: Decision Tree 0.9141 -> 0.8788, Random Forest 0.9150 -> 0.8719, XGBoost 0.9120 -> **0.9065**. The large classes barely move; the losses are in Sql Injection, Infiltration, XSS and DoS Slowhttptest. XGBoost finds the information in the other features. |
+| **Split by capture day** (binary XGBoost, leave one file out) | `15_day_split.py` | Random split: 99.98% of attacks detected. Unseen attack types: **33%** pooled. Web attacks (85-91%) and DDoS (63%) are still caught, as they resemble other HTTP floods; PortScan, FTP/SSH-Patator, Bot, Slowhttptest, slowloris and Infiltration **0-1%**. Holding out the Infiltration day raises false alarms to 15%. |
+| **Class imbalance** (balanced weights, SMOTE, undersampling + SMOTE) | `16_imbalance.py` | No variant improves the all-class macro F1 of Decision Tree, Random Forest or XGBoost (changes from -0.004 to -0.056); they trade small-class precision for recall and add false alarms. XGBoost with balanced weights gives the best reliable-class macro F1 (0.9173 vs 0.9127). |
+| **Label granularity** (binary, 8 families, 15 classes) | `17_granularity.py` | Families: macro F1 0.942 (Random Forest) and 0.945 (XGBoost), 0.973-0.976 on reliable classes; binary: 0.998-0.999. A 15-class model **collapsed** to families or binary is as good as one trained on them (differences <= 0.0012), so keeping the fine labels costs nothing. |
 
-## ⚙️ Installation
+**What it adds up to:** on the random split the models look near perfect, but part of that rests on the lab setup (ports, one capture per attack type, CICFlowMeter's flag bug, see below). Known attack types on this network are recognised very well; new attack types and other networks are a different, much harder problem, where a one-class detector (the autoencoder) is the only method here that needs no attack labels.
 
-Windows 11, PowerShell, Python 3.13.
+### Packet captures in the app
+
+`src\nids\capture\pcap_flows.py` turns a `.pcap` / `.pcapng` into flows and computes the 40 model features following CICFlowMeter (bidirectional flows, FIN/RST termination, 120 s flow timeout, 5 s activity timeout, payload lengths including Ethernet padding, times in whole microseconds). The CICFlowMeter version used for CIC-IDS2017 filled the TCP flag columns incorrectly (Engelen et al., IEEE S&P Workshops 2021); in the cleaned data `PSH Flag Count` and `ACK Flag Count` are almost mutually exclusive. The default **CIC-compatible** mode reproduces that pattern: on the synthetic demo capture it lets the models recognise 282 of 300 port-scan flows (0 of 300 with the real flags), with no false alarm on the normal traffic. It is an empirical approximation, and the app says so.
+
+## Install
+
+Windows 11, PowerShell, Python 3.13 (the pinned versions in `requirements.txt` were tested on it).
 
 ```powershell
 python -m venv C:\venvs\nids
@@ -204,7 +101,9 @@ pip install -r requirements.txt
 pip install -e .
 ```
 
-## ▶️ Run the Pipeline
+XGBoost uses a GPU when one is usable and the CPU otherwise.
+
+## Run the pipeline
 
 From the project folder with the environment active. Each script prints what it did and checks its own output; each has a document in `docs\scripts\`.
 
@@ -214,68 +113,81 @@ python scripts\02_run_eda.py              # exploratory analysis
 python scripts\03_clean_data.py           # cleaning -> data\cleaned\
 python scripts\04_preprocess.py           # split + pipeline -> data\preprocessed\
 python scripts\05_train.py                # the 11 baseline models (about 18 minutes in the reference run)
-python scripts\06_evaluate.py             # baseline evaluation (see --cv-sample-size, --skip-cv for a shorter run)
+python scripts\06_evaluate.py             # baseline evaluation (cross-validation is long; see --cv-sample-size, --skip-cv)
 python scripts\07_optimize.py             # tuning and refit (hours; --dry-run shows the plan first)
 python scripts\06_evaluate.py --stage tuned   # scores the tuned models once, three votes, the final set
 ```
 
-## 🖥️ The Application
+Data mining extensions (each writes `reports\mining\<topic>\` or `reports\experiments\<topic>\`; `--help` lists the quick-run options):
+
+```powershell
+python scripts\09_cluster.py               # k-means sweep, Ward, DBSCAN (2 min)
+python scripts\10_anomaly.py               # Isolation Forest, LOF, autoencoder on BENIGN only (5 min)
+python scripts\11_association_rules.py     # FP-Growth rules and the rule classifier (2 min)
+python scripts\12_explain.py               # PCA, t-SNE, feature importance (10 min)
+python scripts\13_ensembles.py             # weighted votes and stacking (25 min the first time)
+python scripts\14_port_ablation.py         # retrain without Destination Port (10 min)
+python scripts\15_day_split.py             # leave one capture day out (10 min)
+python scripts\16_imbalance.py             # class weights, SMOTE, undersampling (30 min)
+python scripts\17_granularity.py           # binary and attack families (10 min)
+python scripts\18_build_report_pdf.py      # the full written report (French) -> reports\report\rapport_data_mining.pdf (1 min)
+```
+
+Outputs go to `data\`, `artifacts\models\` (trained and tuned), `reports\` and `logs\`; these folders are not part of the source and are rebuilt by the scripts.
+
+## Use the app
 
 ```powershell
 streamlit run app\streamlit_app.py
 ```
 
-* **Single flow:** type the 40 feature values, or load a real example of any class from the test split, then press **Predict**. The page shows the winning class, how many models agree, every model's vote and what the test set says about that class.
-* **Upload a CSV file:** one flow per row, feature names as headers (a `Label` column is ignored; at most 50,000 rows). Invalid rows are refused with the reason; the others are predicted; the result can be downloaded.
-* **About the models:** which version of each model is used and why, the test scores, the known mistakes and the limits.
+- **Analyze a capture:** upload a `.pcap` / `.pcapng` (Wireshark, tcpdump), or press **Try the demo capture** (synthetic web and DNS traffic plus one SYN port scan; also saved as `data\samples\demo_capture.pcap`). The page builds the flows, lets the models vote on each, and shows a verdict, the predicted classes, a timeline, the hosts involved in flagged flows and every flow with the agreement of the models; everything can be downloaded as CSV. *Options*: real TCP flags instead of the CIC-compatible ones, packet limit.
+- **Single flow:** type the 40 feature values (grouped by the first word of the name), or load a real example of any class saved from the test split, then press **Predict**. The page shows the winning class, how many models agree, every model's vote, the tally and what the test set says about that class.
+- **Upload a CSV file:** one flow per row, feature names as headers (a `Label` column is ignored; at most 50,000 rows). Rows with an invalid value are refused with the reason; the others are predicted; the result can be downloaded.
+- **About the models:** which version of each model is used and why, the test scores, the known mistakes and the limits.
+- A missing value is refused by default; the sidebar can switch to "fill with the training median", and the page then says so.
 
-### Open the App From a Clone (no dataset, no training)
+The app loads every model it can; a model that cannot be loaded is named on the page and the vote continues with the others.
 
-This repository contains the **results too**: the trained models (`artifacts\models\`), the fitted preprocessing files (`data\preprocessed\`, without the large arrays), all reports and figures (`reports\`) and the documents (`docs\`). The model files (`*.joblib`) are stored with **Git LFS**, because GitHub refuses normal files above 100 MB.
-
-```powershell
-git lfs install          # once per computer (Git for Windows includes Git LFS)
-git clone https://github.com/dataminingcs21/DM_Project.git
-cd DM_Project
-git lfs pull             # only needed if the model files look like tiny text files
-python -m venv C:\venvs\nids
-C:\venvs\nids\Scripts\Activate.ps1
-pip install -r requirements.txt
-pip install -e .
-streamlit run app\streamlit_app.py
-```
-
-If the app says the models could not be loaded and a `.joblib` file is only a few lines of text (`version https://git-lfs...`), Git LFS was not active: run `git lfs install` and `git lfs pull`. The raw dataset, the cleaned data and the training arrays are **not** in the repository (size); the dataset link is above, and `python scripts\04_preprocess.py` rebuilds the arrays from the cleaned data.
-
-### Compare Predictions With True Labels
+## Compare predictions with true labels
 
 ```powershell
 python scripts\08_make_comparison_files.py                 # 300 random held-out flows
 python scripts\08_make_comparison_files.py --per-class 20  # every class gets flows
 ```
 
-It writes `reports\comparison\comparison_input.csv` (upload it in the app), `comparison_answers.csv` (the true labels) and `comparison.csv` (true and predicted side by side). The flows are real rows of the held-out test split of CIC-IDS2017: unseen by the models, but **not** from another network.
+It writes `reports\comparison\comparison_input.csv` (upload it in the app), `comparison_answers.csv` (the dataset's true labels) and `comparison.csv` (true and predicted side by side). The flows are real rows of the held-out test split of CIC-IDS2017, so they are unseen by the models but **not** from another network.
 
-## 🧪 Tests
+## Tests
 
 ```powershell
 python -m pytest -q
 ```
 
-Reference run: **664 passed, 1 skipped** (the one skipped test only runs on a computer without a usable GPU) and two expected convergence warnings. Tests use synthetic data only and never touch the real `data\`, `artifacts\` or `logs\` folders. The app is tested headlessly with Streamlit's `AppTest`.
+Reference run: **719 passed** (665 for the pipeline and the app, 36 for the mining and experiment modules, 18 for packet captures and the capture tab). The GPU test runs only on a machine with a usable GPU and is skipped otherwise. Tests use synthetic data only and never touch the real `data\`, `artifacts\` or `logs\` folders. The app is tested headlessly with Streamlit's `AppTest`.
 
-## 👥 Team
+## Project layout
 
-* **Team:** CS21
+```
+config\       settings.py (paths, seed, split, rules), model_params.py (grids, display names)
+src\nids\     data, cleaning, eda, preprocessing, models, training, evaluation, optimization,
+              voting, persistence, prediction, utils,
+              mining (clustering, anomaly, association, projection, importance, reporting),
+              experiments (common, ensembles, day_split), capture (pcap_flows, demo)
+scripts\      01 ... 08 (the pipeline and the comparison files), 09 ... 17 (data mining extensions)
+app\          streamlit_app.py, ui_components.py, capture_view.py, style.py
+.streamlit\   config.toml (theme, upload size)
+tests\        pytest files
+docs\         one .md per file (mirrors the layout) and docs\project\ for decisions
+```
 
-## 🚧 Project Status
+The decisions made after each checkpoint, with their reasons, are in `docs\project\checkpoint_1_decisions.md` to `checkpoint_5_decisions.md`.
 
-🟢 **Completed**
+## Not done
 
-The pipeline (inspection, cleaning, preprocessing, training, evaluation, tuning), the majority vote, the Streamlit application and the test suite are finished. Decisions made after each stage, with their reasons, are in `docs\project\checkpoint_1_decisions.md` to `checkpoint_5_decisions.md`.
+- A wider search around the edge-of-grid winners.
+- A multiclass split by attack campaign (the day split is binary, because a held-out day's classes do not exist in its training data).
+- Any test on real, labelled traffic from another network. The app can read such captures, but no labelled capture was available to score it.
+- An exact reproduction of CICFlowMeter's flag bug (the capture reader uses an empirical approximation).
 
-**Not done:** the comparison without `Destination Port`; a split by source file or attack campaign; a wider search around the edge-of-grid winners; a weighted vote; any test on traffic from another network (no such data was available).
-
-## 📚 Objective:
-
-The objective is to build and evaluate a supervised machine learning solution that detects network attacks from network traffic data, to compare eleven classification approaches and their majority vote, and to state clearly what the measured performance does and does not show.
+Done since the first version: the comparison without `Destination Port` (step 14), a split by source file (step 15) and a weighted vote (step 13).
