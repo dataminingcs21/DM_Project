@@ -1,0 +1,67 @@
+test,feature,statistic,p_value,dof,effect_size,n,note,p_holm,reject_h0,effect
+kruskal,Destination Port,18530.274410134793,0.0,14,0.8368834978834249,22143,15 classes,0.0,True,large
+kruskal,Bwd Packet Length Min,14878.549229088345,0.0,14,0.6719604926875776,22143,15 classes,0.0,True,large
+kruskal,Flow IAT Mean,13998.19131718473,0.0,14,0.6322008543575436,22143,15 classes,0.0,True,large
+kruskal,Flow Packets/s,13960.605574003648,0.0,14,0.6307312539081796,22135,15 classes,0.0,True,large
+kruskal,min_seg_size_forward,13558.286115945017,0.0,14,0.6123333987871473,22143,15 classes,0.0,True,large
+kruskal,Bwd Packets/s,13450.2779227526,0.0,14,0.6074554205922049,22143,15 classes,0.0,True,large
+kruskal,Fwd Packets/s,13428.318758808111,0.0,14,0.6064636780240318,22143,15 classes,0.0,True,large
+kruskal,Flow IAT Max,13112.978685138423,0.0,14,0.5922219621144622,22143,15 classes,0.0,True,large
+kruskal,Fwd IAT Mean,12949.447635354518,0.0,14,0.5848364030058043,22143,15 classes,0.0,True,large
+kruskal,Flow Duration,12570.77380409086,0.0,14,0.5677343421592838,22143,15 classes,0.0,True,large
+kruskal,Fwd IAT Max,12475.119911282041,0.0,14,0.5634143217090616,22143,15 classes,0.0,True,large
+kruskal,Idle Mean,12102.21986459772,0.0,14,0.5465730225181881,22143,15 classes,0.0,True,large
+kruskal,Idle Max,12098.169925353295,0.0,14,0.5463901149558891,22143,15 classes,0.0,True,large
+kruskal,Idle Min,12033.782095810599,0.0,14,0.543482164926863,22143,15 classes,0.0,True,large
+kruskal,Fwd IAT Total,11914.548982287464,0.0,14,0.5380972352220876,22143,15 classes,0.0,True,large
+kruskal,Flow IAT Std,11825.356525142133,0.0,14,0.5340690328399482,22143,15 classes,0.0,True,large
+kruskal,Init_Win_bytes_backward,11722.117806729602,0.0,14,0.5294064586184447,22143,15 classes,0.0,True,large
+kruskal,Flow Bytes/s,11147.372482806017,0.0,14,0.5036311775009495,22135,15 classes,0.0,True,large
+kruskal,Bwd Packet Length Std,10979.594619653823,0.0,14,0.49587185528199,22143,15 classes,0.0,True,large
+kruskal,Fwd Header Length,10944.418325168901,0.0,14,0.4942831869374447,22143,15 classes,0.0,True,large
+kruskal,Active Min,10586.003132329466,0.0,14,0.4780960677594375,22143,15 classes,0.0,True,large
+kruskal,Active Mean,10543.464193228154,0.0,14,0.47617488001211067,22143,15 classes,0.0,True,large
+kruskal,Bwd Packet Length Max,10534.908813586271,0.0,14,0.47578849307136983,22143,15 classes,0.0,True,large
+kruskal,Fwd IAT Min,10478.709828192326,0.0,14,0.47325037612647125,22143,15 classes,0.0,True,large
+kruskal,Active Max,10449.222273167716,0.0,14,0.47191862854158234,22143,15 classes,0.0,True,large
+kruskal,Avg Bwd Segment Size,10422.862542376737,0.0,14,0.4707281430031947,22143,15 classes,0.0,True,large
+kruskal,Bwd Packet Length Mean,10422.862542376737,0.0,14,0.4707281430031947,22143,15 classes,0.0,True,large
+kruskal,act_data_pkt_fwd,10313.737727222879,0.0,14,0.4657997347675404,22143,15 classes,0.0,True,large
+kruskal,Fwd Packet Length Max,10238.616523950708,0.0,14,0.462407032966792,22143,15 classes,0.0,True,large
+kruskal,Subflow Bwd Bytes,10216.103233988906,0.0,14,0.4613902643839268,22143,15 classes,0.0,True,large
+kruskal,Total Length of Bwd Packets,10216.103233988906,0.0,14,0.4613902643839268,22143,15 classes,0.0,True,large
+kruskal,Total Fwd Packets,10194.738024225973,0.0,14,0.46042534659136364,22143,15 classes,0.0,True,large
+kruskal,Packet Length Mean,10077.651101236115,0.0,14,0.4551373453724196,22143,15 classes,0.0,True,large
+kruskal,Fwd IAT Std,10003.021847488595,0.0,14,0.45176686150702716,22143,15 classes,0.0,True,large
+kruskal,Max Packet Length,9903.961994026939,0.0,14,0.4472930175244756,22143,15 classes,0.0,True,large
+kruskal,Average Packet Size,9845.834693579895,0.0,14,0.44466781201246025,22143,15 classes,0.0,True,large
+kruskal,Total Backward Packets,9720.471564345386,0.0,14,0.4390060321716821,22143,15 classes,0.0,True,large
+kruskal,Bwd Header Length,9635.145816783579,0.0,14,0.43515246214359943,22143,15 classes,0.0,True,large
+kruskal,Flow IAT Min,9132.54201508722,0.0,14,0.41260242229543775,22135,15 classes,0.0,True,large
+kruskal,Subflow Fwd Bytes,9009.024164026865,0.0,14,0.40687490579111485,22143,15 classes,0.0,True,large
+kruskal,Total Length of Fwd Packets,9009.024164026865,0.0,14,0.40687490579111485,22143,15 classes,0.0,True,large
+kruskal,Init_Win_bytes_forward,9004.796369882877,0.0,14,0.40668396576112714,22143,15 classes,0.0,True,large
+kruskal,Fwd Packet Length Std,8970.581209758375,0.0,14,0.4051387051647717,22143,15 classes,0.0,True,large
+kruskal,Packet Length Std,8696.682710778407,0.0,14,0.3927686166912838,22143,15 classes,0.0,True,large
+kruskal,Packet Length Variance,8696.659029112838,0.0,14,0.39276754715530837,22143,15 classes,0.0,True,large
+kruskal,Down/Up Ratio,8463.704363325342,0.0,14,0.3822466065994644,22143,15 classes,0.0,True,large
+kruskal,Avg Fwd Segment Size,7987.478465474853,0.0,14,0.3607387980071743,22143,15 classes,0.0,True,large
+kruskal,Fwd Packet Length Mean,7987.478465474853,0.0,14,0.3607387980071743,22143,15 classes,0.0,True,large
+kruskal,Min Packet Length,7632.339313473844,0.0,14,0.3446996347879073,22143,15 classes,0.0,True,large
+kruskal,PSH Flag Count,7476.785962367968,0.0,14,0.3376743727923389,22143,15 classes,0.0,True,large
+kruskal,Bwd IAT Total,7415.311343801915,0.0,14,0.33489799222301125,22143,15 classes,0.0,True,large
+kruskal,Idle Std,7246.646706014786,0.0,14,0.3272805846813651,22143,15 classes,0.0,True,large
+kruskal,Bwd IAT Std,6899.26134456763,0.0,14,0.31159160620393955,22143,15 classes,0.0,True,large
+kruskal,Bwd IAT Max,6843.880100843582,0.0,14,0.3090904209576182,22143,15 classes,0.0,True,large
+kruskal,FIN Flag Count,6803.333850073354,0.0,14,0.30725922907024455,22143,15 classes,0.0,True,large
+kruskal,Bwd IAT Mean,6570.715870900115,0.0,14,0.296753494304946,22143,15 classes,0.0,True,large
+kruskal,Bwd IAT Min,6347.4583644007635,0.0,14,0.2866705069280446,22143,15 classes,0.0,True,large
+kruskal,Fwd Packet Length Min,6217.59274218267,0.0,14,0.28080538082299117,22143,15 classes,0.0,True,large
+kruskal,Active Std,5061.992922287472,0.0,14,0.22861498158646334,22143,15 classes,0.0,True,large
+kruskal,Fwd PSH Flags,4102.281575757276,0.0,14,0.18527150102778775,22143,15 classes,0.0,True,large
+kruskal,URG Flag Count,3623.002440888244,0.0,14,0.1636257989742681,22143,15 classes,0.0,True,large
+kruskal,ACK Flag Count,3566.7300259499743,0.0,14,0.16108436572802703,22143,15 classes,0.0,True,large
+kruskal,ECE Flag Count,10.071500005822198,0.7569375320538453,14,0.00045485954321299786,22143,15 classes,0.7569375320538453,False,negligible
+kruskal,Bwd PSH Flags,,,14,0.0,22143,constant feature,,False,negligible
+kruskal,Fwd URG Flags,,,14,0.0,22143,constant feature,,False,negligible
+kruskal,RST Flag Count,,,14,0.0,22143,constant feature,,False,negligible

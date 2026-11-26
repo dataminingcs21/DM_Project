@@ -1,0 +1,70 @@
+{
+  "sample_rows": 22143,
+  "cleaned_rows": 2522362,
+  "cap_per_class": 2000,
+  "seed": 42,
+  "n_features": 66,
+  "alpha": 0.05,
+  "summary": [
+    {
+      "test": "chi2",
+      "title": "Chi-square test of independence (binned feature x class)",
+      "features_tested": 58,
+      "reject_h0_holm": 57,
+      "large_effect": 56,
+      "top_feature": "Destination Port"
+    },
+    {
+      "test": "anova",
+      "title": "One-way ANOVA (class means)",
+      "features_tested": 63,
+      "reject_h0_holm": 62,
+      "large_effect": 51,
+      "top_feature": "Subflow Bwd Bytes"
+    },
+    {
+      "test": "kruskal",
+      "title": "Kruskal-Wallis H test (class distributions)",
+      "features_tested": 63,
+      "reject_h0_holm": 62,
+      "large_effect": 62,
+      "top_feature": "Destination Port"
+    },
+    {
+      "test": "shapiro",
+      "title": "Shapiro-Wilk normality test",
+      "features_tested": 62,
+      "reject_h0_holm": 62,
+      "large_effect": 0,
+      "top_feature": "Total Length of Bwd Packets"
+    },
+    {
+      "test": "mannwhitney",
+      "title": "Mann-Whitney U test (BENIGN vs attack)",
+      "features_tested": 63,
+      "reject_h0_holm": 56,
+      "large_effect": 2,
+      "top_feature": "Init_Win_bytes_forward"
+    }
+  ],
+  "spearman_kruskal_vs_anova": 0.3820032360978533,
+  "shapiro_median_w_raw": 0.3468555928317572,
+  "shapiro_median_w_log": 0.7817365128009922,
+  "class_counts": {
+    "BENIGN": 2000,
+    "DDoS": 2000,
+    "DoS GoldenEye": 2000,
+    "DoS Slowhttptest": 2000,
+    "DoS Hulk": 2000,
+    "DoS slowloris": 2000,
+    "FTP-Patator": 2000,
+    "SSH-Patator": 2000,
+    "PortScan": 2000,
+    "Bot": 1953,
+    "Web Attack - Brute Force": 1470,
+    "Web Attack - XSS": 652,
+    "Infiltration": 36,
+    "Web Attack - Sql Injection": 21,
+    "Heartbleed": 11
+  }
+}

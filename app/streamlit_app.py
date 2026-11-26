@@ -4,8 +4,13 @@ Start it from the project folder (virtual environment active)::
 
     streamlit run app\\streamlit_app.py
 
-The page only composes the building blocks of ``ui_components.py``; the work is done by
-``nids.prediction.predictor`` (input check, preprocessing, the 11 models, the majority vote).
+Five pages (``st.navigation``):
+
+* **Detection** (default): composes the building blocks of ``ui_components.py``; the work is done by
+  ``nids.prediction.predictor`` (input check, preprocessing, the 11 models, the majority vote).
+* **Analysis**: data quality, exploratory analysis, statistical tests, benchmark and batch inference
+  (``page_*.py``); they read small committed files in ``reports/`` and work without the trained models.
+
 Nothing is trained or tuned here, and nothing typed in the page is stored.
 """
 
@@ -19,6 +24,10 @@ sys.path.insert(0, str(Path(__file__).resolve().parent))  # so "import ui_compon
 import streamlit as st  # noqa: E402
 
 import capture_view  # noqa: E402
+import page_benchmark  # noqa: E402
+import page_eda  # noqa: E402
+import page_quality  # noqa: E402
+import page_stats  # noqa: E402
 import style  # noqa: E402
 import ui_components as ui  # noqa: E402
 from config import model_params, settings  # noqa: E402
@@ -122,9 +131,7 @@ def header(predictor: predictor_module.Predictor, scores) -> None:
     st.write("")
 
 
-def main() -> None:
-    st.set_page_config(page_title="Network intrusion detection", page_icon=":material/shield:", layout="wide")
-    style.inject_css()
+def detection_page() -> None:
     try:
         predictor = ui.get_predictor()
     except (predictor_module.PredictorError, FileNotFoundError, ValueError) as error:
@@ -157,6 +164,24 @@ def main() -> None:
     with tab_models:
         ui.render_models_panel(predictor, scores, reliability)
         ui.render_limits()
+
+
+def main() -> None:
+    st.set_page_config(page_title="Network intrusion detection", page_icon=":material/shield:", layout="wide")
+    style.inject_css()
+    # The analysis pages read only small committed files (reports/), so they work without the trained models.
+    pages = {
+        "Detection": [
+            st.Page(detection_page, title="Detection (11-model vote)", icon=":material/shield:", url_path="detection", default=True),
+        ],
+        "Analysis": [
+            st.Page(page_quality.render, title="1. Data quality", icon=":material/fact_check:", url_path="quality"),
+            st.Page(page_eda.render, title="2. Exploratory analysis", icon=":material/insights:", url_path="eda"),
+            st.Page(page_stats.render, title="3. Statistical tests", icon=":material/functions:", url_path="statistics"),
+            st.Page(page_benchmark.render, title="4. Benchmark & batch inference", icon=":material/leaderboard:", url_path="benchmark"),
+        ],
+    }
+    st.navigation(pages).run()
 
 
 main()

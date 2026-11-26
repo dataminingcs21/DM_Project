@@ -1,0 +1,6 @@
+test,title,features_tested,reject_h0_holm,large_effect,top_feature
+chi2,Chi-square test of independence (binned feature x class),58,57,56,Destination Port
+anova,One-way ANOVA (class means),63,62,51,Subflow Bwd Bytes
+kruskal,Kruskal-Wallis H test (class distributions),63,62,62,Destination Port
+shapiro,Shapiro-Wilk normality test,62,62,0,Total Length of Bwd Packets
+mannwhitney,Mann-Whitney U test (BENIGN vs attack),63,56,2,Init_Win_bytes_forward

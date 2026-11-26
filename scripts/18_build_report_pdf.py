@@ -8,7 +8,7 @@ Every table is read from the reports of steps 01-17 (JSON / CSV), never retyped,
 A few extra figures (French, matplotlib) are drawn into reports/report/figures/; the other figures are the ones
 the pipeline already produced.  The demo capture is analysed live with the saved models for chapter 12.
 
-Output: reports/report/rapport_data_mining.pdf
+Output: reports/report/rapport_data_mining.pdf, copied to docs/Rapport_Projet.pdf
 
 Exit codes: 0 done; 1 a needed report is missing (run the step it names).
 """
@@ -16,6 +16,7 @@ Exit codes: 0 done; 1 a needed report is missing (run the step it names).
 from __future__ import annotations
 
 import json
+import shutil
 import sys
 from datetime import date
 from pathlib import Path
@@ -56,6 +57,7 @@ REP = ROOT / "reports"
 OUT_DIR = REP / "report"
 FIG = OUT_DIR / "figures"
 PDF = OUT_DIR / "rapport_data_mining.pdf"
+DOCS_PDF = ROOT / "docs" / "Rapport_Projet.pdf"  # the deliverable path asked for by the course
 
 ACCENT = "#1f6fd1"
 GREY = "#b8b8ae"
@@ -488,6 +490,15 @@ def build() -> int:
     day_pc = rc("reports/experiments/day_split/per_class.csv", "scripts/15_day_split.py")
     imb = rc("reports/experiments/imbalance/imbalance_comparison.csv", "scripts/16_imbalance.py")
     gran = rc("reports/experiments/granularity/granularity_comparison.csv", "scripts/17_granularity.py")
+    st_summary = rc("reports/stats/summary.csv", "scripts/19_stat_tests.py")
+    st_report = rj("reports/stats/stat_tests_report.json", "scripts/19_stat_tests.py")
+    st_kw = rc("reports/stats/kruskal.csv", "scripts/19_stat_tests.py")
+    st_mw = rc("reports/stats/mannwhitney.csv", "scripts/19_stat_tests.py")
+    st_sh = rc("reports/stats/shapiro.csv", "scripts/19_stat_tests.py")
+    bm_summary = rc("reports/benchmark/cv_summary.csv", "scripts/20_pipeline_benchmark.py")
+    bm_paired = rc("reports/benchmark/paired_vs_baseline.csv", "scripts/20_pipeline_benchmark.py")
+    bm_report = rj("reports/benchmark/benchmark_report.json", "scripts/20_pipeline_benchmark.py")
+    bm_pc = rc("reports/benchmark/per_class_f1_oof.csv", "scripts/20_pipeline_benchmark.py")
 
     models = comparison["models"]
     votes = {v["key"]: v for v in comparison["votes"]}
@@ -524,7 +535,7 @@ def build() -> int:
                 ["Méthodes", "11 classifieurs + vote · k-means, Ward, DBSCAN · FP-Growth · Isolation Forest, LOF, autoencodeur"],
                 ["Résultat principal", vote_line],
                 ["Attaques jamais vues", f"détection {pct(day['pooled_detection_unseen'], 0)} (contre {pct(day['random_split']['detection_rate'], 2)} si l'attaque est connue)"],
-                ["Livrables", "18 scripts reproductibles · application Streamlit (CSV et .pcap) · 719 tests automatisés"],
+                ["Livrables", "20 scripts reproductibles · 2 carnets exécutés · application Streamlit à 5 pages (qualité, EDA, tests, benchmark, détection CSV et .pcap) · 744 tests automatisés"],
             ],
             [3.6, 13.0],
         ),
@@ -913,7 +924,100 @@ def build() -> int:
         CondPageBreak(9 * cm),
     ]
 
-    # ---------------- 11. Application
+
+    # ---------------- 11. Validation statistique et benchmark hermétique
+    test_fr = {
+        "chi2": ("Chi-deux d'indépendance", "variable discrétisée et classe indépendantes", "V de Cramér"),
+        "anova": ("ANOVA à un facteur", "même moyenne dans toutes les classes", "eta²"),
+        "kruskal": ("Kruskal-Wallis", "même distribution dans toutes les classes", "epsilon²"),
+        "shapiro": ("Shapiro-Wilk", "loi normale", "W"),
+        "mannwhitney": ("Mann-Whitney U", "même distribution BENIGN et attaques", "r bisérial de rang"),
+    }
+    strows = [["Test", "H0", "Taille d'effet", "Testées", "H0 rejetée (Holm)", "Effet fort", "Variable en tête"]]
+    for r in st_summary.itertuples():
+        name, h0, eff = test_fr[r.test]
+        strows.append([name, h0, eff, str(r.features_tested), str(r.reject_h0_holm), "–" if r.test == "shapiro" else str(r.large_effect), str(r.top_feature)])
+    kwrows = [["Variable", "H de Kruskal-Wallis", "epsilon²", "Effet"]]
+    for r in st_kw.head(8).itertuples():
+        kwrows.append([r.feature, f"{r.statistic:,.0f}".replace(",", " "), fr(r.effect_size, 3), {"large": "fort", "medium": "moyen", "small": "faible", "negligible": "négligeable"}.get(r.effect, r.effect)])
+    mwrows = [["Variable", "r bisérial", "Médianes (BENIGN / attaque)"]]
+    for r in st_mw.head(6).itertuples():
+        mwrows.append([r.feature, fr(r.effect_size, 3), str(r.note).replace("median BENIGN ", "").replace(" vs attack ", " / ")])
+    fam_fr = {"floor": "plancher", "baseline": "baseline", "ensemble": "ensemble"}
+    bmrows = [["Modèle", "Famille", "F1 macro (moy. ± écart-type)", "Acc. équilibrée", "MCC", "Fausses alertes", "Apprentissage (s)"]]
+    for r in bm_summary.itertuples():
+        bmrows.append([r.display, fam_fr.get(r.family, r.family), f"{fr(r.macro_f1_mean, 4)} ± {fr(r.macro_f1_std, 4)}", fr(r.balanced_accuracy_mean, 4), fr(r.mcc_mean, 4), pct(r.false_alarm_rate_mean, 2), fr(r.fit_seconds_mean, 1)])
+    ref = bm_report["best_baseline"]
+    prows = [["Modèle", "Écart moyen de F1 macro", "Écart-type", "Plis gagnés"]]
+    for r in bm_paired.itertuples():
+        if r.model in (ref, "dummy"):
+            continue
+        prows.append([r.display, f"{getattr(r, 'mean_diff_vs_' + ref):+.4f}".replace(".", ","), fr(r.std_diff, 4), f"{r.folds_better} / {r.folds}"])
+    best_disp = bm_summary.iloc[0]["display"]
+    hold = bm_report["holdout"]
+    weak = bm_pc.set_index("class").drop(columns="support").max(axis=1).sort_values().head(4)
+    weakrows = [["Classe", "Effectif", "Meilleur F1 hors-pli"]] + [[c, str(int(bm_pc.set_index("class").loc[c, "support"])), fr(v, 3)] for c, v in weak.items()]
+    story += [
+        H1("11. Validation statistique et benchmark hermétique"),
+        P("Ce chapitre répond à deux exigences de méthode. Il vérifie par des <b>tests d'hypothèses formels</b> ce que l'exploration (chapitre 2) suggère. "
+          "Il compare ensuite des <b>baselines</b> et des <b>ensembles</b> dans un pipeline où la fuite de données est impossible par construction. "
+          "Les deux analyses sont aussi dans l'application (pages « Statistical tests » et « Benchmark ») et dans les carnets exécutés "
+          "<font name='Courier'>notebooks/01</font> et <font name='Courier'>02</font>."),
+        H2("11.1 Méthodologie des tests"),
+        P(f"Les tests portent sur un échantillon plafonné par classe des données nettoyées ({n(st_report['sample_rows'])} flux, au plus "
+          f"{n(st_report['cap_per_class'])} par classe, petites classes entières), pour chacune des {st_report['n_features']} variables. Avec autant de lignes, "
+          f"presque toute p-valeur est minuscule. Les p-valeurs sont donc corrigées par la méthode de <b>Holm</b> au sein de chaque test, et les conclusions "
+          f"reposent sur les <b>tailles d'effet</b>, indépendantes de l'effectif."),
+        tblock(table(strows, [2.6, 3.9, 2.0, 1.3, 1.9, 1.3, 3.6], num_cols=(3, 4, 5)), "Tableau 17 – Cinq tests d'hypothèses sur les 66 variables (seuil 5 %, correction de Holm)."),
+        H2("11.2 Résultats"),
+        bullets([
+            f"<b>Shapiro-Wilk</b> : aucune variable n'est normale (W médian {fr(st_report['shapiro_median_w_raw'], 3)} brut, {fr(st_report['shapiro_median_w_log'], 3)} après log1p "
+            "signé). Cela justifie le log1p du pipeline et l'imputation par la médiane. Les hypothèses de l'ANOVA ne tiennent donc pas : Kruskal-Wallis sert de test de référence.",
+            f"<b>Kruskal-Wallis et ANOVA</b> rejettent H0 pour les mêmes variables. Leurs classements par taille d'effet ne concordent que modérément (ρ de Spearman "
+            f"{fr(st_report['spearman_kruskal_vs_anova'], 2)}), car eta² compare des moyennes dominées par quelques flux extrêmes. Le classement par rangs est retenu.",
+            "<b>Chi-deux</b> : la classe dépend de presque toutes les variables discrétisées, souvent avec un V de Cramér fort. <font name='Courier'>Destination Port</font> "
+            "arrive en tête, ce qui rejoint l'ablation du port (section 10.2).",
+            "<b>Mann-Whitney U</b> : le décalage entre BENIGN et l'ensemble des attaques est nettement plus faible que les écarts entre types d'attaque. Un seuil sur une "
+            "seule variable ne suffit donc pas à détecter les attaques, et il faut des modèles multivariés.",
+        ]),
+        tblock(table(kwrows, [6.4, 3.4, 2.4, 2.4], num_cols=(1, 2)), "Tableau 18 – Les 8 variables qui séparent le plus les classes (Kruskal-Wallis)."),
+        figure(REP / "stats/figures/effect_sizes.png", "Figure 18 – Tailles d'effet des 20 premières variables : V de Cramér, epsilon², r bisérial (rouge : valeurs plus faibles chez les attaques).", 16.5),
+        tblock(table(mwrows, [6.4, 2.6, 6.0], num_cols=(1,)), "Tableau 19 – Plus forts décalages BENIGN / attaques (Mann-Whitney U)."),
+        P("<b>Limite.</b> Les flux d'une même session d'attaque ne sont pas des observations indépendantes, ce qui rend les p-valeurs optimistes. Les tailles d'effet sont la partie robuste."),
+        H2("11.3 Pipeline hermétique et validation croisée stratifiée"),
+        P("Dans la chaîne principale (scripts 04 à 07), le prétraitement est ajusté une fois sur tout l'entraînement, puis la validation croisée de l'étape 06 travaille "
+          "sur les données déjà transformées : les médianes, les colonnes gardées et la standardisation ont vu tous les plis. L'effet est négligeable sur 2 millions de "
+          "lignes, mais c'est une fuite de principe. Le script 20 la supprime : chaque candidat est un seul "
+          "<font name='Courier'>Pipeline(ColumnTransformer(prétraitement) → modèle)</font>. Le <font name='Courier'>ColumnTransformer</font> sélectionne les 66 variables "
+          "(il ignore <font name='Courier'>Label</font> et <font name='Courier'>source_file</font>), puis applique infini → manquant, médiane, log1p signé, filtre des "
+          "colonnes constantes et corrélées, et standardisation. <font name='Courier'>StratifiedKFold</font> clone et réajuste <b>tout</b> le pipeline dans chaque pli."),
+        P(f"Données : un échantillon de {n(bm_report['sample_rows'])} flux (au plus {n(bm_report['cap_per_class'])} par classe), découpé en {n(bm_report['dev_rows'])} lignes "
+          f"de développement ({bm_report['folds']} plis stratifiés) et {n(bm_report['holdout_rows'])} lignes de hold-out évaluées une seule fois. L'échantillon est plafonné, "
+          "donc les scores ne sont pas comparables à ceux du chapitre 5. Seule la comparaison entre modèles compte."),
+        tblock(table(bmrows, [3.6, 1.9, 3.6, 2.0, 1.6, 2.0, 2.0], num_cols=(2, 3, 4, 5, 6)), f"Tableau 20 – Validation croisée stratifiée à {bm_report['folds']} plis, pipeline réajusté dans chaque pli."),
+        figure(REP / "benchmark/figures/cv_macro_f1.png", "Figure 19 – F1 macro par modèle (moyenne et écart-type) et dispersion d'un pli à l'autre.", 16.5),
+        P(f"Comparaison appariée contre la meilleure baseline ({ref.replace('_', ' ')}) : chaque pli est le même pour tous les modèles, donc la différence pli par pli "
+          "élimine la difficulté propre au pli."),
+        table(prows, [4.6, 4.0, 3.0, 3.0], num_cols=(1, 2, 3)),
+        key(f"Les ensembles de boosting battent la meilleure baseline sur <b>tous</b> les plis. Le meilleur modèle, <b>{best_disp}</b>, atteint en hold-out un F1 macro de "
+            f"<b>{fr(hold['macro_f1'], 4)}</b>, avec {pct(hold['detection_rate'], 2)} d'attaques détectées et {pct(hold['false_alarm_rate'], 2)} de fausses alertes. "
+            "Random Forest et Extra Trees gagnent en moyenne, mais pas sur chaque pli. La régression logistique perd presque partout."),
+        H2("11.4 Analyse d'erreurs"),
+        figure(REP / "benchmark/figures/per_class_f1_oof.png", "Figure 20 – F1 hors-pli par classe et par modèle (effectif entre parenthèses).", 15.5),
+        tblock(table(weakrows, [6.4, 3.0, 4.0], num_cols=(1, 2)), "Classes les plus difficiles : meilleur F1 atteint par l'un des modèles."),
+        bullets([
+            "<b>Web Attack Brute Force / XSS</b> : c'est la confusion dominante, pour tous les modèles. Au niveau des statistiques de flux, ces attaques sont quasi "
+            "identiques (même serveur, port 80, requêtes HTTP de tailles proches). Les séparer demanderait le contenu applicatif, absent du jeu.",
+            "<b>DoS Slowhttptest / slowloris</b> : deux attaques lentes au principe voisin, avec quelques confusions dans les deux sens.",
+            "<b>Bot et BENIGN</b> : une partie du trafic du botnet ressemble à du trafic normal, ce qui donne des attaques manquées (déjà vu au chapitre 5).",
+            "<b>Infiltration, Heartbleed, Sql Injection</b> : quelques dizaines de flux. Leur F1 varie fortement d'un pli à l'autre.",
+            "<b>Régression logistique</b> : elle échoue sur les classes qui demandent des interactions entre variables (seuils combinés sur ports et fenêtres TCP). "
+            "C'est là que les ensembles d'arbres gagnent le plus.",
+        ]),
+        CondPageBreak(9 * cm),
+    ]
+
+    # ---------------- 12. Application
     app_items = [
         "<b>Analyser une capture</b> : dépôt d'un fichier .pcap / .pcapng (ou bouton de démonstration) ; verdict, indicateurs, classes prédites, chronologie, hôtes impliqués, détail de chaque flux et export CSV.",
         "<b>Flux unique</b> : saisie des 40 variables ou chargement d'un vrai exemple ; vote de chaque modèle.",
@@ -921,9 +1025,17 @@ def build() -> int:
         "<b>Les modèles</b> : version utilisée, scores, erreurs connues et limites.",
     ]
     story += [
-        H1("11. Application : de la capture réseau à la décision"),
+        H1("12. Application : de la capture réseau à la décision"),
         P("Le déploiement prend la forme d'une application web Streamlit (<font name='Courier'>streamlit run app/streamlit_app.py</font>), au thème sombre de "
-          "console de sécurité, organisée en quatre onglets :"),
+          "console de sécurité. Quatre pages d'<b>analyse</b> lisent de petits fichiers versionnés dans <font name='Courier'>reports/</font> et fonctionnent donc "
+          "sans le jeu de données ni les modèles :"),
+        bullets([
+            "<b>Qualité des données</b> : doublons, valeurs manquantes et infinies, types, valeurs impossibles, colonnes constantes, labels contradictoires ; mêmes contrôles sur un CSV déposé.",
+            "<b>Exploration</b> : 13 figures interactives (distributions, boîtes par classe, corrélations, nuage de deux variables, ports, profils de classes, classe x jour).",
+            "<b>Tests statistiques</b> : les cinq tests du chapitre 11 sur toutes les variables, et en direct sur une variable choisie (avec Q-Q plot).",
+            "<b>Benchmark et inférence par lot</b> : baselines contre ensembles en validation croisée, scores des 11 modèles, et dépôt d'un CSV avec export des prédictions.",
+        ], numbered=True),
+        P("La page de <b>détection</b> (vote des 11 modèles) est organisée en quatre onglets :"),
         bullets(app_items, numbered=True),
         H2("11.1 Des paquets aux flux"),
         P("Les modèles lisent les 40 statistiques de flux de CICFlowMeter, pas des paquets. Le module <font name='Courier'>capture/pcap_flows.py</font> "
@@ -939,7 +1051,7 @@ def build() -> int:
     if f_demo is not None:
         c, r = demo["cic"], demo["real"]
         story += [
-            figure(f_demo, "Figure 18 – Analyse de la capture de démonstration (mode compatible CIC-IDS2017), calculée par les modèles enregistrés.", 16),
+            figure(f_demo, "Figure 21 – Analyse de la capture de démonstration (mode compatible CIC-IDS2017), calculée par les modèles enregistrés.", 16),
             tblock(table(
                 [
                     ["Mode des flags", "Flux du scan détectés", "Fausses alertes sur le trafic normal"],
@@ -947,7 +1059,7 @@ def build() -> int:
                     ["Flags TCP réels", f"{r['scan_detected']} sur {r['scan_flows']}", f"{r['normal_alarms']} sur {r['normal_flows']}"],
                 ],
                 [6.0, 4.5, 6.0], num_cols=(1, 2),
-            ), f"Tableau 17 – Capture de démonstration : {n(c['packets'])} paquets, {c['flows']} flux, dont un scan SYN de 300 ports."),
+            ), f"Tableau 21 – Capture de démonstration : {n(c['packets'])} paquets, {c['flows']} flux, dont un scan SYN de 300 ports."),
             key("Avec les vrais flags, le scan passe <b>entièrement inaperçu</b> ; avec le motif du dataset, il est reconnu. Les modèles ont donc en partie appris "
                 "un défaut de l'outil qui a fabriqué leurs données. Le mode compatible est une approximation empirique de ce défaut, et l'application le signale."),
         ]
@@ -955,10 +1067,10 @@ def build() -> int:
 
     # ---------------- 12. Qualité logicielle
     story += [
-        H1("12. Qualité logicielle et reproductibilité"),
+        H1("13. Qualité logicielle et reproductibilité"),
         bullets([
-            "<b>719 tests automatisés</b> (pytest) : 665 pour la chaîne de classification et l'application, 36 pour les modules de data mining et d'expériences, "
-            "18 pour la lecture des captures et l'onglet correspondant. Ils n'utilisent que des données synthétiques ; l'application est testée sans navigateur.",
+            "<b>744 tests automatisés</b> (pytest) : 665 pour la chaîne de classification et l'application, 36 pour les modules de data mining et d'expériences, "
+            "18 pour la lecture des captures et l'onglet correspondant, 25 pour les tests statistiques, les contrôles qualité, le benchmark hermétique et les pages d'analyse. Ils n'utilisent que des données synthétiques ; l'application est testée sans navigateur.",
             "<b>Écritures atomiques</b> : chaque fichier est écrit dans un fichier temporaire puis renommé, pour qu'une interruption ne laisse jamais un fichier à moitié écrit.",
             "<b>Contrôle de fraîcheur</b> : données prétraitées et modèles portent le hash de leurs réglages ; un réglage modifié les déclare périmés.",
             "<b>Pas de fuite de données</b> : le test n'est lu que par l'évaluation ; toutes les autres étapes n'apprennent que sur l'entraînement.",
@@ -974,7 +1086,8 @@ def build() -> int:
                 ["python scripts/13_ensembles.py … 17_granularity.py", "5 expériences critiques", "10 à 30 min chacune"],
                 ["python scripts/18_build_report_pdf.py", "ce rapport", "≈ 1 min"],
                 ["streamlit run app/streamlit_app.py", "application", "immédiat"],
-                ["python -m pytest -q", "719 tests", "≈ 2 min"],
+                ["python scripts/19_stat_tests.py, 20_pipeline_benchmark.py", "tests d'hypothèses, benchmark hermétique", "1 min, ≈ 15 min"],
+                ["python -m pytest -q", "744 tests", "≈ 2 min"],
             ],
             [7.6, 6.0, 3.0],
         ),
@@ -983,7 +1096,7 @@ def build() -> int:
 
     # ---------------- 13. Discussion
     story += [
-        H1("13. Discussion et limites"),
+        H1("14. Discussion et limites"),
         P("Les résultats décrivent un très bon détecteur des attaques connues de ce laboratoire, pas un IDS prêt pour un autre réseau. Trois raisons, chacune mesurée :"),
         bullets([
             f"<b>Le découpage aléatoire est optimiste</b> : séparer par jour fait chuter la détection de {pct(day['random_split']['detection_rate'], 2)} à {pct(day['pooled_detection_unseen'], 0)}.",
@@ -1000,7 +1113,7 @@ def build() -> int:
             "Aucune capture étiquetée d'un autre réseau n'était disponible pour mesurer l'application en conditions réelles.",
             "Le module de captures réimplémente CICFlowMeter et n'en reproduit le défaut des flags que de façon empirique.",
         ]),
-        H1("14. Conclusion et perspectives"),
+        H1("15. Conclusion et perspectives"),
         P(f"Sur CIC-IDS2017, les modèles à base d'arbres reconnaissent les attaques connues avec un F1 macro de 0,91 à 0,92 ; un Random Forest seul suffit. Mais une "
           f"attaque d'un type nouveau n'est détectée qu'une fois sur trois, et une part de la performance repose sur le port et sur un défaut de l'outil d'extraction. "
           f"Les quatre tâches de data mining se complètent : la classification pour le connu, le clustering pour la structure, les règles pour l'explication, "
@@ -1027,7 +1140,9 @@ def build() -> int:
 
     doc = ReportDoc(str(PDF))
     doc.multiBuild(attach_headings(story))
-    print(f"Report: {PDF} ({PDF.stat().st_size / 1e6:.1f} MB)")
+    DOCS_PDF.parent.mkdir(parents=True, exist_ok=True)
+    shutil.copyfile(PDF, DOCS_PDF)
+    print(f"Report: {PDF} ({PDF.stat().st_size / 1e6:.1f} MB), copied to {DOCS_PDF}")
     return 0
 
 

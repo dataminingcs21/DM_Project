@@ -1,0 +1,6230 @@
+vrai,prédit,confiance
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+Bot,Bot,0.9993
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+BENIGN,BENIGN,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7458
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9686
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9997
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8128
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.99
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9872
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9992
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6742
+Web Attack - Brute Force,Web Attack - Brute Force,0.9597
+Bot,Bot,0.9998
+BENIGN,BENIGN,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9983
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9999
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7232
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9993
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9516
+FTP-Patator,FTP-Patator,0.9999
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS slowloris,DoS slowloris,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6065
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - XSS,0.9963
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+Web Attack - Brute Force,Web Attack - Brute Force,0.6923
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.7057
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,0.9998
+BENIGN,BENIGN,0.9996
+Infiltration,Infiltration,0.7024
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9994
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.869
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9852
+BENIGN,BENIGN,0.9985
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,0.9947
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,0.9999
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - XSS,0.773
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9997
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.94
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9996
+DoS slowloris,DoS slowloris,0.9992
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9998
+BENIGN,BENIGN,0.9999
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9993
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9996
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,0.9999
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9996
+Bot,Bot,0.9798
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,0.9987
+BENIGN,BENIGN,0.9996
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9988
+DoS Slowhttptest,DoS Slowhttptest,0.9979
+DoS Hulk,DoS Hulk,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9992
+BENIGN,BENIGN,0.9988
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8064
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9622
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9996
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8185
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7196
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9991
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8966
+DoS Hulk,DoS Hulk,0.9997
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.6732
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9392
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8404
+Web Attack - Brute Force,Web Attack - Brute Force,0.5845
+DoS slowloris,DoS slowloris,0.9995
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7936
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,0.9998
+Bot,Bot,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,0.9993
+BENIGN,BENIGN,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6731
+SSH-Patator,SSH-Patator,0.9998
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9998
+BENIGN,BENIGN,0.9989
+Web Attack - Brute Force,Web Attack - Brute Force,0.9343
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,0.9999
+BENIGN,BENIGN,0.9998
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9439
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9963
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+Infiltration,Infiltration,0.9997
+BENIGN,BENIGN,0.9986
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9848
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9994
+DoS Hulk,DoS Hulk,0.9999
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9994
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9998
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9975
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7407
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9992
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9997
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9996
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6076
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6063
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9994
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - XSS,0.9752
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9992
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.982
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5893
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9995
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8617
+Web Attack - Brute Force,Web Attack - XSS,0.5535
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5838
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+Web Attack - XSS,Web Attack - XSS,0.7437
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6882
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7203
+DoS Hulk,DoS Hulk,0.9997
+BENIGN,BENIGN,0.9985
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9858
+DoS slowloris,DoS slowloris,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6169
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9998
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS Hulk,DoS Hulk,0.9991
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9872
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,0.9991
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,0.9941
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.5452
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Sql Injection,Web Attack - Sql Injection,0.8615
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - XSS,0.9769
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9997
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9998
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9996
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9998
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.5124
+Web Attack - Brute Force,Web Attack - Brute Force,0.9002
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.75
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7613
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9698
+Bot,Bot,1.0
+Bot,Bot,0.9957
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS Slowhttptest,0.7479
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9996
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7559
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9928
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9996
+Web Attack - Brute Force,Web Attack - Brute Force,0.9253
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9996
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9998
+BENIGN,BENIGN,0.9996
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9998
+Web Attack - XSS,Web Attack - XSS,0.7168
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5216
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9995
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8408
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9983
+Web Attack - XSS,Web Attack - Brute Force,0.8468
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9808
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9998
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,0.9997
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9996
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+Bot,Bot,0.9993
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9996
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9995
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,0.9982
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9007
+DDoS,DDoS,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9572
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9999
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.924
+Web Attack - Brute Force,Web Attack - Brute Force,0.9019
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8884
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,0.9996
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9998
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9994
+Bot,Bot,1.0
+Bot,Bot,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,0.9999
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7389
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9998
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9998
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9971
+DoS GoldenEye,DoS GoldenEye,0.9992
+DoS slowloris,DoS slowloris,0.9979
+Web Attack - XSS,Web Attack - Brute Force,0.8643
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.9728
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.91
+BENIGN,BENIGN,0.9999
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,0.9999
+DoS slowloris,DoS slowloris,0.9995
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,0.9999
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - XSS,0.9915
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9863
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9995
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5135
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9994
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6998
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9997
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9991
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,0.9999
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9909
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.9886
+DoS slowloris,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9998
+DoS Hulk,DoS Hulk,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9951
+BENIGN,BENIGN,0.9868
+Web Attack - Brute Force,Web Attack - Brute Force,0.593
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.8047
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9979
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.681
+Web Attack - Brute Force,Web Attack - Brute Force,0.9504
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5707
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,BENIGN,0.7984
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6985
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6274
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9944
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9995
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9995
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,0.9996
+Bot,Bot,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7456
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8477
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9998
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5547
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9943
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9996
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5775
+DoS slowloris,DoS slowloris,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.6725
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5759
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.504
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,0.9999
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.5303
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9707
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9997
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9605
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9177
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,0.9998
+DoS slowloris,DoS slowloris,1.0
+Web Attack - XSS,Web Attack - XSS,0.7228
+DoS slowloris,DoS slowloris,0.9994
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - XSS,Web Attack - Brute Force,0.8541
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6021
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9792
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,0.9968
+Infiltration,Infiltration,0.9993
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9998
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS slowloris,DoS slowloris,1.0
+Heartbleed,Heartbleed,0.9916
+DoS slowloris,DoS slowloris,0.9973
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9962
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9997
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,0.9999
+Bot,Bot,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9987
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,0.9995
+Web Attack - Brute Force,Web Attack - Brute Force,0.6567
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,BENIGN,0.4623
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7833
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7242
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9933
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9962
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9992
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6331
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9999
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9998
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9985
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - XSS,0.6926
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.5116
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9998
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9888
+PortScan,PortScan,1.0
+PortScan,PortScan,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9989
+DoS Hulk,DoS Hulk,0.9999
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9976
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,0.9998
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8808
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9997
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.8591
+SSH-Patator,SSH-Patator,0.9995
+DoS slowloris,DoS slowloris,0.9995
+Web Attack - XSS,Web Attack - Brute Force,0.7618
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5692
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9995
+SSH-Patator,SSH-Patator,0.9999
+BENIGN,BENIGN,0.9998
+DoS slowloris,DoS slowloris,0.9994
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,0.9992
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9492
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9995
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,1.0
+PortScan,PortScan,0.9996
+BENIGN,BENIGN,0.999
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9996
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9999
+Bot,Bot,0.9998
+BENIGN,BENIGN,0.9975
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,0.9718
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9995
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9985
+DoS GoldenEye,DoS GoldenEye,0.9997
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9996
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - XSS,0.5183
+BENIGN,BENIGN,0.9986
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9998
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,0.9998
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9996
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.998
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,0.9999
+PortScan,PortScan,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.6919
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7744
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9997
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9959
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9999
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,0.9862
+PortScan,PortScan,0.994
+Web Attack - Brute Force,Web Attack - XSS,0.9017
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9992
+DoS GoldenEye,DoS GoldenEye,0.9997
+Web Attack - Brute Force,Web Attack - Brute Force,0.9588
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,0.9995
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,0.5159
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9778
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9943
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9896
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6729
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9992
+SSH-Patator,SSH-Patator,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9936
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9815
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,0.977
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9997
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9995
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,0.9999
+BENIGN,BENIGN,0.9991
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,0.992
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9705
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9985
+Bot,Bot,0.9249
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.848
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.9808
+Heartbleed,Heartbleed,0.9968
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,0.9995
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9995
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.5109
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9997
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+Web Attack - XSS,Web Attack - XSS,0.8408
+DoS slowloris,DoS slowloris,0.9757
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9978
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9518
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9997
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8207
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.999
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9995
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,SSH-Patator,0.9756
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - XSS,0.5119
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9942
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9804
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9996
+BENIGN,BENIGN,0.9901
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5578
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9997
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9148
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7861
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6347
+BENIGN,BENIGN,0.9955
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9994
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9996
+PortScan,PortScan,1.0
+Bot,Bot,0.9994
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9981
+DoS Hulk,DoS Hulk,0.9994
+Web Attack - XSS,Web Attack - Brute Force,0.9022
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+DDoS,DDoS,0.9999
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9857
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+PortScan,BENIGN,0.9841
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS Slowhttptest,DoS Slowhttptest,0.8661
+DoS GoldenEye,DoS GoldenEye,0.9981
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7283
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,0.9982
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9993
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9999
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9997
+Web Attack - Brute Force,Web Attack - XSS,0.7096
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.8074
+DoS Hulk,DoS Hulk,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.9915
+Web Attack - Brute Force,Web Attack - Brute Force,0.8701
+BENIGN,BENIGN,0.9949
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+DoS Slowhttptest,DoS slowloris,0.8928
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,0.9974
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9994
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9997
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9942
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.998
+Bot,Bot,1.0
+Bot,Bot,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6155
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.9991
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,DoS Hulk,0.6749
+Bot,Bot,0.9993
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5703
+Web Attack - XSS,Web Attack - Brute Force,0.9203
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,0.9993
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8775
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7086
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - XSS,0.5281
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,0.6729
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9602
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9211
+PortScan,PortScan,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8241
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8249
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS Hulk,DoS Hulk,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,0.9992
+DoS Hulk,DoS Hulk,0.9999
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9995
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9998
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7622
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9997
+Web Attack - XSS,Web Attack - XSS,0.5655
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9994
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS Slowhttptest,DoS Slowhttptest,0.999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9615
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6185
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9888
+BENIGN,BENIGN,0.9993
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.7412
+DoS slowloris,DoS slowloris,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7689
+BENIGN,BENIGN,0.9998
+BENIGN,BENIGN,0.9987
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6749
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9996
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7867
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9132
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9972
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9989
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9995
+Bot,Bot,1.0
+Web Attack - XSS,Web Attack - XSS,0.8056
+Web Attack - XSS,Web Attack - Brute Force,0.7702
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+Bot,Bot,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9985
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9994
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9985
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9998
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9997
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,0.9995
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.744
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9994
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9997
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9998
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,0.9842
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9993
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9994
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9993
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.5488
+Web Attack - Brute Force,Web Attack - Brute Force,0.9544
+BENIGN,BENIGN,0.8693
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9966
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9996
+DoS GoldenEye,DoS GoldenEye,0.9998
+Web Attack - XSS,Web Attack - Brute Force,0.7789
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7631
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9995
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5531
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9981
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9997
+BENIGN,FTP-Patator,0.9481
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7767
+Bot,Bot,0.9998
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9997
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9997
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8559
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9997
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9996
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+Web Attack - Brute Force,Web Attack - XSS,0.7146
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9908
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.7555
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8491
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.95
+Bot,Bot,0.9993
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9147
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9995
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,1.0
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - XSS,0.9713
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.536
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8383
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9912
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7433
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9995
+DoS Hulk,DoS Hulk,0.9978
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,0.9999
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9995
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9996
+BENIGN,BENIGN,0.9999
+Bot,Bot,0.9998
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9997
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,0.9999
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,0.9999
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6016
+BENIGN,BENIGN,0.998
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.998
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+Bot,Bot,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,0.9999
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9998
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,0.9999
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9995
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7366
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - XSS,0.5322
+DoS slowloris,DoS slowloris,0.9928
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+Bot,Bot,0.9999
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.738
+DoS slowloris,DoS slowloris,0.8047
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9998
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9992
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,0.9967
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.8047
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,0.9997
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9209
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9996
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9983
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,0.9999
+DoS slowloris,DoS slowloris,0.997
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9982
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.6412
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7962
+Web Attack - XSS,Web Attack - Brute Force,0.531
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5967
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.921
+Web Attack - Brute Force,Web Attack - Brute Force,0.9976
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9994
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,0.9999
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9876
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9998
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9619
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9654
+Web Attack - Brute Force,Web Attack - Brute Force,0.5808
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9172
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9998
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,0.9999
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9996
+BENIGN,BENIGN,1.0
+Web Attack - XSS,Web Attack - XSS,0.5322
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,0.9997
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,0.9996
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9926
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9891
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+Bot,Bot,0.9997
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9997
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+Bot,Bot,0.9998
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9999
+PortScan,PortScan,0.9999
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9765
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9869
+DDoS,DDoS,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,0.9996
+BENIGN,BENIGN,0.9997
+Web Attack - Brute Force,Web Attack - XSS,0.6324
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7349
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9994
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - XSS,0.9862
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,0.9979
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9066
+BENIGN,BENIGN,0.9986
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9984
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.995
+Bot,Bot,0.9994
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9995
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - XSS,0.5164
+DoS slowloris,DoS slowloris,0.9996
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+DoS slowloris,Web Attack - XSS,0.5099
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9173
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9998
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9996
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9998
+BENIGN,BENIGN,0.9998
+PortScan,PortScan,0.9996
+BENIGN,BENIGN,0.9999
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - XSS,0.5062
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9981
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,0.9855
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9997
+DDoS,DDoS,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9976
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,0.9975
+Web Attack - XSS,Web Attack - Brute Force,0.6915
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7618
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8191
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9983
+SSH-Patator,SSH-Patator,0.9999
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,0.9997
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9999
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7944
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9998
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,0.9996
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9997
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.89
+DoS GoldenEye,DoS GoldenEye,0.9997
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9205
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9998
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9997
+Web Attack - Brute Force,Web Attack - Brute Force,0.9791
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,0.9998
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.998
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9995
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5777
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9983
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9995
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9986
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9996
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8662
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9334
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,0.9996
+Web Attack - Brute Force,Web Attack - Brute Force,0.8458
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.7064
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9996
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,0.9995
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,0.9998
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9997
+FTP-Patator,FTP-Patator,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9503
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9778
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,0.9999
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9974
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+Bot,Bot,0.9995
+Web Attack - Brute Force,Web Attack - Brute Force,0.5493
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7894
+BENIGN,BENIGN,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7393
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - XSS,0.9865
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9991
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9998
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9989
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9999
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9823
+Web Attack - Brute Force,Web Attack - Brute Force,0.9571
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5172
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - XSS,0.5546
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5173
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9994
+DDoS,DDoS,0.9999
+SSH-Patator,SSH-Patator,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6894
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9997
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,0.9974
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8097
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9395
+BENIGN,BENIGN,0.9744
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8938
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9998
+BENIGN,BENIGN,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9855
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9669
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9981
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Sql Injection,Web Attack - Sql Injection,0.5955
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.8172
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9613
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9994
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.991
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,0.9984
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6275
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DDoS,DDoS,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,0.9981
+BENIGN,BENIGN,0.9978
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6763
+DoS slowloris,DoS slowloris,0.9997
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5126
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9989
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9992
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+Web Attack - XSS,Web Attack - XSS,0.5028
+Web Attack - Brute Force,Web Attack - XSS,0.5009
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+Bot,Bot,0.9997
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5228
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8449
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8844
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9798
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8863
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8928
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9998
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9997
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6106
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5856
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9974
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9973
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.882
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.7932
+Web Attack - Brute Force,Web Attack - Brute Force,0.9984
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.85
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,0.9998
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.6968
+DoS GoldenEye,DoS GoldenEye,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9995
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9997
+BENIGN,BENIGN,0.8744
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Infiltration,Infiltration,0.9965
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9748
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9996
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9998
+PortScan,PortScan,0.9998
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9311
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9991
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9981
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9564
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9997
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.814
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9989
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9993
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - XSS,0.5361
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,0.9999
+BENIGN,BENIGN,0.9984
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9995
+DoS slowloris,DoS slowloris,0.9998
+BENIGN,BENIGN,0.9931
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.903
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - XSS,Web Attack - XSS,0.512
+Web Attack - XSS,Web Attack - XSS,0.9922
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.8542
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9286
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9998
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,0.9996
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6044
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6785
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9997
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+Web Attack - Brute Force,Web Attack - Brute Force,0.9619
+DoS slowloris,DoS slowloris,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9995
+PortScan,PortScan,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9972
+Web Attack - Brute Force,Web Attack - Brute Force,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9998
+BENIGN,BENIGN,0.9943
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8258
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+Web Attack - Brute Force,Web Attack - Brute Force,0.9879
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - XSS,Web Attack - XSS,0.9818
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+Web Attack - Sql Injection,Web Attack - Sql Injection,0.9769
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9998
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9998
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7993
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9953
+Web Attack - XSS,Web Attack - XSS,0.9955
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8433
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.7033
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9994
+DoS slowloris,DoS slowloris,0.9981
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6512
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9999
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5808
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS Slowhttptest,0.9269
+Bot,Bot,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.9819
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9738
+FTP-Patator,FTP-Patator,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7548
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7165
+Web Attack - Brute Force,Web Attack - Brute Force,0.6942
+Web Attack - Brute Force,Web Attack - Brute Force,0.9209
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9977
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8831
+Bot,Bot,0.9998
+DoS Hulk,DoS Hulk,0.9997
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,0.7536
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9963
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.9906
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,0.9999
+Web Attack - XSS,Web Attack - XSS,0.6589
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9996
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,0.9998
+Web Attack - XSS,Web Attack - XSS,0.6329
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.9009
+Bot,Bot,1.0
+Bot,Bot,0.9999
+Bot,Bot,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.7047
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9445
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9698
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9998
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9995
+DoS slowloris,DoS slowloris,0.9981
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9995
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - XSS,0.5617
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,0.9993
+Web Attack - Brute Force,Web Attack - Brute Force,0.9971
+DoS Hulk,DoS Hulk,0.9994
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9983
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9994
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,DoS slowloris,0.579
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9978
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9974
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,0.9997
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9986
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9991
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.9609
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8865
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9996
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7326
+Infiltration,Infiltration,0.9997
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9989
+DDoS,DDoS,1.0
+DDoS,DDoS,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.6423
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9998
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9995
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5454
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9976
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9823
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9993
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8823
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9772
+Web Attack - Brute Force,Web Attack - Brute Force,0.9991
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8993
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9999
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9998
+DoS slowloris,DoS slowloris,0.9996
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9996
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9991
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8301
+Web Attack - XSS,Web Attack - Brute Force,0.6622
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9679
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.6612
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9997
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,0.9999
+Bot,Bot,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,0.9999
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7882
+DoS slowloris,DoS slowloris,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9971
+Web Attack - Brute Force,Web Attack - XSS,0.6112
+BENIGN,BENIGN,0.9998
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9996
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8966
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9509
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS slowloris,0.5265
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9995
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,0.9996
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9916
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9997
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9993
+DoS slowloris,DoS slowloris,0.9953
+SSH-Patator,SSH-Patator,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.8005
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9962
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9232
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9997
+PortScan,PortScan,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,0.9997
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.8047
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,0.9999
+PortScan,PortScan,0.9999
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.8661
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - XSS,0.9915
+BENIGN,BENIGN,0.987
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.7312
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9987
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+BENIGN,BENIGN,0.9984
+BENIGN,BENIGN,0.9996
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9991
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+PortScan,PortScan,0.9996
+DoS slowloris,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS Hulk,0.973
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Web Attack - Brute Force,Web Attack - XSS,0.5883
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5745
+PortScan,PortScan,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,0.9999
+BENIGN,Web Attack - XSS,0.7842
+Web Attack - Brute Force,Web Attack - Brute Force,0.9423
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.6639
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9994
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9796
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9976
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9989
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9747
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9982
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8764
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9997
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9991
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+Bot,Bot,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.5507
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5557
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9997
+Bot,Bot,0.9998
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,0.9999
+Bot,Bot,0.9999
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9999
+Bot,Bot,0.9997
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9992
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7968
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9989
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.999
+DDoS,DDoS,1.0
+PortScan,PortScan,0.9998
+PortScan,PortScan,1.0
+DDoS,DDoS,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.9465
+DoS Hulk,DoS Hulk,0.9998
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS GoldenEye,DoS GoldenEye,0.9997
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9998
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8073
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9837
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.8271
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,0.9999
+BENIGN,BENIGN,0.9993
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5414
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9996
+SSH-Patator,SSH-Patator,0.9997
+Bot,Bot,0.9999
+PortScan,PortScan,1.0
+DoS slowloris,DoS Slowhttptest,0.9033
+DoS slowloris,DoS slowloris,0.9998
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.999
+Bot,Bot,0.9998
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,Bot,0.6605
+Bot,Bot,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7821
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9091
+Web Attack - XSS,Web Attack - XSS,0.986
+DoS Slowhttptest,DoS Slowhttptest,0.9985
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8964
+BENIGN,BENIGN,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9715
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.858
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8494
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Web Attack - XSS,Web Attack - XSS,0.7893
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Infiltration,Infiltration,0.9914
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9986
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.9734
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,0.9994
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9998
+DoS slowloris,DoS slowloris,0.9995
+Bot,Bot,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9976
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9953
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8449
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6462
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9997
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+BENIGN,BENIGN,0.9999
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9996
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9712
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8994
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9993
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6798
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Infiltration,BENIGN,0.4694
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - XSS,0.7017
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9941
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS Slowhttptest,0.503
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9958
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9996
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.999
+DoS Hulk,DoS Hulk,0.9001
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9622
+Web Attack - Brute Force,Web Attack - Brute Force,0.5259
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8326
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9996
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9992
+Web Attack - Brute Force,Web Attack - Brute Force,0.7233
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9994
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9094
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7228
+Bot,Bot,0.9992
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9997
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.5994
+BENIGN,BENIGN,0.9998
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8164
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+SSH-Patator,SSH-Patator,0.9996
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9995
+DoS Hulk,DoS Hulk,0.9997
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9998
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,0.9939
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,SSH-Patator,0.9691
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - XSS,0.9964
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+PortScan,PortScan,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9993
+FTP-Patator,FTP-Patator,0.9998
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+FTP-Patator,FTP-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6722
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.8763
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9998
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9912
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,0.9999
+PortScan,PortScan,1.0
+Bot,Bot,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9996
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+Bot,Bot,0.9999
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9999
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.7579
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9995
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,0.9999
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9849
+DoS GoldenEye,DoS GoldenEye,0.9996
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,0.9999
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,0.9999
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9993
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9979
+Web Attack - XSS,Web Attack - Brute Force,0.6208
+DoS GoldenEye,DoS GoldenEye,0.9993
+Web Attack - Brute Force,Web Attack - Brute Force,0.5951
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.6293
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.927
+Web Attack - Brute Force,Web Attack - Brute Force,0.8168
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9811
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9997
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9988
+Web Attack - Brute Force,Web Attack - Brute Force,0.9996
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - XSS,0.5418
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,0.9995
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9992
+BENIGN,BENIGN,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.9467
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9942
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5794
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9995
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8359
+BENIGN,BENIGN,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,0.9941
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9975
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9441
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.7474
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - XSS,0.6428
+DoS slowloris,DoS slowloris,0.9992
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9975
+Web Attack - Brute Force,Web Attack - Brute Force,0.8363
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+FTP-Patator,FTP-Patator,0.9999
+Bot,Bot,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9245
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8222
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9997
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7525
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9998
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9995
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8263
+BENIGN,BENIGN,0.9996
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS slowloris,DoS slowloris,0.9998
+Web Attack - Brute Force,Web Attack - Brute Force,0.6273
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9604
+DoS GoldenEye,DoS GoldenEye,0.9997
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS slowloris,DoS slowloris,0.9985
+DoS slowloris,DoS slowloris,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9998
+BENIGN,BENIGN,0.9993
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,0.9999
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9992
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9984
+DDoS,DDoS,1.0
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.998
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5546
+DoS slowloris,DoS slowloris,0.9998
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9995
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9972
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,0.8864
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,0.9997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.9988
+BENIGN,BENIGN,0.9999
+Bot,Bot,0.9999
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8304
+DoS Slowhttptest,DoS Slowhttptest,0.9995
+Bot,Bot,0.9998
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5943
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9995
+DoS slowloris,DoS slowloris,0.9999
+Bot,Bot,0.9882
+DDoS,DDoS,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,0.9999
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+BENIGN,BENIGN,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.9362
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Bot,Bot,0.9994
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.862
+DoS GoldenEye,DoS GoldenEye,0.9999
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9998
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - XSS,0.9868
+DDoS,DDoS,0.9999
+DoS Hulk,DoS Hulk,0.9999
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.6873
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9992
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,0.9999
+PortScan,DoS slowloris,0.4718
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.6014
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9295
+DoS Hulk,DoS Hulk,0.9999
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,0.9998
+PortScan,PortScan,1.0
+Bot,Bot,0.9998
+PortScan,PortScan,0.9955
+Web Attack - Brute Force,Web Attack - Brute Force,0.8272
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5196
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9998
+BENIGN,BENIGN,0.9999
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9998
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS slowloris,DoS slowloris,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5252
+SSH-Patator,SSH-Patator,0.9998
+PortScan,PortScan,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,0.9995
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,0.9988
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+DDoS,DDoS,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+SSH-Patator,SSH-Patator,0.9999
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.5418
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9997
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+Bot,Bot,0.9993
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9943
+DoS slowloris,DoS slowloris,0.9998
+DoS slowloris,DoS slowloris,0.9999
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9996
+DoS slowloris,DoS slowloris,0.9995
+BENIGN,BENIGN,0.9962
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+Bot,Bot,1.0
+BENIGN,Bot,0.9851
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9998
+DoS Slowhttptest,DoS Slowhttptest,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.5459
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS slowloris,DoS slowloris,0.9997
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,0.9994
+Bot,Bot,1.0
+DoS GoldenEye,DoS GoldenEye,0.9999
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+Bot,Bot,0.9998
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9992
+DoS Hulk,DoS Hulk,1.0
+PortScan,PortScan,1.0
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+BENIGN,BENIGN,0.9997
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9993
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.8208
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,0.9993
+DoS GoldenEye,DoS GoldenEye,0.9998
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.7843
+DoS GoldenEye,DoS GoldenEye,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+PortScan,PortScan,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9977
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.9671
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9999
+Bot,Bot,1.0
+DoS slowloris,DoS slowloris,0.9997
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.6776
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+Bot,Bot,0.9999
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Hulk,DoS Hulk,0.9993
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.9438
+DoS GoldenEye,DoS GoldenEye,1.0
+Web Attack - Sql Injection,Web Attack - Sql Injection,0.9963
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+Bot,Bot,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.7898
+DDoS,DDoS,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,1.0
+BENIGN,BENIGN,0.9997
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9999
+Bot,Bot,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+BENIGN,BENIGN,0.9998
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS slowloris,DoS slowloris,0.9998
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Hulk,DoS Hulk,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9838
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,0.9999
+DoS slowloris,DoS slowloris,0.9999
+DDoS,DDoS,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9925
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+DoS Hulk,DoS Hulk,0.9999
+DoS GoldenEye,DoS GoldenEye,0.9999
+Bot,Bot,1.0
+BENIGN,BENIGN,0.9992
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9998
+DoS Hulk,DoS Hulk,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+BENIGN,BENIGN,1.0
+FTP-Patator,FTP-Patator,1.0
+Bot,Bot,0.9998
+Bot,Bot,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,1.0
+PortScan,PortScan,1.0
+Web Attack - Brute Force,Web Attack - XSS,0.5023
+Bot,Bot,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+PortScan,PortScan,1.0
+BENIGN,BENIGN,0.9998
+Bot,Bot,1.0
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,0.9996
+BENIGN,BENIGN,0.9998
+DoS Hulk,DoS Hulk,1.0
+SSH-Patator,SSH-Patator,1.0
+DDoS,DDoS,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9999
+FTP-Patator,FTP-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+Bot,Bot,0.9997
+PortScan,PortScan,1.0
+SSH-Patator,SSH-Patator,1.0
+SSH-Patator,SSH-Patator,0.9999
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+Web Attack - Brute Force,Web Attack - Brute Force,0.5855
+DDoS,DDoS,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.9448
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS slowloris,DoS slowloris,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+SSH-Patator,SSH-Patator,1.0
+PortScan,PortScan,1.0
+DoS slowloris,DoS slowloris,0.9999
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,1.0
+BENIGN,BENIGN,0.9994
+DoS Hulk,DoS Hulk,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9997
+FTP-Patator,FTP-Patator,1.0
+BENIGN,BENIGN,1.0
+DoS slowloris,DoS slowloris,0.9949
+BENIGN,BENIGN,0.997
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999
+PortScan,PortScan,1.0
+Web Attack - XSS,Web Attack - Brute Force,0.885
+Bot,Bot,1.0
+PortScan,PortScan,0.9999
+Bot,Bot,1.0
+Web Attack - Brute Force,Web Attack - Brute Force,0.8392
+PortScan,PortScan,0.9993
+FTP-Patator,FTP-Patator,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9994
+BENIGN,BENIGN,0.999
+Bot,Bot,0.9997
+DoS Slowhttptest,DoS Slowhttptest,0.9993
+FTP-Patator,FTP-Patator,1.0
+DoS slowloris,DoS slowloris,0.9999
+Web Attack - XSS,Web Attack - Brute Force,0.9278
+Web Attack - Brute Force,Web Attack - Brute Force,0.999
+PortScan,PortScan,1.0
+Bot,Bot,0.9999
+BENIGN,BENIGN,0.9999
+DDoS,DDoS,1.0
+DoS slowloris,DoS slowloris,1.0
+FTP-Patator,FTP-Patator,1.0
+FTP-Patator,FTP-Patator,1.0
+DoS Hulk,DoS Hulk,0.9998
+PortScan,PortScan,1.0
+DDoS,DDoS,1.0
+Bot,Bot,0.9999
+SSH-Patator,SSH-Patator,1.0
+DoS GoldenEye,DoS GoldenEye,1.0
+DDoS,DDoS,1.0
+DoS Slowhttptest,DoS Slowhttptest,1.0
+DoS slowloris,DoS slowloris,1.0
+DDoS,DDoS,1.0
+SSH-Patator,SSH-Patator,1.0
+DoS Hulk,DoS Hulk,1.0
+DoS Slowhttptest,DoS Slowhttptest,0.9999

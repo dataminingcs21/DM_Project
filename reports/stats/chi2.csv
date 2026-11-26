@@ -1,0 +1,67 @@
+test,feature,statistic,p_value,dof,effect_size,n,note,p_holm,reject_h0,effect
+chi2,Destination Port,43466.0417775299,0.0,42,0.8089025214380945,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Bwd Packet Length Max,40104.59186920111,0.0,42,0.7769949445884944,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Bwd Packet Length Std,26041.569099234184,0.0,28,0.7668322094960082,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Bwd Packet Length Mean,38628.41644602753,0.0,42,0.7625610084873206,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Avg Bwd Segment Size,38628.41644602753,0.0,42,0.7625610084873206,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Init_Win_bytes_backward,48771.09481571635,0.0,56,0.7420497561339612,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Max Packet Length,35717.202140803325,0.0,42,0.7332631471218807,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Subflow Bwd Bytes,35713.055403682745,0.0,42,0.7332205802690982,22143,4 bins x 15 classes; 10% of expected counts < 5,0.0,True,large
+chi2,Total Length of Bwd Packets,35713.055403682745,0.0,42,0.7332205802690982,22143,4 bins x 15 classes; 10% of expected counts < 5,0.0,True,large
+chi2,Packet Length Std,35694.08168752303,0.0,42,0.7330257808141718,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Packet Length Variance,35692.665896554136,0.0,42,0.7330112430879905,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Packet Length Mean,34720.57791439886,0.0,42,0.7229605759486012,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Average Packet Size,34329.134685299796,0.0,42,0.7188736597077982,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Total Backward Packets,33466.61442094439,0.0,42,0.709785352319605,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,min_seg_size_forward,22276.486815798584,0.0,28,0.709234939194914,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Fwd IAT Std,31959.996913220843,0.0,42,0.693624631291071,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Flow Duration,42467.293023780825,0.0,56,0.6924350829023725,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Avg Fwd Segment Size,31750.10838811786,0.0,42,0.691343284709041,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Fwd Packet Length Mean,31750.10838811786,0.0,42,0.691343284709041,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Subflow Fwd Bytes,30454.68596168524,0.0,42,0.6770928151743782,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Total Length of Fwd Packets,30454.68596168524,0.0,42,0.6770928151743782,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Fwd Packet Length Max,30370.39152073871,0.0,42,0.6761551153205071,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Fwd IAT Max,40101.99102191048,0.0,56,0.6728755410338605,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Bwd Header Length,39909.0178933309,0.0,56,0.6712546304546251,22143,5 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Idle Max,9958.434678921452,0.0,14,0.6706212479417245,22143,2 bins x 15 classes; 7% of expected counts < 5,0.0,True,large
+chi2,Flow IAT Std,39736.91809754024,0.0,56,0.669805739921688,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Fwd IAT Total,39720.892482529074,0.0,56,0.6696706623679445,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,act_data_pkt_fwd,19846.23312627671,0.0,28,0.6694309948013466,22143,3 bins x 15 classes; 11% of expected counts < 5,0.0,True,large
+chi2,Flow IAT Max,39671.379760068856,0.0,56,0.6692531546690104,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Fwd Header Length,39599.45083759401,0.0,56,0.6686461616850342,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Idle Mean,9834.595234259114,0.0,14,0.6664384031245142,22143,2 bins x 15 classes; 7% of expected counts < 5,0.0,True,large
+chi2,Flow IAT Mean,38814.443364538565,0.0,56,0.6619854674517501,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Bwd Packets/s,38329.44190594242,0.0,56,0.6578365842101973,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Fwd Packets/s,37577.100149237085,0.0,56,0.6513484821522674,22143,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Flow Packets/s,36950.68869980432,0.0,56,0.6460133752490937,22135,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,Active Min,8988.54566932617,0.0,14,0.6371276964910645,22143,2 bins x 15 classes; 7% of expected counts < 5,0.0,True,large
+chi2,Bwd IAT Max,17826.254179415853,0.0,28,0.6344491494518754,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Bwd IAT Mean,17536.06359300758,0.0,28,0.6292639151059967,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Fwd IAT Mean,34730.80001659487,0.0,56,0.626194383453424,22143,5 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Total Fwd Packets,34425.68400229911,0.0,56,0.6234377032771137,22143,5 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Idle Min,8529.082361546712,0.0,14,0.6206302278093034,22143,2 bins x 15 classes; 7% of expected counts < 5,0.0,True,large
+chi2,Bwd IAT Std,16871.156573971737,0.0,28,0.6172188771064189,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Flow Bytes/s,25297.541045186586,0.0,42,0.6172182574330863,22135,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Active Max,7758.138398640356,0.0,14,0.5919166158865585,22143,2 bins x 15 classes; 7% of expected counts < 5,0.0,True,large
+chi2,Active Mean,7758.138398640356,0.0,14,0.5919166158865585,22143,2 bins x 15 classes; 7% of expected counts < 5,0.0,True,large
+chi2,PSH Flag Count,7477.1236367407855,0.0,14,0.5810975587561352,22143,2 bins x 15 classes; 3% of expected counts < 5,0.0,True,large
+chi2,Bwd IAT Min,14345.411421074701,0.0,28,0.5691454604433444,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Bwd IAT Total,13798.603714993826,0.0,28,0.5581929451543549,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,FIN Flag Count,6803.6411093023835,0.0,14,0.5543096869713199,22143,2 bins x 15 classes; 10% of expected counts < 5,0.0,True,large
+chi2,Fwd Packet Length Std,13444.565904819188,0.0,28,0.5509854929408889,22143,3 bins x 15 classes; 9% of expected counts < 5,0.0,True,large
+chi2,Init_Win_bytes_forward,19841.325543516374,0.0,42,0.5465205340032214,22143,4 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Fwd IAT Min,24934.22003158561,0.0,56,0.5305785250429924,22143,5 bins x 15 classes; 12% of expected counts < 5,0.0,True,large
+chi2,Fwd PSH Flags,4102.46684725836,0.0,14,0.4304317611745098,22143,2 bins x 15 classes; 10% of expected counts < 5,0.0,True,large
+chi2,Flow IAT Min,15391.560575171441,0.0,56,0.4169380866994891,22135,5 bins x 15 classes; 13% of expected counts < 5,0.0,True,large
+chi2,URG Flag Count,3623.1660666872476,0.0,14,0.404506858995332,22143,2 bins x 15 classes; 10% of expected counts < 5,0.0,True,large
+chi2,ACK Flag Count,3566.8911103157143,0.0,14,0.4013531683293749,22143,2 bins x 15 classes; 3% of expected counts < 5,0.0,True,large
+chi2,Down/Up Ratio,1752.9224450461156,0.0,14,0.2813604960188297,22143,2 bins x 15 classes; 10% of expected counts < 5,0.0,True,medium
+chi2,ECE Flag Count,10.071954859542952,0.7569040428173469,14,0.021327436389544097,22143,2 bins x 15 classes; 50% of expected counts < 5,0.7569040428173469,False,negligible
+chi2,Fwd Packet Length Min,,,0,,22143,fewer than two categories,,False,n/a
+chi2,Bwd Packet Length Min,,,0,,22143,fewer than two categories,,False,n/a
+chi2,Bwd PSH Flags,,,0,,22143,fewer than two categories,,False,n/a
+chi2,Fwd URG Flags,,,0,,22143,fewer than two categories,,False,n/a
+chi2,Min Packet Length,,,0,,22143,fewer than two categories,,False,n/a
+chi2,RST Flag Count,,,0,,22143,fewer than two categories,,False,n/a
+chi2,Active Std,,,0,,22143,fewer than two categories,,False,n/a
+chi2,Idle Std,,,0,,22143,fewer than two categories,,False,n/a

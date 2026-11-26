@@ -2,7 +2,9 @@
 
 A modular Python system that classifies network flows into **BENIGN or one of 14 attack types** with **eleven supervised models**, combines them by **majority vote**, and serves the result in a **Streamlit app** where you can analyse a **packet capture (.pcap / .pcapng)**, type the features of a flow, load a real example, or upload a CSV file.
 
-On top of the classification pipeline, the **data mining extensions** (scripts 09-17) add clustering, unsupervised anomaly detection, association rules, projections and feature importance, and five experiments that test how far the classification scores carry. The whole process is written up in a French PDF report (`reports\report\rapport_data_mining.pdf`, built by script 18).
+On top of the classification pipeline, the **data mining extensions** (scripts 09-17) add clustering, unsupervised anomaly detection, association rules, projections and feature importance, and five experiments that test how far the classification scores carry. The whole process is written up in a French PDF report (**`docs\Rapport_Projet.pdf`**, also at `reports\report\rapport_data_mining.pdf`, built by script 18).
+
+Statistical validation (script 19: chi-square, ANOVA, Kruskal-Wallis, Shapiro-Wilk, Mann-Whitney U), a leak-free benchmark (script 20: `ColumnTransformer` + model in one `Pipeline`, stratified 5-fold CV of baselines vs ensembles incl. XGBoost and LightGBM) and two **executed notebooks** (`notebooks\`) complete the analysis. The Streamlit app has four analytical pages (data quality, EDA, statistical tests, benchmark and batch inference) next to the detection page.
 
 - **Course:** Data Mining · **Team:** CS21 · **Domain:** network security
 - **Tasks covered:** classification, clustering, association rules, anomaly detection
@@ -178,8 +180,21 @@ python scripts\14_port_ablation.py         # retrain without Destination Port (1
 python scripts\15_day_split.py             # leave one capture day out (10 min)
 python scripts\16_imbalance.py             # class weights, SMOTE, undersampling (30 min)
 python scripts\17_granularity.py           # binary and attack families (10 min)
-python scripts\18_build_report_pdf.py      # the full written report (French) -> reports\report\rapport_data_mining.pdf (1 min)
+python scripts\18_build_report_pdf.py      # the full written report (French) -> reports\report\rapport_data_mining.pdf + docs\Rapport_Projet.pdf (1 min)
+python scripts\19_stat_tests.py           # 5 hypothesis tests on the 66 features + the app's analysis sample (1 min)
+python scripts\20_pipeline_benchmark.py   # hermetic pipeline, stratified 5-fold CV of 7 models, hold-out, saved best pipeline (15 min)
 ```
+
+Run 19 and 20 before 18 (the report reads their results).
+
+### Notebooks (executed, outputs saved)
+
+| Notebook | Content |
+|---|---|
+| `notebooks\01_qualite_eda_tests_statistiques.ipynb` | data quality checks, 12 EDA figures, the 5 hypothesis tests with Holm correction and effect sizes |
+| `notebooks\02_benchmark_modeles_pipeline.ipynb` | the hermetic `ColumnTransformer` + model pipeline, stratified 5-fold CV of 7 models (Dummy, Logistic Regression, Decision Tree, Random Forest, Extra Trees, XGBoost, LightGBM), paired comparison and Friedman test, error analysis, hold-out, batch inference to CSV |
+
+They run on files committed in `reports\` (no dataset needed). To re-execute them: `jupyter nbconvert --to notebook --execute --inplace notebooks\*.ipynb`.
 
 Outputs go to `data\`, `artifacts\models\` (trained and tuned), `reports\` and `logs\`. `data\` and `artifacts\` are not in the repository (`.gitignore`) and are rebuilt by the scripts.
 
@@ -189,7 +204,16 @@ Outputs go to `data\`, `artifacts\models\` (trained and tuned), `reports\` and `
 streamlit run app\streamlit_app.py
 ```
 
-Streamlit prints a local address, normally <http://localhost:8501>. The page has four tabs:
+Streamlit prints a local address, normally <http://localhost:8501>. The sidebar has five pages.
+
+**Analysis pages.** They need neither the dataset nor the trained models; they read small files committed in `reports\`:
+
+1. **Data quality:** facts about the raw files (duplicates, missing and infinite values, types, impossible negatives, constant columns, conflicting labels) and what the cleaning did; the same checks run live on the analysis sample or on any uploaded CSV.
+2. **Exploratory analysis:** 13 interactive figures (class distribution, attacks per capture day, skewness, outliers, class separation, correlation redundancy, histograms and box plots per class, 2-feature scatter, correlation heatmap, ports, class profiles, class x day).
+3. **Statistical tests:** chi-square, ANOVA, Kruskal-Wallis, Shapiro-Wilk and Mann-Whitney U on all 66 features (Holm-corrected, with effect sizes), and the same five tests live on any feature with a Q-Q plot.
+4. **Benchmark & batch inference:** baselines vs ensembles under stratified CV with the hermetic pipeline (per-fold scores, paired comparison, per-class F1, confusion matrix), the full-data scores of the 11 models and the ensembles, and **batch inference**: upload a CSV, get one prediction per row (scored if a `Label` column is present) and download them as CSV.
+
+**Detection page** (needs the trained models, see below). It has four tabs:
 
 - **Analyze a capture:** upload a `.pcap` / `.pcapng` (Wireshark, tcpdump), or press **Try the demo capture** (synthetic web and DNS traffic plus one SYN port scan). The page builds the flows, lets the models vote on each, and shows a verdict, the predicted classes, a timeline, the hosts involved in flagged flows and every flow with the agreement of the models; everything can be downloaded as CSV. *Options*: real TCP flags instead of the CIC-compatible ones, packet limit.
 - **Single flow:** type the 40 feature values (grouped by the first word of the name), or load a real example of any class saved from the test split, then press **Predict**. The page shows the winning class, how many models agree, every model's vote, the tally and what the test set says about that class.
@@ -223,7 +247,7 @@ It writes `reports\comparison\comparison_input.csv` (upload it in the app), `com
 python -m pytest -q
 ```
 
-Reference run: **719 passed** (665 for the pipeline and the app, 36 for the mining and experiment modules, 18 for packet captures and the capture tab). The GPU test runs only on a machine with a usable GPU and is skipped otherwise. Tests use synthetic data only, do not need the dataset, and never touch the real `data\`, `artifacts\` or `logs\` folders. The app is tested headlessly with Streamlit's `AppTest`.
+Reference run: **744 passed** (665 for the pipeline and the app, 36 for the mining and experiment modules, 18 for packet captures and the capture tab, 25 for the statistical tests, the quality checks, the hermetic benchmark and the four analysis pages). The GPU test runs only on a machine with a usable GPU and is skipped otherwise. Tests use synthetic data only, do not need the dataset, and never touch the real `data\`, `artifacts\` or `logs\` folders. The app is tested headlessly with Streamlit's `AppTest`.
 
 ## Project layout
 
@@ -234,12 +258,15 @@ src\nids\     data, cleaning, eda, preprocessing, models, training, evaluation, 
               mining (clustering, anomaly, association, projection, importance, reporting),
               experiments (common, ensembles, day_split), capture (pcap_flows, demo)
 scripts\      01 ... 08 (the pipeline and the comparison files), 09 ... 17 (data mining extensions),
-              18 (PDF report)
-app\          streamlit_app.py, ui_components.py, capture_view.py, style.py
+              18 (PDF report), 19 (hypothesis tests), 20 (hermetic benchmark)
+app\          streamlit_app.py (navigation), ui_components.py, capture_view.py, style.py,
+              page_quality.py, page_eda.py, page_stats.py, page_benchmark.py, analysis_data.py
+notebooks\    01 quality + EDA + statistical tests, 02 benchmark (executed, with outputs)
 .streamlit\   config.toml (theme, upload size)
 tests\        pytest files
-docs\         one .md per file (mirrors the layout) and docs\project\ for decisions
-reports\      inspection, eda, training, evaluation, optimization, comparison, mining, experiments, report
+docs\         Rapport_Projet.pdf (the report), one .md per file (mirrors the layout) and docs\project\ for decisions
+reports\      inspection, eda, training, evaluation, optimization, comparison, mining, experiments, report,
+              stats (step 19), benchmark (step 20), app_data (analysis sample used by the app)
 ```
 
 The decisions made after each checkpoint, with their reasons, are in `docs\project\`.

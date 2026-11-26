@@ -1,0 +1,8 @@
+model,display,mean_diff_vs_decision_tree,std_diff,folds_better,folds
+lightgbm,LightGBM,0.030092732753740803,0.012911584648284409,5,5
+xgboost,XGBoost,0.01753159435431184,0.007536463577245009,5,5
+extra_trees,Extra Trees,0.01403647895622373,0.04734328222695366,2,5
+random_forest,Random Forest,0.011424587804792673,0.05726533519025262,3,5
+decision_tree,Decision Tree,0.0,0.0,0,5
+logistic_regression,Logistic Regression,-0.061415814656407844,0.058805126277817664,1,5
+dummy,Dummy (most frequent),-0.8751603997355083,0.05001804587029591,0,5
