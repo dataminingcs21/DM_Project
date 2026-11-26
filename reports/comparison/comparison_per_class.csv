@@ -1,0 +1,6 @@
+class,flows,correct,recall,test_rows_in_dataset
+BENIGN,263,262,0.9961977186311787,419297
+DDoS,11,11,1.0,25603
+DoS GoldenEye,1,1,1.0,2057
+DoS Hulk,19,19,1.0,34570
+PortScan,6,6,1.0,18164

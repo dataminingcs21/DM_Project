@@ -1,0 +1,61 @@
+class,rule,n_items,class_coverage,confidence,lift,support,class_rows
+BENIGN,"{Bwd Packet Length Mean=mid, Init_Win_bytes_backward=low, Init_Win_bytes_forward=low} -> class=BENIGN",3,0.42752293577981654,1.0,7.339449541284403,0.05825,8175
+BENIGN,"{Init_Win_bytes_forward=low, port=DNS} -> class=BENIGN",2,0.41149847094801223,1.0,7.339449541284403,0.05606666666666667,8175
+BENIGN,"{Bwd Packet Length Mean=mid, port=DNS} -> class=BENIGN",2,0.41149847094801223,1.0,7.339449541284403,0.05606666666666667,8175
+BENIGN,"{Init_Win_bytes_backward=low, port=DNS} -> class=BENIGN",2,0.41149847094801223,1.0,7.339449541284403,0.05606666666666667,8175
+BENIGN,"{Bwd Packet Length Mean=mid, Init_Win_bytes_forward=low, port=DNS} -> class=BENIGN",3,0.41149847094801223,1.0,7.339449541284403,0.05606666666666667,8175
+Bot,"{Init_Win_bytes_backward=high, port=HTTP-alt} -> class=Bot",2,0.38028169014084506,1.0,38.41229193341869,0.0099,1562
+Bot,"{Flow IAT Mean=low, Init_Win_bytes_backward=high, port=HTTP-alt} -> class=Bot",3,0.37836107554417414,1.0,38.41229193341869,0.00985,1562
+Bot,"{Init_Win_bytes_backward=high, Init_Win_bytes_forward=mid, port=HTTP-alt} -> class=Bot",3,0.3764404609475032,1.0,38.41229193341869,0.0098,1562
+Bot,"{Flow Packets/s=high, Init_Win_bytes_backward=high, port=HTTP-alt} -> class=Bot",3,0.3738796414852753,1.0,38.41229193341869,0.009733333333333333,1562
+Bot,"{Init_Win_bytes_backward=high, PSH Flag=1, port=HTTP-alt} -> class=Bot",3,0.3732394366197183,1.0,38.41229193341869,0.009716666666666667,1562
+DDoS,"{Init_Win_bytes_backward=mid, Init_Win_bytes_forward=mid, Total Length of Bwd Packets=high} -> class=DDoS",3,0.4503975535168196,1.0,7.339449541284403,0.06136666666666667,8175
+DDoS,"{Init_Win_bytes_forward=mid, Total Length of Bwd Packets=high, Total Length of Fwd Packets=low} -> class=DDoS",3,0.45015290519877676,1.0,7.339449541284403,0.06133333333333333,8175
+DDoS,"{Fwd Packet Length Mean=mid, Init_Win_bytes_backward=mid, Total Length of Bwd Packets=high} -> class=DDoS",3,0.45015290519877676,1.0,7.339449541284403,0.06133333333333333,8175
+DDoS,"{Fwd Packet Length Mean=mid, Total Length of Bwd Packets=high, Total Length of Fwd Packets=low} -> class=DDoS",3,0.45015290519877676,1.0,7.339449541284403,0.06133333333333333,8175
+DDoS,"{Fwd Packet Length Mean=mid, PSH Flag=1, Total Length of Fwd Packets=low} -> class=DDoS",3,0.45015290519877676,1.0,7.339449541284403,0.06133333333333333,8175
+DoS GoldenEye,"{Bwd Packet Length Mean=high, Down/Up Ratio=0, Init_Win_bytes_forward=high} -> class=DoS GoldenEye",3,0.48434059212136044,0.9914850989231154,7.277845110764242,0.06598333333333334,8174
+DoS GoldenEye,"{Bwd Packet Length Mean=high, Down/Up Ratio=0, PSH Flag=1} -> class=DoS GoldenEye",3,0.486665035478346,0.9910313901345291,7.274514730618026,0.0663,8174
+DoS GoldenEye,"{Bwd Packet Length Mean=high, Init_Win_bytes_forward=high, Total Fwd Packets=high} -> class=DoS GoldenEye",3,0.489478835331539,0.9869264923532314,7.24438335468484,0.06668333333333333,8174
+DoS GoldenEye,"{Bwd Packet Length Mean=high, PSH Flag=1, Total Fwd Packets=high} -> class=DoS GoldenEye",3,0.4918032786885246,0.9824046920821115,7.21119176962646,0.067,8174
+DoS GoldenEye,"{Bwd Packet Length Mean=high, Flow Bytes/s=mid, Init_Win_bytes_forward=high} -> class=DoS GoldenEye",3,0.489478835331539,0.9787181996086106,7.184131634024546,0.06668333333333333,8174
+DoS Hulk,"{Bwd Packet Length Mean=high, Flow Bytes/s=low, Init_Win_bytes_backward=high} -> class=DoS Hulk",3,0.5085015290519878,1.0,7.339449541284403,0.06928333333333334,8175
+DoS Hulk,"{Init_Win_bytes_backward=high, Total Fwd Packets=mid, Total Length of Bwd Packets=high} -> class=DoS Hulk",3,0.4003669724770642,1.0,7.339449541284403,0.05455,8175
+DoS Hulk,"{Bwd Packet Length Mean=high, Fwd Packet Length Mean=mid, Init_Win_bytes_forward=low} -> class=DoS Hulk",3,0.37516819571865445,1.0,7.339449541284403,0.051116666666666664,8175
+DoS Hulk,"{Fwd Packet Length Mean=high, Total Fwd Packets=mid, Total Length of Bwd Packets=high} -> class=DoS Hulk",3,0.363914373088685,1.0,7.339449541284403,0.04958333333333333,8175
+DoS Hulk,"{Bwd Packet Length Mean=high, Fwd Packet Length Mean=high, Total Fwd Packets=mid} -> class=DoS Hulk",3,0.3340672782874618,1.0,7.339449541284403,0.045516666666666664,8175
+DoS Slowhttptest,"{Flow Duration=high, PSH Flag=1, Total Backward Packets=0} -> class=DoS Slowhttptest",3,0.539454806312769,0.9982300884955753,14.32180901715316,0.0376,4182
+DoS Slowhttptest,"{PSH Flag=1, Total Backward Packets=0, Total Fwd Packets=high} -> class=DoS Slowhttptest",3,0.539454806312769,0.9982300884955753,14.32180901715316,0.0376,4182
+DoS Slowhttptest,"{Init_Win_bytes_forward=high, Total Backward Packets=0, Total Fwd Packets=high} -> class=DoS Slowhttptest",3,0.539454806312769,0.9982300884955753,14.32180901715316,0.0376,4182
+DoS Slowhttptest,"{Fwd Packet Length Mean=0, Init_Win_bytes_forward=high, Total Fwd Packets=high} -> class=DoS Slowhttptest",3,0.539454806312769,0.9982300884955753,14.32180901715316,0.0376,4182
+DoS Slowhttptest,"{Init_Win_bytes_forward=high, Total Fwd Packets=high, Total Length of Fwd Packets=0} -> class=DoS Slowhttptest",3,0.539454806312769,0.9982300884955753,14.32180901715316,0.0376,4182
+DoS slowloris,"{Flow IAT Mean=mid, PSH Flag=1, Total Backward Packets=0} -> class=DoS slowloris",3,0.3047818012999072,0.9879608728367193,13.759900735887454,0.021883333333333334,4308
+DoS slowloris,"{Flow Packets/s=mid, PSH Flag=1, Total Backward Packets=0} -> class=DoS slowloris",3,0.3047818012999072,0.9879608728367193,13.759900735887454,0.021883333333333334,4308
+DoS slowloris,"{Flow Duration=mid, PSH Flag=1, Total Backward Packets=0} -> class=DoS slowloris",3,0.3047818012999072,0.9820493642483171,13.677567747191047,0.021883333333333334,4308
+DoS slowloris,"{Flow IAT Mean=mid, Init_Win_bytes_forward=high, Total Backward Packets=0} -> class=DoS slowloris",3,0.3047818012999072,0.9813153961136024,13.66734534977162,0.021883333333333334,4308
+DoS slowloris,"{Flow Packets/s=mid, Init_Win_bytes_forward=high, Total Backward Packets=0} -> class=DoS slowloris",3,0.3047818012999072,0.9798507462686568,13.646946326861514,0.021883333333333334,4308
+FTP-Patator,"{Flow Duration=mid, Init_Win_bytes_forward=high, port=FTP} -> class=FTP-Patator",3,0.6677201854193004,1.0,12.642225031605562,0.052816666666666665,4746
+FTP-Patator,"{Flow Packets/s=mid, Init_Win_bytes_forward=high, port=FTP} -> class=FTP-Patator",3,0.6677201854193004,1.0,12.642225031605562,0.052816666666666665,4746
+FTP-Patator,"{Flow Bytes/s=low, Init_Win_bytes_forward=high, port=FTP} -> class=FTP-Patator",3,0.6677201854193004,1.0,12.642225031605562,0.052816666666666665,4746
+FTP-Patator,"{Flow IAT Mean=mid, Init_Win_bytes_forward=high, port=FTP} -> class=FTP-Patator",3,0.6677201854193004,1.0,12.642225031605562,0.052816666666666665,4746
+FTP-Patator,"{Bwd Packet Length Mean=mid, Flow IAT Mean=mid, port=FTP} -> class=FTP-Patator",3,0.6675094816687737,1.0,12.642225031605562,0.0528,4746
+Heartbleed,"{Bwd Packet Length Mean=high, port=444} -> class=Heartbleed",2,1.0,1.0,6666.666666666667,0.00015,9
+Heartbleed,"{Bwd Packet Length Mean=high, Flow Packets/s=high, port=444} -> class=Heartbleed",3,1.0,1.0,6666.666666666667,0.00015,9
+Heartbleed,"{Bwd Packet Length Mean=high, Flow IAT Mean=low, port=444} -> class=Heartbleed",3,1.0,1.0,6666.666666666667,0.00015,9
+Heartbleed,"{Bwd Packet Length Mean=high, Init_Win_bytes_backward=high, port=444} -> class=Heartbleed",3,1.0,1.0,6666.666666666667,0.00015,9
+Heartbleed,"{Bwd Packet Length Mean=high, Total Backward Packets=high, port=444} -> class=Heartbleed",3,1.0,1.0,6666.666666666667,0.00015,9
+Infiltration,"{Fwd Packet Length Mean=high, port=444} -> class=Infiltration",2,0.8275862068965517,1.0,2068.965517241379,0.0004,29
+Infiltration,"{Fwd Packet Length Mean=high, Total Length of Fwd Packets=high, port=444} -> class=Infiltration",3,0.8275862068965517,1.0,2068.965517241379,0.0004,29
+Infiltration,"{Fwd Packet Length Mean=high, Total Fwd Packets=high, port=444} -> class=Infiltration",3,0.8275862068965517,1.0,2068.965517241379,0.0004,29
+Infiltration,"{Flow Duration=high, Fwd Packet Length Mean=high, port=444} -> class=Infiltration",3,0.8275862068965517,1.0,2068.965517241379,0.0004,29
+Infiltration,"{Bwd Packet Length Mean=low, Total Backward Packets=high, port=444} -> class=Infiltration",3,0.7931034482758621,1.0,2068.965517241379,0.00038333333333333334,29
+PortScan,"{Flow Bytes/s=high, Fwd Packet Length Mean=0, PSH Flag=1} -> class=PortScan",3,0.4948012232415902,0.9997528423133959,7.337635539914832,0.06741666666666667,8175
+PortScan,"{Flow Bytes/s=high, Fwd Packet Length Mean=0, Init_Win_bytes_forward=high} -> class=PortScan",3,0.4948012232415902,0.9997528423133959,7.337635539914832,0.06741666666666667,8175
+PortScan,"{Flow Bytes/s=high, PSH Flag=1, Total Length of Fwd Packets=0} -> class=PortScan",3,0.4948012232415902,0.9997528423133959,7.337635539914832,0.06741666666666667,8175
+PortScan,"{Flow Bytes/s=high, Init_Win_bytes_forward=high, Total Length of Fwd Packets=0} -> class=PortScan",3,0.4948012232415902,0.9997528423133959,7.337635539914832,0.06741666666666667,8175
+PortScan,"{Fwd Packet Length Mean=0, PSH Flag=1, port=registered} -> class=PortScan",3,0.39327217125382263,0.9993783027665527,7.334886625809561,0.05358333333333333,8175
+SSH-Patator,"{Flow Packets/s=mid, port=SSH} -> class=SSH-Patator",2,0.9192233009708738,1.0,23.300970873786408,0.03945,2575
+SSH-Patator,"{Flow IAT Mean=mid, port=SSH} -> class=SSH-Patator",2,0.9192233009708738,1.0,23.300970873786408,0.03945,2575
+SSH-Patator,"{Flow Bytes/s=mid, Flow Packets/s=mid, port=SSH} -> class=SSH-Patator",3,0.9192233009708738,1.0,23.300970873786408,0.03945,2575
+SSH-Patator,"{Flow IAT Mean=mid, Flow Packets/s=mid, port=SSH} -> class=SSH-Patator",3,0.9192233009708738,1.0,23.300970873786408,0.03945,2575
+SSH-Patator,"{Flow Bytes/s=mid, Flow IAT Mean=mid, port=SSH} -> class=SSH-Patator",3,0.9192233009708738,1.0,23.300970873786408,0.03945,2575

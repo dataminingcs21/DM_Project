@@ -1,0 +1,136 @@
+{
+  "comparison": [
+    {
+      "model": "Decision Tree",
+      "variant": "none",
+      "train_rows": 2017889,
+      "macro_f1": 0.9141088543100798,
+      "macro_f1_reliable": 0.914858290109822,
+      "accuracy": 0.9981307225560139,
+      "detection_rate": 0.9951159951159951,
+      "false_alarm_rate": 0.0007846466824231989,
+      "fit_seconds": null
+    },
+    {
+      "model": "Decision Tree",
+      "variant": "balanced weights",
+      "train_rows": 2017889,
+      "macro_f1": 0.9086378724989445,
+      "macro_f1_reliable": 0.9130409303672703,
+      "accuracy": 0.9983031797539215,
+      "detection_rate": 0.996407438715131,
+      "false_alarm_rate": 0.0008609649007743915,
+      "fit_seconds": 65.921
+    },
+    {
+      "model": "Decision Tree",
+      "variant": "SMOTE",
+      "train_rows": 2210534,
+      "macro_f1": 0.8833340422789335,
+      "macro_f1_reliable": 0.9028855015666156,
+      "accuracy": 0.9978968150921853,
+      "detection_rate": 0.9951277355123509,
+      "false_alarm_rate": 0.0010040615601828776,
+      "fit_seconds": 94.198
+    },
+    {
+      "model": "Decision Tree",
+      "variant": "undersample + SMOTE",
+      "train_rows": 1033347,
+      "macro_f1": 0.8578516117404379,
+      "macro_f1_reliable": 0.9015000350375382,
+      "accuracy": 0.9982139777550038,
+      "detection_rate": 0.9986498544190852,
+      "false_alarm_rate": 0.0013522634314101936,
+      "fit_seconds": 22.309
+    },
+    {
+      "model": "Random Forest",
+      "variant": "none",
+      "train_rows": 2017889,
+      "macro_f1": 0.9150133128428858,
+      "macro_f1_reliable": 0.9164939137808799,
+      "accuracy": 0.9984022930860522,
+      "detection_rate": 0.995820418897342,
+      "false_alarm_rate": 0.0006868639651607334,
+      "fit_seconds": null
+    },
+    {
+      "model": "Random Forest",
+      "variant": "balanced weights",
+      "train_rows": 2017889,
+      "macro_f1": 0.9018773926921217,
+      "macro_f1_reliable": 0.9119787754971869,
+      "accuracy": 0.9984062576193374,
+      "detection_rate": 0.9958908612754767,
+      "false_alarm_rate": 0.000689248909484208,
+      "fit_seconds": 310.76
+    },
+    {
+      "model": "Random Forest",
+      "variant": "SMOTE",
+      "train_rows": 2210534,
+      "macro_f1": 0.9089309665510085,
+      "macro_f1_reliable": 0.9146537366787891,
+      "accuracy": 0.9982893038874231,
+      "detection_rate": 0.9964191791114868,
+      "false_alarm_rate": 0.0008800444553621895,
+      "fit_seconds": 406.687
+    },
+    {
+      "model": "Random Forest",
+      "variant": "undersample + SMOTE",
+      "train_rows": 1033347,
+      "macro_f1": 0.9081912215790183,
+      "macro_f1_reliable": 0.9137290554638012,
+      "accuracy": 0.9985133000180386,
+      "detection_rate": 0.9989198835352682,
+      "false_alarm_rate": 0.0011161539433861916,
+      "fit_seconds": 107.287
+    },
+    {
+      "model": "XGBoost",
+      "variant": "none",
+      "train_rows": 2017889,
+      "macro_f1": 0.9119770337384984,
+      "macro_f1_reliable": 0.9126985649003957,
+      "accuracy": 0.9988958774800634,
+      "detection_rate": 0.9987789987789988,
+      "false_alarm_rate": 0.0006606295776025109,
+      "fit_seconds": null
+    },
+    {
+      "model": "XGBoost",
+      "variant": "balanced weights",
+      "train_rows": 2017889,
+      "macro_f1": 0.9081994687121456,
+      "macro_f1_reliable": 0.9173006179414641,
+      "accuracy": 0.9985806970838875,
+      "detection_rate": 0.9998825960364421,
+      "false_alarm_rate": 0.0012115517163251825,
+      "fit_seconds": 232.19
+    },
+    {
+      "model": "XGBoost",
+      "variant": "SMOTE",
+      "train_rows": 2210534,
+      "macro_f1": 0.9036695534930677,
+      "macro_f1_reliable": 0.912920275199668,
+      "accuracy": 0.9987016153490871,
+      "detection_rate": 0.9996830092983939,
+      "false_alarm_rate": 0.001011216393153302,
+      "fit_seconds": 251.74
+    },
+    {
+      "model": "XGBoost",
+      "variant": "undersample + SMOTE",
+      "train_rows": 1033347,
+      "macro_f1": 0.8681860515623556,
+      "macro_f1_reliable": 0.9116214533418335,
+      "accuracy": 0.9985985374836711,
+      "detection_rate": 0.9998708556400864,
+      "false_alarm_rate": 0.0011590829412087375,
+      "fit_seconds": 120.912
+    }
+  ]
+}

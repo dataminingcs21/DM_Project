@@ -1,0 +1,16 @@
+label,count,percent,n_files,below_min_class_samples
+BENIGN,2273097,80.3004,8,False
+DoS Hulk,231073,8.163,1,False
+PortScan,158930,5.6144,1,False
+DDoS,128027,4.5227,1,False
+DoS GoldenEye,10293,0.3636,1,False
+FTP-Patator,7938,0.2804,1,False
+SSH-Patator,5897,0.2083,1,False
+DoS slowloris,5796,0.2048,1,False
+DoS Slowhttptest,5499,0.1943,1,False
+Bot,1966,0.0695,1,False
+Web Attack � Brute Force,1507,0.0532,1,False
+Web Attack � XSS,652,0.023,1,False
+Infiltration,36,0.0013,1,False
+Web Attack � Sql Injection,21,0.0007,1,False
+Heartbleed,11,0.0004,1,False

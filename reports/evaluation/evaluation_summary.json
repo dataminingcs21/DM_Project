@@ -1,0 +1,36 @@
+{
+  "generated_at": "2026-11-21T07:58:08",
+  "scope": {
+    "training rows": "2,017,889",
+    "test rows": "504,473",
+    "classes": 15,
+    "features": 40,
+    "cross-validation": "5-fold on 2,017,889 rows (all training rows)",
+    "tie rule of the vote": "prefer_non_benign",
+    "random seed": 42
+  },
+  "checks": [
+    {
+      "name": "all 11 models scored on the test set",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "every row of the table is scored on the same test rows",
+      "passed": true,
+      "detail": "[504473]"
+    },
+    {
+      "name": "class supports are identical for every model",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "no missing or infinite macro F1",
+      "passed": true,
+      "detail": ""
+    }
+  ],
+  "missing": {},
+  "cv_failed": []
+}

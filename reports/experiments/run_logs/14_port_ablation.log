@@ -1,0 +1,16 @@
+2026-11-25 20:07:52 | INFO     | nids.training.data_access | Training data: 2017889 rows, 40 features, 15 classes
+2026-11-25 20:07:52 | INFO     | nids.training.data_access | Test data: 504473 rows, 40 features
+Retraining Decision Tree without Destination Port on 2,017,889 rows ...
+2026-11-25 20:09:26 | INFO     | nids.models.base | Decision Tree fitted on 2017889 rows in 94.0 s
+Retraining Random Forest without Destination Port on 2,017,889 rows ...
+2026-11-25 20:14:35 | INFO     | nids.models.base | Random Forest fitted on 2017889 rows in 308.5 s
+Retraining XGBoost without Destination Port on 2,017,889 rows ...
+2026-11-25 20:14:41 | INFO     | nids.models.xgboost | XGBoost device (auto): cpu
+2026-11-25 20:18:34 | INFO     | nids.models.base | XGBoost fitted on 2017889 rows in 233.3 s
+| model | macro_f1_with | macro_f1_without | delta |
+|---|---:|---:|---:|
+| Decision Tree | 0.9141 | 0.8788 | -0.0353 |
+| Random Forest | 0.9150 | 0.8719 | -0.0431 |
+| XGBoost | 0.9120 | 0.9065 | -0.0055 |
+
+Report: F:\DM_Project\reports\experiments\port_ablation\port_ablation_report.md

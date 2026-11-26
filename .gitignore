@@ -4,16 +4,6 @@
 # source package src/nids/data/ is NOT ignored by the /data/ rule.
 # ============================================================
 
-# --- Dataset and generated outputs (all regenerable) ---------
-/data/
-/dataset/
-/artifacts/
-/reports/
-/logs/
-
-# --- Trained model files, wherever they are saved ------------
-*.joblib
-*.pkl
 
 # --- Python ---------------------------------------------------
 __pycache__/
@@ -43,3 +33,7 @@ env/
 .DS_Store
 Thumbs.db
 desktop.ini
+# --- Local inference assets, datasets, and runtime logs ------
+/artifacts/
+/data/
+/logs/

@@ -1,0 +1,39 @@
+2026-11-25 20:30:00 | INFO     | nids.training.data_access | Training data: 2017889 rows, 40 features, 15 classes
+2026-11-25 20:30:01 | INFO     | nids.training.data_access | Test data: 504473 rows, 40 features
+2026-11-25 20:30:04 | INFO     | nids.scripts.imbalance | SMOTE: 2017889 -> 2210534 rows (11 classes raised to 20000, k=5) in 3 s
+2026-11-25 20:30:05 | INFO     | nids.scripts.imbalance | SMOTE: 840702 -> 1033347 rows (11 classes raised to 20000, k=5) in 1 s
+Decision Tree: balanced weights ...
+2026-11-25 20:31:11 | INFO     | nids.models.base | Decision Tree fitted on 2017889 rows in 65.9 s
+Decision Tree: SMOTE ...
+2026-11-25 20:32:46 | INFO     | nids.models.base | Decision Tree fitted on 2210534 rows in 94.2 s
+Decision Tree: undersample + SMOTE ...
+2026-11-25 20:33:08 | INFO     | nids.models.base | Decision Tree fitted on 1033347 rows in 22.3 s
+Random Forest: balanced weights ...
+2026-11-25 20:38:20 | INFO     | nids.models.base | Random Forest fitted on 2017889 rows in 310.8 s
+Random Forest: SMOTE ...
+2026-11-25 20:45:12 | INFO     | nids.models.base | Random Forest fitted on 2210534 rows in 406.7 s
+Random Forest: undersample + SMOTE ...
+2026-11-25 20:47:05 | INFO     | nids.models.base | Random Forest fitted on 1033347 rows in 107.3 s
+XGBoost: balanced weights ...
+2026-11-25 20:47:11 | INFO     | nids.models.xgboost | XGBoost device (auto): cpu
+2026-11-25 20:51:04 | INFO     | nids.models.base | XGBoost fitted on 2017889 rows in 232.2 s
+XGBoost: SMOTE ...
+2026-11-25 20:55:22 | INFO     | nids.models.base | XGBoost fitted on 2210534 rows in 251.7 s
+XGBoost: undersample + SMOTE ...
+2026-11-25 20:57:28 | INFO     | nids.models.base | XGBoost fitted on 1033347 rows in 120.9 s
+| model | variant | macro_f1 | macro_f1_reliable | false_alarm_rate |
+|---|---|---:|---:|---:|
+| Decision Tree | none | 0.9141 | 0.9149 | 0.0008 |
+| Decision Tree | balanced weights | 0.9086 | 0.9130 | 0.0009 |
+| Decision Tree | SMOTE | 0.8833 | 0.9029 | 0.0010 |
+| Decision Tree | undersample + SMOTE | 0.8579 | 0.9015 | 0.0014 |
+| Random Forest | none | 0.9150 | 0.9165 | 0.0007 |
+| Random Forest | balanced weights | 0.9019 | 0.9120 | 0.0007 |
+| Random Forest | SMOTE | 0.9089 | 0.9147 | 0.0009 |
+| Random Forest | undersample + SMOTE | 0.9082 | 0.9137 | 0.0011 |
+| XGBoost | none | 0.9120 | 0.9127 | 0.0007 |
+| XGBoost | balanced weights | 0.9082 | 0.9173 | 0.0012 |
+| XGBoost | SMOTE | 0.9037 | 0.9129 | 0.0010 |
+| XGBoost | undersample + SMOTE | 0.8682 | 0.9116 | 0.0012 |
+
+Report: F:\DM_Project\reports\experiments\imbalance\imbalance_report.md

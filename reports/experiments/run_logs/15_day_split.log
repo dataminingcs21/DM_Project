@@ -1,0 +1,36 @@
+2026-11-25 20:58:15 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 20:58:34 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 20:58:45 | INFO     | nids.models.xgboost | XGBoost device (auto): cpu
+2026-11-25 20:59:01 | INFO     | nids.experiments.day_split | Held out Friday-Afternoon-DDos: detection 0.631, false alarms 0.0023, ROC-AUC 0.992052386870857
+2026-11-25 20:59:04 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 20:59:22 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 20:59:57 | INFO     | nids.experiments.day_split | Held out Friday-Afternoon-PortScan: detection 0.006, false alarms 0.0054, ROC-AUC 0.8458706883851617
+2026-11-25 21:00:02 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 21:00:22 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 21:00:49 | INFO     | nids.experiments.day_split | Held out Friday-Morning: detection 0.000, false alarms 0.0003, ROC-AUC 0.9022890183104575
+2026-11-25 21:00:52 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 21:01:14 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 38 kept (2 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 21:01:47 | INFO     | nids.experiments.day_split | Held out Thursday-Afternoon-Infilteration: detection 0.000, false alarms 0.1528, ROC-AUC 0.6001669643252365
+2026-11-25 21:01:52 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 21:02:13 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 21:02:47 | INFO     | nids.experiments.day_split | Held out Thursday-Morning-WebAttacks: detection 0.867, false alarms 0.0003, ROC-AUC 0.999628327462591
+2026-11-25 21:02:50 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 21:03:14 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 21:03:44 | INFO     | nids.experiments.day_split | Held out Tuesday: detection 0.002, false alarms 0.0006, ROC-AUC 0.9310959032878876
+2026-11-25 21:03:47 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 21:04:06 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+2026-11-25 21:04:36 | INFO     | nids.experiments.day_split | Held out Wednesday: detection 0.302, false alarms 0.0004, ROC-AUC 0.9968279997033063
+2026-11-25 21:04:39 | INFO     | nids.preprocessing.pipeline_builder | Pipeline built: inf_to_nan -> imputer -> log -> filter -> scaler
+2026-11-25 21:05:11 | INFO     | nids.preprocessing.feature_filter | Feature filter fitted: 66 columns in, 39 kept (1 constant, 26 correlated dropped; threshold 0.950)
+| held_out | detection_rate | false_alarm_rate | roc_auc |
+|---|---:|---:|---:|
+| Friday-Afternoon-DDos | 0.6313 | 0.0023 | 0.9921 |
+| Friday-Afternoon-PortScan | 0.0061 | 0.0054 | 0.8459 |
+| Friday-Morning | 0.0000 | 0.0003 | 0.9023 |
+| Thursday-Afternoon-Infilteration | 0.0000 | 0.1528 | 0.6002 |
+| Thursday-Morning-WebAttacks | 0.8665 | 0.0003 | 0.9996 |
+| Tuesday | 0.0022 | 0.0006 | 0.9311 |
+| Wednesday | 0.3021 | 0.0004 | 0.9968 |
+Random split reference: detection 0.9998, false alarms 0.0010
+
+Report: F:\DM_Project\reports\experiments\day_split\day_split_report.md

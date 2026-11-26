@@ -1,0 +1,121 @@
+{
+  "comparison": [
+    {
+      "model": "Random Forest",
+      "task": "15 classes",
+      "variant": "trained on 15 classes",
+      "macro_f1": 0.9150133128428858,
+      "macro_f1_reliable": 0.9164939137808799,
+      "accuracy": 0.9984022930860522,
+      "detection_rate": 0.995820418897342,
+      "false_alarm_rate": 0.0006868639651607334
+    },
+    {
+      "model": "Random Forest",
+      "task": "8 families",
+      "variant": "trained on families",
+      "macro_f1": 0.9423526014893185,
+      "macro_f1_reliable": 0.9730782978059744,
+      "accuracy": 0.998717473482228,
+      "detection_rate": 0.9959378228608998,
+      "false_alarm_rate": 0.0006820940765137838
+    },
+    {
+      "model": "Random Forest",
+      "task": "8 families",
+      "variant": "15-class model, collapsed",
+      "macro_f1": 0.9422427796330992,
+      "macro_f1_reliable": 0.9729527871131524,
+      "accuracy": 0.9986996330824445,
+      "detection_rate": 0.995820418897342,
+      "false_alarm_rate": 0.0006868639651607334
+    },
+    {
+      "model": "Random Forest",
+      "task": "binary",
+      "variant": "trained binary",
+      "macro_f1": 0.9977498973910455,
+      "macro_f1_reliable": 0.9977498973910455,
+      "accuracy": 0.9987372961486541,
+      "detection_rate": 0.9959026016718324,
+      "false_alarm_rate": 0.0006868639651607334
+    },
+    {
+      "model": "Random Forest",
+      "task": "binary",
+      "variant": "15-class model, collapsed",
+      "macro_f1": 0.9977250964634742,
+      "macro_f1_reliable": 0.9977250964634742,
+      "accuracy": 0.9987234202821559,
+      "detection_rate": 0.995820418897342,
+      "false_alarm_rate": 0.0006868639651607334
+    },
+    {
+      "model": "XGBoost",
+      "task": "15 classes",
+      "variant": "trained on 15 classes",
+      "macro_f1": 0.9119770337384984,
+      "macro_f1_reliable": 0.9126985649003957,
+      "accuracy": 0.9988958774800634,
+      "detection_rate": 0.9987789987789988,
+      "false_alarm_rate": 0.0006606295776025109
+    },
+    {
+      "model": "XGBoost",
+      "task": "8 families",
+      "variant": "trained on families",
+      "macro_f1": 0.9450544413288342,
+      "macro_f1_reliable": 0.976166114765421,
+      "accuracy": 0.9991852884098852,
+      "detection_rate": 0.9987320371935756,
+      "false_alarm_rate": 0.0006868639651607334
+    },
+    {
+      "model": "XGBoost",
+      "task": "8 families",
+      "variant": "15-class model, collapsed",
+      "macro_f1": 0.9463363551892137,
+      "macro_f1_reliable": 0.9776311591772832,
+      "accuracy": 0.9992150224095244,
+      "detection_rate": 0.9987789987789988,
+      "false_alarm_rate": 0.0006606295776025109
+    },
+    {
+      "model": "XGBoost",
+      "task": "binary",
+      "variant": "trained binary",
+      "macro_f1": 0.998652025991162,
+      "macro_f1_reliable": 0.998652025991162,
+      "accuracy": 0.999242774142521,
+      "detection_rate": 0.9986850756081526,
+      "false_alarm_rate": 0.0006439349673381875
+    },
+    {
+      "model": "XGBoost",
+      "task": "binary",
+      "variant": "15-class model, collapsed",
+      "macro_f1": 0.9986556489301869,
+      "macro_f1_reliable": 0.9986556489301869,
+      "accuracy": 0.9992447564091637,
+      "detection_rate": 0.9987789987789988,
+      "false_alarm_rate": 0.0006606295776025109
+    }
+  ],
+  "families": {
+    "BENIGN": "BENIGN",
+    "Bot": "Bot",
+    "DDoS": "DDoS",
+    "DoS GoldenEye": "DoS",
+    "DoS Hulk": "DoS",
+    "DoS Slowhttptest": "DoS",
+    "DoS slowloris": "DoS",
+    "FTP-Patator": "Brute Force",
+    "Heartbleed": "DoS",
+    "Infiltration": "Infiltration",
+    "PortScan": "PortScan",
+    "SSH-Patator": "Brute Force",
+    "Web Attack - Brute Force": "Web Attack",
+    "Web Attack - Sql Injection": "Web Attack",
+    "Web Attack - XSS": "Web Attack"
+  }
+}

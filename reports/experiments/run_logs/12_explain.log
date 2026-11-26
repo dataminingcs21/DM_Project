@@ -1,0 +1,19 @@
+2026-11-25 21:07:58 | INFO     | nids.training.data_access | Training data: 2017889 rows, 40 features, 15 classes
+2026-11-25 21:07:58 | INFO     | nids.training.data_access | Test data: 504473 rows, 40 features
+2026-11-25 21:08:10 | INFO     | nids.mining.projection | t-SNE on 15000 rows (perplexity 40)
+2026-11-25 21:09:47 | INFO     | nids.scripts.explain | Permutation importance for random_forest on 50000 test rows ...
+2026-11-25 21:11:06 | INFO     | nids.scripts.explain | Permutation importance for xgboost on 50000 test rows ...
+| Random Forest: feature | Random Forest: f1_drop_mean | XGBoost: feature | XGBoost: f1_drop_mean |
+|---|---:|---|---:|
+| Destination Port | 0.1604 | Destination Port | 0.2409 |
+| Bwd Packet Length Std | 0.1041 | Init_Win_bytes_backward | 0.1942 |
+| Init_Win_bytes_backward | 0.0892 | Fwd Header Length | 0.0961 |
+| Init_Win_bytes_forward | 0.0869 | Init_Win_bytes_forward | 0.0908 |
+| Max Packet Length | 0.0860 | Total Length of Fwd Packets | 0.0882 |
+| Flow Duration | 0.0589 | Bwd Packet Length Std | 0.0740 |
+| Total Length of Bwd Packets | 0.0571 | min_seg_size_forward | 0.0429 |
+| Bwd Packets/s | 0.0556 | Flow Duration | 0.0330 |
+| Total Length of Fwd Packets | 0.0535 | Flow Bytes/s | 0.0315 |
+| Bwd Header Length | 0.0496 | Total Length of Bwd Packets | 0.0251 |
+
+Report: F:\DM_Project\reports\mining\explain\explain_report.md

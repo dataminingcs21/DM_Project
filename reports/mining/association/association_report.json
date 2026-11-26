@@ -1,0 +1,67 @@
+{
+  "transactions": 60000,
+  "items": 88,
+  "frequent_itemsets": 96388,
+  "general_rules": 121822,
+  "class_rules": 60,
+  "classes_without_rule": [
+    "Web Attack - Brute Force",
+    "Web Attack - Sql Injection",
+    "Web Attack - XSS"
+  ],
+  "rule_classifier_macro_f1": 0.5828748602104604,
+  "rule_classifier_test_rows": 30000,
+  "bin_edges": {
+    "Flow Duration": [
+      200867.99999999977,
+      11910566.333333334
+    ],
+    "Total Fwd Packets": [
+      2.0,
+      7.0
+    ],
+    "Total Backward Packets": [
+      2.0,
+      6.0
+    ],
+    "Total Length of Fwd Packets": [
+      30.0,
+      360.0
+    ],
+    "Total Length of Bwd Packets": [
+      168.0,
+      11595.0
+    ],
+    "Fwd Packet Length Mean": [
+      8.666666667,
+      54.28571429
+    ],
+    "Bwd Packet Length Mean": [
+      12.53333333,
+      1656.428571
+    ],
+    "Flow Bytes/s": [
+      139.3558769,
+      10474.825526666666
+    ],
+    "Flow Packets/s": [
+      0.7096134689999998,
+      29.995269223333317
+    ],
+    "Flow IAT Mean": [
+      47709.95833333333,
+      1817961.777666666
+    ],
+    "Init_Win_bytes_forward": [
+      296.0,
+      29200.0
+    ],
+    "Init_Win_bytes_backward": [
+      227.0,
+      235.0
+    ],
+    "Down/Up Ratio": [
+      1.0
+    ]
+  }
+}

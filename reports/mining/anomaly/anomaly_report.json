@@ -1,0 +1,479 @@
+{
+  "detectors": [
+    {
+      "name": "Isolation Forest",
+      "fit_rows": 300000,
+      "fit_seconds": 1.0,
+      "score_seconds": 7.0,
+      "roc_auc": 0.860300004485586,
+      "average_precision": 0.4065929821696882,
+      "operating_points": [
+        {
+          "target_false_alarm_rate": 0.001,
+          "threshold": 0.645856383769255,
+          "detection_rate": 0.00010566356720202873,
+          "false_alarm_rate": 0.0009134336758908363,
+          "precision": 0.02295918367346939,
+          "alarms": 392
+        },
+        {
+          "target_false_alarm_rate": 0.01,
+          "threshold": 0.6231697924773371,
+          "detection_rate": 0.006539400770170001,
+          "false_alarm_rate": 0.010300574533087525,
+          "precision": 0.11423297785069729,
+          "alarms": 4876
+        },
+        {
+          "target_false_alarm_rate": 0.05,
+          "threshold": 0.5732225344590233,
+          "detection_rate": 0.06228280266741805,
+          "false_alarm_rate": 0.04975947836497757,
+          "precision": 0.2027207764912683,
+          "alarms": 26169
+        }
+      ],
+      "per_class_detection": [
+        {
+          "class": "BENIGN",
+          "test_rows": 419297,
+          "median_score": 0.45775732019024834,
+          "flagged_at_far_0.001": 0.0009134336758908363,
+          "flagged_at_far_0.01": 0.010300574533087525,
+          "flagged_at_far_0.05": 0.04975947836497757
+        },
+        {
+          "class": "DoS Hulk",
+          "test_rows": 34570,
+          "median_score": 0.557705366677151,
+          "flagged_at_far_0.001": 0.00023141452126120915,
+          "flagged_at_far_0.01": 0.00043390222736476716,
+          "flagged_at_far_0.05": 0.023199305756436216
+        },
+        {
+          "class": "DDoS",
+          "test_rows": 25603,
+          "median_score": 0.5248002838498477,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.1197125336874585
+        },
+        {
+          "class": "PortScan",
+          "test_rows": 18164,
+          "median_score": 0.5054724843264964,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.00011010790574763268,
+          "flagged_at_far_0.05": 0.002752697643690817
+        },
+        {
+          "class": "DoS GoldenEye",
+          "test_rows": 2057,
+          "median_score": 0.5068013297974564,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0004861448711716091,
+          "flagged_at_far_0.05": 0.0004861448711716091
+        },
+        {
+          "class": "FTP-Patator",
+          "test_rows": 1187,
+          "median_score": 0.5191754827963309,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        },
+        {
+          "class": "DoS slowloris",
+          "test_rows": 1077,
+          "median_score": 0.6093683562577547,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.5496750232126276
+        },
+        {
+          "class": "DoS Slowhttptest",
+          "test_rows": 1046,
+          "median_score": 0.6289768842068111,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.5076481835564054,
+          "flagged_at_far_0.05": 0.6453154875717018
+        },
+        {
+          "class": "SSH-Patator",
+          "test_rows": 644,
+          "median_score": 0.5184372818821235,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        },
+        {
+          "class": "Bot",
+          "test_rows": 391,
+          "median_score": 0.4848621458290322,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0025575447570332483,
+          "flagged_at_far_0.05": 0.24808184143222506
+        },
+        {
+          "class": "Web Attack - Brute Force",
+          "test_rows": 294,
+          "median_score": 0.5224674161075428,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.047619047619047616
+        },
+        {
+          "class": "Web Attack - XSS",
+          "test_rows": 130,
+          "median_score": 0.5224674161075428,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.007692307692307693
+        },
+        {
+          "class": "Infiltration",
+          "test_rows": 7,
+          "median_score": 0.6335956752102213,
+          "flagged_at_far_0.001": 0.14285714285714285,
+          "flagged_at_far_0.01": 0.7142857142857143,
+          "flagged_at_far_0.05": 0.8571428571428571
+        },
+        {
+          "class": "Web Attack - Sql Injection",
+          "test_rows": 4,
+          "median_score": 0.46893007815304055,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        },
+        {
+          "class": "Heartbleed",
+          "test_rows": 2,
+          "median_score": 0.6327043266077845,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 1.0,
+          "flagged_at_far_0.05": 1.0
+        }
+      ]
+    },
+    {
+      "name": "Local Outlier Factor",
+      "fit_rows": 50000,
+      "fit_seconds": 12.5,
+      "score_seconds": 95.9,
+      "roc_auc": 0.9180699065329793,
+      "average_precision": 0.5715146013632539,
+      "operating_points": [
+        {
+          "target_false_alarm_rate": 0.001,
+          "threshold": 55.30905666732821,
+          "detection_rate": 0.006257631257631258,
+          "false_alarm_rate": 0.0010350658363880495,
+          "precision": 0.5511892450879007,
+          "alarms": 967
+        },
+        {
+          "target_false_alarm_rate": 0.01,
+          "threshold": 18.757862644195516,
+          "detection_rate": 0.007314266929651545,
+          "false_alarm_rate": 0.010074004822357423,
+          "precision": 0.1285331132659377,
+          "alarms": 4847
+        },
+        {
+          "target_false_alarm_rate": 0.05,
+          "threshold": 3.6700985193252094,
+          "detection_rate": 0.4238635296327604,
+          "false_alarm_rate": 0.05022454250805515,
+          "precision": 0.6315909170427907,
+          "alarms": 57162
+        }
+      ],
+      "per_class_detection": [
+        {
+          "class": "BENIGN",
+          "test_rows": 419297,
+          "median_score": 1.0892573595046997,
+          "flagged_at_far_0.001": 0.0010350658363880495,
+          "flagged_at_far_0.01": 0.010074004822357423,
+          "flagged_at_far_0.05": 0.05022454250805515
+        },
+        {
+          "class": "DoS Hulk",
+          "test_rows": 34570,
+          "median_score": 6.242658615112305,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0012438530517789991,
+          "flagged_at_far_0.05": 0.7920161990164882
+        },
+        {
+          "class": "DDoS",
+          "test_rows": 25603,
+          "median_score": 2.3317551612854004,
+          "flagged_at_far_0.001": 3.905792289966019e-05,
+          "flagged_at_far_0.01": 0.00019528961449830098,
+          "flagged_at_far_0.05": 0.19318048666171933
+        },
+        {
+          "class": "PortScan",
+          "test_rows": 18164,
+          "median_score": 2.8686957359313965,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0023673199735741025,
+          "flagged_at_far_0.05": 0.03116053732658005
+        },
+        {
+          "class": "DoS GoldenEye",
+          "test_rows": 2057,
+          "median_score": 2.906681537628174,
+          "flagged_at_far_0.001": 0.0004861448711716091,
+          "flagged_at_far_0.01": 0.0004861448711716091,
+          "flagged_at_far_0.05": 0.2766164316966456
+        },
+        {
+          "class": "FTP-Patator",
+          "test_rows": 1187,
+          "median_score": 6.6680498123168945,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.6764953664700927
+        },
+        {
+          "class": "DoS slowloris",
+          "test_rows": 1077,
+          "median_score": 3.951953172683716,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.5357474466109564
+        },
+        {
+          "class": "DoS Slowhttptest",
+          "test_rows": 1046,
+          "median_score": 1295.594970703125,
+          "flagged_at_far_0.001": 0.5076481835564054,
+          "flagged_at_far_0.01": 0.5076481835564054,
+          "flagged_at_far_0.05": 0.7552581261950286
+        },
+        {
+          "class": "SSH-Patator",
+          "test_rows": 644,
+          "median_score": 1.1673815250396729,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.046583850931677016
+        },
+        {
+          "class": "Bot",
+          "test_rows": 391,
+          "median_score": 1.161222219467163,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.18414322250639387
+        },
+        {
+          "class": "Web Attack - Brute Force",
+          "test_rows": 294,
+          "median_score": 7.452062606811523,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.8333333333333334
+        },
+        {
+          "class": "Web Attack - XSS",
+          "test_rows": 130,
+          "median_score": 7.453947067260742,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.9615384615384616
+        },
+        {
+          "class": "Infiltration",
+          "test_rows": 7,
+          "median_score": 1.297423005104065,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        },
+        {
+          "class": "Web Attack - Sql Injection",
+          "test_rows": 4,
+          "median_score": 1.013201355934143,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        },
+        {
+          "class": "Heartbleed",
+          "test_rows": 2,
+          "median_score": 1.6296396255493164,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        }
+      ]
+    },
+    {
+      "name": "Autoencoder",
+      "fit_rows": 300000,
+      "fit_seconds": 110.2,
+      "score_seconds": 0.5,
+      "roc_auc": 0.9643429653255624,
+      "average_precision": 0.8172304534207648,
+      "operating_points": [
+        {
+          "target_false_alarm_rate": 0.001,
+          "threshold": 0.6916364292502538,
+          "detection_rate": 0.1229571710340941,
+          "false_alarm_rate": 0.0009348981748021093,
+          "precision": 0.9639208467556374,
+          "alarms": 10865
+        },
+        {
+          "target_false_alarm_rate": 0.01,
+          "threshold": 0.2843829289078711,
+          "detection_rate": 0.28439936132243826,
+          "false_alarm_rate": 0.009873669499185542,
+          "precision": 0.8540403328162459,
+          "alarms": 28364
+        },
+        {
+          "target_false_alarm_rate": 0.05,
+          "threshold": 0.11076726242899894,
+          "detection_rate": 0.8008593970132432,
+          "false_alarm_rate": 0.050601363711164166,
+          "precision": 0.7627556440160571,
+          "alarms": 89431
+        }
+      ],
+      "per_class_detection": [
+        {
+          "class": "BENIGN",
+          "test_rows": 419297,
+          "median_score": 0.01199467945843935,
+          "flagged_at_far_0.001": 0.0009348981748021093,
+          "flagged_at_far_0.01": 0.009873669499185542,
+          "flagged_at_far_0.05": 0.050601363711164166
+        },
+        {
+          "class": "DoS Hulk",
+          "test_rows": 34570,
+          "median_score": 0.28645259141921997,
+          "flagged_at_far_0.001": 0.29641307492045127,
+          "flagged_at_far_0.01": 0.5137113103847266,
+          "flagged_at_far_0.05": 0.8684986982933179
+        },
+        {
+          "class": "DDoS",
+          "test_rows": 25603,
+          "median_score": 0.16188257932662964,
+          "flagged_at_far_0.001": 0.008163105886028981,
+          "flagged_at_far_0.01": 0.1837675272429012,
+          "flagged_at_far_0.05": 0.9346170370659689
+        },
+        {
+          "class": "PortScan",
+          "test_rows": 18164,
+          "median_score": 0.11403548717498779,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.009524333847170227,
+          "flagged_at_far_0.05": 0.5612199955956838
+        },
+        {
+          "class": "DoS GoldenEye",
+          "test_rows": 2057,
+          "median_score": 0.08779479563236237,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.24064171122994651,
+          "flagged_at_far_0.05": 0.3305785123966942
+        },
+        {
+          "class": "FTP-Patator",
+          "test_rows": 1187,
+          "median_score": 0.14341263473033905,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.9848357203032856
+        },
+        {
+          "class": "DoS slowloris",
+          "test_rows": 1077,
+          "median_score": 0.26453909277915955,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.3286908077994429,
+          "flagged_at_far_0.05": 0.9712163416898792
+        },
+        {
+          "class": "DoS Slowhttptest",
+          "test_rows": 1046,
+          "median_score": 0.5532580018043518,
+          "flagged_at_far_0.001": 0.015296367112810707,
+          "flagged_at_far_0.01": 0.6921606118546845,
+          "flagged_at_far_0.05": 0.9923518164435946
+        },
+        {
+          "class": "SSH-Patator",
+          "test_rows": 644,
+          "median_score": 0.05840252339839935,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.013975155279503106,
+          "flagged_at_far_0.05": 0.029503105590062112
+        },
+        {
+          "class": "Bot",
+          "test_rows": 391,
+          "median_score": 0.07253105938434601,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.23529411764705882
+        },
+        {
+          "class": "Web Attack - Brute Force",
+          "test_rows": 294,
+          "median_score": 0.018637510016560555,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.047619047619047616
+        },
+        {
+          "class": "Web Attack - XSS",
+          "test_rows": 130,
+          "median_score": 0.018286408856511116,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.007692307692307693
+        },
+        {
+          "class": "Infiltration",
+          "test_rows": 7,
+          "median_score": 0.17143817245960236,
+          "flagged_at_far_0.001": 0.14285714285714285,
+          "flagged_at_far_0.01": 0.42857142857142855,
+          "flagged_at_far_0.05": 0.8571428571428571
+        },
+        {
+          "class": "Web Attack - Sql Injection",
+          "test_rows": 4,
+          "median_score": 0.061429936438798904,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 0.0,
+          "flagged_at_far_0.05": 0.0
+        },
+        {
+          "class": "Heartbleed",
+          "test_rows": 2,
+          "median_score": 0.49932271242141724,
+          "flagged_at_far_0.001": 0.0,
+          "flagged_at_far_0.01": 1.0,
+          "flagged_at_far_0.05": 1.0
+        }
+      ]
+    }
+  ],
+  "supervised_reference": {
+    "detection_rate": 0.9987789987789988,
+    "false_alarm_rate": 0.0006606295776025109
+  },
+  "fit_rows": 300000,
+  "calibration_rows": 100000,
+  "test_rows": 504473
+}

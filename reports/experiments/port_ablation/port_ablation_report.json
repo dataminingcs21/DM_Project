@@ -1,0 +1,150 @@
+{
+  "models": [
+    {
+      "model": "Decision Tree",
+      "macro_f1_with": 0.9141088543100798,
+      "macro_f1_without": 0.8788030307312165,
+      "delta": -0.03530582357886336,
+      "reliable_with": 0.914858290109822,
+      "reliable_without": 0.9040593439695762,
+      "detection_with": 0.9951159951159951,
+      "detection_without": 0.9974288531980839,
+      "false_alarms_with": 0.0007846466824231989,
+      "false_alarms_without": 0.0009802121169481298,
+      "fit_seconds": 93.969
+    },
+    {
+      "model": "Random Forest",
+      "macro_f1_with": 0.9150133128428858,
+      "macro_f1_without": 0.8718697585041519,
+      "delta": -0.04314355433873385,
+      "reliable_with": 0.9164939137808799,
+      "reliable_without": 0.9125644708574628,
+      "detection_with": 0.995820418897342,
+      "detection_without": 0.9975227763689302,
+      "false_alarms_with": 0.0006868639651607334,
+      "false_alarms_without": 0.0008251907359222699,
+      "fit_seconds": 308.452
+    },
+    {
+      "model": "XGBoost",
+      "macro_f1_with": 0.9119770337384984,
+      "macro_f1_without": 0.9065133910819476,
+      "delta": -0.005463642656550749,
+      "reliable_with": 0.9126985649003957,
+      "reliable_without": 0.9058690115797073,
+      "detection_with": 0.9987789987789988,
+      "detection_without": 0.9982859021320559,
+      "false_alarms_with": 0.0006606295776025109,
+      "false_alarms_without": 0.000834730513216169,
+      "fit_seconds": 233.274
+    }
+  ],
+  "per_class_delta": [
+    {
+      "class": "BENIGN",
+      "support": 419297,
+      "Decision Tree": 0.00013687009860485766,
+      "Random Forest": 0.00010357586759701665,
+      "XGBoost": -0.000137184469274243
+    },
+    {
+      "class": "DoS Hulk",
+      "support": 34570,
+      "Decision Tree": -0.0002891941059204317,
+      "Random Forest": -0.00020270145376521942,
+      "XGBoost": -0.0003609495480078051
+    },
+    {
+      "class": "DDoS",
+      "support": 25603,
+      "Decision Tree": -0.00011716690425511711,
+      "Random Forest": -1.9528579659700007e-05,
+      "XGBoost": 3.904724395231707e-05
+    },
+    {
+      "class": "PortScan",
+      "support": 18164,
+      "Decision Tree": 0.007632834988681503,
+      "Random Forest": 0.004901600472742684,
+      "XGBoost": -2.784843852776664e-05
+    },
+    {
+      "class": "DoS GoldenEye",
+      "support": 2057,
+      "Decision Tree": 0.00024502925815472754,
+      "Random Forest": -0.0002477701578339486,
+      "XGBoost": -0.00048211897446004404
+    },
+    {
+      "class": "FTP-Patator",
+      "support": 1187,
+      "Decision Tree": -0.002949141870779326,
+      "Random Forest": -0.0029598213856705247,
+      "XGBoost": -0.0012681352046921557
+    },
+    {
+      "class": "DoS slowloris",
+      "support": 1077,
+      "Decision Tree": -0.0018613308515588178,
+      "Random Forest": 0.0004636038567693568,
+      "XGBoost": 0.0009250496048134327
+    },
+    {
+      "class": "DoS Slowhttptest",
+      "support": 1046,
+      "Decision Tree": -0.041551913524769946,
+      "Random Forest": -0.024499745567429065,
+      "XGBoost": -0.025802063217997828
+    },
+    {
+      "class": "SSH-Patator",
+      "support": 644,
+      "Decision Tree": -0.009345794392523366,
+      "Random Forest": -0.0031298505241224017,
+      "XGBoost": -0.003120115357059916
+    },
+    {
+      "class": "Bot",
+      "support": 391,
+      "Decision Tree": -0.019216762124785403,
+      "Random Forest": -0.006467939494162023,
+      "XGBoost": -0.026230635200967245
+    },
+    {
+      "class": "Web Attack - Brute Force",
+      "support": 294,
+      "Decision Tree": -0.015788158552302756,
+      "Random Forest": 0.004284253296110929,
+      "XGBoost": 0.0007160328774257207
+    },
+    {
+      "class": "Web Attack - XSS",
+      "support": 130,
+      "Decision Tree": -0.046482625701490865,
+      "Random Forest": -0.019378991411583335,
+      "XGBoost": -0.026205719163465646
+    },
+    {
+      "class": "Infiltration",
+      "support": 7,
+      "Decision Tree": -0.2666666666666667,
+      "Random Forest": 0.0,
+      "XGBoost": 0.0
+    },
+    {
+      "class": "Web Attack - Sql Injection",
+      "support": 4,
+      "Decision Tree": -0.13333333333333341,
+      "Random Forest": -0.6,
+      "XGBoost": 0.0
+    },
+    {
+      "class": "Heartbleed",
+      "support": 2,
+      "Decision Tree": 0.0,
+      "Random Forest": 0.0,
+      "XGBoost": 0.0
+    }
+  ]
+}

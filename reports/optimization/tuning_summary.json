@@ -1,0 +1,500 @@
+{
+  "generated_at": "2026-11-21T16:58:37",
+  "scope": {
+    "training rows": "2,017,889",
+    "classes": 15,
+    "selection score": "prior-corrected macro F1 (plain macro F1 recorded beside it)",
+    "tuning sample": "class-capped sample of the training rows (KNN 50,000, Decision Tree 100,000, Random Forest 100,000, Gaussian Naive Bayes 100,000, SVC (RBF kernel) 30,000, Bernoulli Naive Bayes 100,000, Logistic Regression 100,000, SGD Classifier 100,000, AdaBoost 100,000, Gradient Boosting 30,000, XGBoost 100,000)",
+    "random seed": 42,
+    "test set": "not read"
+  },
+  "summary": [
+    {
+      "model": "KNN",
+      "key": "knn",
+      "tuning_rows": 50000,
+      "folds": 5,
+      "grid_points": 8,
+      "best_params": "n_neighbors=5, weights=distance",
+      "baseline_corrected_f1": 0.6858651810606236,
+      "best_corrected_f1": 0.7142323242938234,
+      "improvement": 0.028367143233199842,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.8768891250641506,
+      "minutes": 0.26
+    },
+    {
+      "model": "Decision Tree",
+      "key": "decision_tree",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 16,
+      "best_params": "class_weight=balanced, criterion=entropy, min_samples_leaf=1",
+      "baseline_corrected_f1": 0.7821245167310418,
+      "best_corrected_f1": 0.8538501750921158,
+      "improvement": 0.07172565836107406,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.9059441720298643,
+      "minutes": 0.29
+    },
+    {
+      "model": "Random Forest",
+      "key": "random_forest",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 16,
+      "best_params": "class_weight=None, max_features=0.5, min_samples_leaf=1, n_estimators=300",
+      "baseline_corrected_f1": 0.8630442352551169,
+      "best_corrected_f1": 0.8841516454426825,
+      "improvement": 0.021107410187565567,
+      "beyond_noise": false,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.9057891677350813,
+      "minutes": 8.323333333333332
+    },
+    {
+      "model": "Gaussian Naive Bayes",
+      "key": "gaussian_nb",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 5,
+      "best_params": "var_smoothing=1e-09",
+      "baseline_corrected_f1": 0.48414235490187013,
+      "best_corrected_f1": 0.48414235490187013,
+      "improvement": 0.0,
+      "beyond_noise": false,
+      "best_is_baseline": true,
+      "best_plain_f1": 0.6581719899017433,
+      "minutes": 0.09833333333333334
+    },
+    {
+      "model": "SVC (RBF kernel)",
+      "key": "svm",
+      "tuning_rows": 30000,
+      "folds": 5,
+      "grid_points": 12,
+      "best_params": "C=10.0, class_weight=None, gamma=0.1",
+      "baseline_corrected_f1": 0.6561482620314634,
+      "best_corrected_f1": 0.7589612825415856,
+      "improvement": 0.10281302051012217,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.8496062726230006,
+      "minutes": 0.5516666666666666
+    },
+    {
+      "model": "Bernoulli Naive Bayes",
+      "key": "bernoulli_nb",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 9,
+      "best_params": "alpha=0.1, binarize=0.5",
+      "baseline_corrected_f1": 0.28004581098651393,
+      "best_corrected_f1": 0.368677566336557,
+      "improvement": 0.08863175535004308,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.60153710484361,
+      "minutes": 0.025
+    },
+    {
+      "model": "Logistic Regression",
+      "key": "logistic_regression",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 8,
+      "best_params": "C=10.0, class_weight=None",
+      "baseline_corrected_f1": 0.6491025416157366,
+      "best_corrected_f1": 0.6613231131428793,
+      "improvement": 0.012220571527142843,
+      "beyond_noise": false,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.8098787650893812,
+      "minutes": 1.7866666666666666
+    },
+    {
+      "model": "SGD Classifier",
+      "key": "sgd",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 24,
+      "best_params": "alpha=1e-06, class_weight=None, loss=modified_huber",
+      "baseline_corrected_f1": 0.5765666905404293,
+      "best_corrected_f1": 0.6485803074206749,
+      "improvement": 0.07201361688024555,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.7911610608858899,
+      "minutes": 4.848333333333333
+    },
+    {
+      "model": "AdaBoost",
+      "key": "adaboost",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 12,
+      "best_params": "base_max_depth=4, learning_rate=0.5, n_estimators=100",
+      "baseline_corrected_f1": 0.3097761348674804,
+      "best_corrected_f1": 0.8494655176839162,
+      "improvement": 0.5396893828164357,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.8876108226679262,
+      "minutes": 4.196666666666667
+    },
+    {
+      "model": "Gradient Boosting",
+      "key": "gradient_boosting",
+      "tuning_rows": 30000,
+      "folds": 3,
+      "grid_points": 4,
+      "best_params": "learning_rate=0.2, max_depth=5",
+      "baseline_corrected_f1": 0.6902426593849859,
+      "best_corrected_f1": 0.7387092258612133,
+      "improvement": 0.048466566476227525,
+      "beyond_noise": true,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.8707216589180687,
+      "minutes": 3.6616666666666666
+    },
+    {
+      "model": "XGBoost",
+      "key": "xgboost",
+      "tuning_rows": 100000,
+      "folds": 5,
+      "grid_points": 12,
+      "best_params": "learning_rate=0.3, max_depth=8, n_estimators=300",
+      "baseline_corrected_f1": 0.8710153541497588,
+      "best_corrected_f1": 0.879018917322877,
+      "improvement": 0.0080035631731183,
+      "beyond_noise": false,
+      "best_is_baseline": false,
+      "best_plain_f1": 0.9052092560042878,
+      "minutes": 6.63
+    }
+  ],
+  "refits": {
+    "knn": {
+      "key": "knn",
+      "status": "refitted",
+      "fit_seconds": 0.008,
+      "n_rows_used": 100000,
+      "file_size_mb": 16.02,
+      "params": {
+        "n_neighbors": 5,
+        "weights": "distance"
+      },
+      "converged": null,
+      "note": null
+    },
+    "decision_tree": {
+      "key": "decision_tree",
+      "status": "refitted",
+      "fit_seconds": 34.74,
+      "n_rows_used": 2017889,
+      "file_size_mb": 1.4,
+      "params": {
+        "class_weight": "balanced",
+        "criterion": "entropy",
+        "min_samples_leaf": 1
+      },
+      "converged": null,
+      "note": null
+    },
+    "random_forest": {
+      "key": "random_forest",
+      "status": "refitted",
+      "fit_seconds": 1293.001,
+      "n_rows_used": 2017889,
+      "file_size_mb": 280.16,
+      "params": {
+        "class_weight": null,
+        "max_features": 0.5,
+        "min_samples_leaf": 1,
+        "n_estimators": 300
+      },
+      "converged": null,
+      "note": null
+    },
+    "gaussian_nb": {
+      "key": "gaussian_nb",
+      "status": "reused baseline",
+      "fit_seconds": 1.218,
+      "n_rows_used": 2017889,
+      "file_size_mb": 0.01,
+      "params": {
+        "var_smoothing": 1e-09
+      }
+    },
+    "svm": {
+      "key": "svm",
+      "status": "refitted",
+      "fit_seconds": 3.989,
+      "n_rows_used": 50000,
+      "file_size_mb": 1.83,
+      "params": {
+        "C": 10.0,
+        "class_weight": null,
+        "gamma": 0.1
+      },
+      "converged": null,
+      "note": null
+    },
+    "bernoulli_nb": {
+      "key": "bernoulli_nb",
+      "status": "refitted",
+      "fit_seconds": 1.27,
+      "n_rows_used": 2017889,
+      "file_size_mb": 0.01,
+      "params": {
+        "alpha": 0.1,
+        "binarize": 0.5
+      },
+      "converged": null,
+      "note": null
+    },
+    "logistic_regression": {
+      "key": "logistic_regression",
+      "status": "refitted",
+      "fit_seconds": 87.801,
+      "n_rows_used": 2017889,
+      "file_size_mb": 0.01,
+      "params": {
+        "C": 10.0,
+        "class_weight": null
+      },
+      "converged": true,
+      "note": null
+    },
+    "sgd": {
+      "key": "sgd",
+      "status": "refitted",
+      "fit_seconds": 38.524,
+      "n_rows_used": 2017889,
+      "file_size_mb": 0.0,
+      "params": {
+        "alpha": 1e-06,
+        "class_weight": null,
+        "loss": "modified_huber"
+      },
+      "converged": true,
+      "note": null
+    },
+    "adaboost": {
+      "key": "adaboost",
+      "status": "refitted",
+      "fit_seconds": 1869.823,
+      "n_rows_used": 2017889,
+      "file_size_mb": 0.58,
+      "params": {
+        "base_max_depth": 4,
+        "learning_rate": 0.5,
+        "n_estimators": 100
+      },
+      "converged": null,
+      "note": null
+    },
+    "gradient_boosting": {
+      "key": "gradient_boosting",
+      "status": "refitted",
+      "fit_seconds": 803.541,
+      "n_rows_used": 100000,
+      "file_size_mb": 5.04,
+      "params": {
+        "learning_rate": 0.2,
+        "max_depth": 5
+      },
+      "converged": null,
+      "note": null
+    },
+    "xgboost": {
+      "key": "xgboost",
+      "status": "refitted",
+      "fit_seconds": 69.302,
+      "n_rows_used": 2017889,
+      "file_size_mb": 7.28,
+      "params": {
+        "learning_rate": 0.3,
+        "max_depth": 8,
+        "n_estimators": 300
+      },
+      "converged": null,
+      "note": null
+    }
+  },
+  "failed": {},
+  "checks": [
+    {
+      "name": "no tuning or refit failed",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KNN: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KNN: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "KNN: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Decision Tree: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Decision Tree: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Decision Tree: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Random Forest: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Random Forest: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Random Forest: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Gaussian Naive Bayes: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Gaussian Naive Bayes: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Gaussian Naive Bayes: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SVC (RBF kernel): tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SVC (RBF kernel): saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SVC (RBF kernel): predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bernoulli Naive Bayes: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bernoulli Naive Bayes: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Bernoulli Naive Bayes: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Logistic Regression: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Logistic Regression: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Logistic Regression: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SGD Classifier: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SGD Classifier: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "SGD Classifier: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AdaBoost: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AdaBoost: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "AdaBoost: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Gradient Boosting: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Gradient Boosting: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "Gradient Boosting: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "XGBoost: tuned model reloads (checksum and freshness verified)",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "XGBoost: saved parameters equal the winning parameters",
+      "passed": true,
+      "detail": ""
+    },
+    {
+      "name": "XGBoost: predicts valid class codes on a training slice",
+      "passed": true,
+      "detail": ""
+    }
+  ]
+}

@@ -1,0 +1,107 @@
+{
+  "weights": {
+    "knn": 0.6780808037994676,
+    "decision_tree": 0.8464910680995918,
+    "random_forest": 0.849671814411367,
+    "gaussian_nb": 0.4627809144939786,
+    "svm": 0.6686780517746455,
+    "bernoulli_nb": 0.2892799237103569,
+    "logistic_regression": 0.6822939749296222,
+    "sgd": 0.4867371208434594,
+    "adaboost": 0.17579816138247165,
+    "gradient_boosting": 0.7096987340918617,
+    "xgboost": 0.871051427551883
+  },
+  "comparison": [
+    {
+      "combiner": "Single model: Random Forest",
+      "oof_macro_f1": 0.849671814411367,
+      "test_macro_f1": 0.9150133128428858,
+      "test_macro_f1_reliable": 0.9164939137808799,
+      "test_accuracy": 0.9984022930860522,
+      "test_detection_rate": 0.995820418897342,
+      "test_false_alarm_rate": 0.0006868639651607334
+    },
+    {
+      "combiner": "Equal vote, top 3 by OOF F1 (XGBoost, Random Forest, Decision Tree)",
+      "oof_macro_f1": 0.8626786385421038,
+      "test_macro_f1": 0.9148861720123092,
+      "test_macro_f1_reliable": 0.9163349877426592,
+      "test_accuracy": 0.9985549276175335,
+      "test_detection_rate": 0.9966422466422467,
+      "test_false_alarm_rate": 0.0006510898003086118
+    },
+    {
+      "combiner": "Weighted vote, OOF macro F1^4",
+      "oof_macro_f1": 0.8590001049720158,
+      "test_macro_f1": 0.913410417644155,
+      "test_macro_f1_reliable": 0.9144902947824666,
+      "test_accuracy": 0.9988403740140701,
+      "test_detection_rate": 0.9983328637174791,
+      "test_false_alarm_rate": 0.0006630145219259857
+    },
+    {
+      "combiner": "Single model: XGBoost",
+      "oof_macro_f1": 0.871051427551883,
+      "test_macro_f1": 0.9119770337384984,
+      "test_macro_f1_reliable": 0.9126985649003957,
+      "test_accuracy": 0.9988958774800634,
+      "test_detection_rate": 0.9987789987789988,
+      "test_false_alarm_rate": 0.0006606295776025109
+    },
+    {
+      "combiner": "Weighted vote, OOF macro F1^1",
+      "oof_macro_f1": 0.8642430130078746,
+      "test_macro_f1": 0.9112863708125771,
+      "test_macro_f1_reliable": 0.9118352362429941,
+      "test_accuracy": 0.9987293670820837,
+      "test_detection_rate": 0.9986263736263736,
+      "test_false_alarm_rate": 0.0008466552348335428
+    },
+    {
+      "combiner": "Equal vote, 11 models (baseline set)",
+      "oof_macro_f1": 0.8528376240746065,
+      "test_macro_f1": 0.9095150506274616,
+      "test_macro_f1_reliable": 0.9096210860115997,
+      "test_accuracy": 0.9986203424167398,
+      "test_detection_rate": 0.9981919789612097,
+      "test_false_alarm_rate": 0.0008681197337448158
+    },
+    {
+      "combiner": "Equal vote, top 5 by OOF F1 (XGBoost, Random Forest, Decision Tree, Gradient Boosting, Logistic Regression)",
+      "oof_macro_f1": 0.8519206158239437,
+      "test_macro_f1": 0.9075856612489617,
+      "test_macro_f1_reliable": 0.9072093492884745,
+      "test_accuracy": 0.9988443385473553,
+      "test_detection_rate": 0.9983446041138349,
+      "test_false_alarm_rate": 0.0006630145219259857
+    },
+    {
+      "combiner": "Stacking, XGBoost",
+      "oof_macro_f1": null,
+      "test_macro_f1": 0.8941410415768549,
+      "test_macro_f1_reliable": 0.9018643361591029,
+      "test_accuracy": 0.9989038065466338,
+      "test_detection_rate": 0.9988142199680661,
+      "test_false_alarm_rate": 0.0006749392435433595
+    },
+    {
+      "combiner": "Stacking, logistic regression",
+      "oof_macro_f1": null,
+      "test_macro_f1": 0.8847178356934349,
+      "test_macro_f1_reliable": 0.9064023451218443,
+      "test_accuracy": 0.9988403740140701,
+      "test_detection_rate": 0.9986263736263736,
+      "test_false_alarm_rate": 0.0006820940765137838
+    },
+    {
+      "combiner": "Weighted vote, per-class OOF F1",
+      "oof_macro_f1": 0.7724881306776967,
+      "test_macro_f1": 0.7723928192350266,
+      "test_macro_f1_reliable": 0.8613243573771165,
+      "test_accuracy": 0.9984062576193374,
+      "test_detection_rate": 0.9954682070066685,
+      "test_false_alarm_rate": 0.0006606295776025109
+    }
+  ]
+}

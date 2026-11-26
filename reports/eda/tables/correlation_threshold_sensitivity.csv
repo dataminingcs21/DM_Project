@@ -1,0 +1,5 @@
+threshold,features_dropped
+0.9,30
+0.95,24
+0.98,21
+0.99,18

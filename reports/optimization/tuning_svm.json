@@ -1,0 +1,225 @@
+{
+  "key": "svm",
+  "display_name": "SVC (RBF kernel)",
+  "status": "ok",
+  "n_combinations": 12,
+  "failed_combinations": 0,
+  "folds": 5,
+  "tuning_rows": 30000,
+  "outer_jobs": 14,
+  "selection_score": "macro_f1_corrected",
+  "best_params": {
+    "C": 10.0,
+    "class_weight": null,
+    "gamma": 0.1
+  },
+  "best_score": {
+    "corrected_mean": 0.7589612825415856,
+    "corrected_std": 0.0341969316963945,
+    "plain_mean": 0.8496062726230006,
+    "plain_std": 0.0278998845036435
+  },
+  "baseline_params": {
+    "C": 1.0,
+    "gamma": "scale",
+    "class_weight": null
+  },
+  "baseline_score": {
+    "corrected_mean": 0.6561482620314634,
+    "corrected_std": 0.02387953826149808,
+    "plain_mean": 0.8276614431595689
+  },
+  "best_is_baseline": false,
+  "improvement_corrected": 0.10281302051012217,
+  "improvement_fold_spread": 0.03461443834526334,
+  "improvement_beyond_noise": true,
+  "seconds": 33.1,
+  "table": [
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": null,
+        "gamma": 0.1
+      },
+      "macro_f1_corrected_mean": 0.7589612825415856,
+      "macro_f1_corrected_std": 0.0341969316963945,
+      "macro_f1_plain_mean": 0.8496062726230006,
+      "macro_f1_plain_std": 0.0278998845036435,
+      "fit_seconds_mean": 4.031563425064087,
+      "is_baseline": false,
+      "is_best": true,
+      "rank": 1
+    },
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": "balanced",
+        "gamma": 0.1
+      },
+      "macro_f1_corrected_mean": 0.7425257537008556,
+      "macro_f1_corrected_std": 0.024804372500805413,
+      "macro_f1_plain_mean": 0.8365176558377353,
+      "macro_f1_plain_std": 0.014637116004940215,
+      "fit_seconds_mean": 2.9215370655059814,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 2
+    },
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": null,
+        "gamma": 0.01
+      },
+      "macro_f1_corrected_mean": 0.7381158406663058,
+      "macro_f1_corrected_std": 0.02178751836868647,
+      "macro_f1_plain_mean": 0.8352329637223148,
+      "macro_f1_plain_std": 0.009897577033424086,
+      "fit_seconds_mean": 2.4181055545806887,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 3
+    },
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": null,
+        "gamma": "scale"
+      },
+      "macro_f1_corrected_mean": 0.7373442169239098,
+      "macro_f1_corrected_std": 0.01923877748784428,
+      "macro_f1_plain_mean": 0.8447158314145863,
+      "macro_f1_plain_std": 0.01424183466095649,
+      "fit_seconds_mean": 2.5001923561096193,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 4
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "gamma": 0.1
+      },
+      "macro_f1_corrected_mean": 0.7357588069554734,
+      "macro_f1_corrected_std": 0.019545205178952082,
+      "macro_f1_plain_mean": 0.8202669593193461,
+      "macro_f1_plain_std": 0.014947206101378395,
+      "fit_seconds_mean": 5.625745677947998,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 5
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "gamma": 0.1
+      },
+      "macro_f1_corrected_mean": 0.7156009727665488,
+      "macro_f1_corrected_std": 0.01707009978439349,
+      "macro_f1_plain_mean": 0.829286400648906,
+      "macro_f1_plain_std": 0.015049347294253543,
+      "fit_seconds_mean": 5.601265239715576,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 6
+    },
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": "balanced",
+        "gamma": "scale"
+      },
+      "macro_f1_corrected_mean": 0.7079492136598324,
+      "macro_f1_corrected_std": 0.02458965455090979,
+      "macro_f1_plain_mean": 0.8439940588618302,
+      "macro_f1_plain_std": 0.006634241741219099,
+      "fit_seconds_mean": 2.3735535621643065,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 7
+    },
+    {
+      "params": {
+        "C": 10.0,
+        "class_weight": "balanced",
+        "gamma": 0.01
+      },
+      "macro_f1_corrected_mean": 0.7010997523400349,
+      "macro_f1_corrected_std": 0.02835385610775471,
+      "macro_f1_plain_mean": 0.8428658800066348,
+      "macro_f1_plain_std": 0.00827596918412188,
+      "fit_seconds_mean": 2.3941882610321046,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 8
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "gamma": "scale"
+      },
+      "macro_f1_corrected_mean": 0.6561482620314634,
+      "macro_f1_corrected_std": 0.02387953826149808,
+      "macro_f1_plain_mean": 0.8276614431595689,
+      "macro_f1_plain_std": 0.011089858003987745,
+      "fit_seconds_mean": 4.05915379524231,
+      "is_baseline": true,
+      "is_best": false,
+      "rank": 9
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "gamma": "scale"
+      },
+      "macro_f1_corrected_mean": 0.6351254926153371,
+      "macro_f1_corrected_std": 0.026250992278695606,
+      "macro_f1_plain_mean": 0.8280714565805347,
+      "macro_f1_plain_std": 0.006161118429966459,
+      "fit_seconds_mean": 4.228645658493042,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 10
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": null,
+        "gamma": 0.01
+      },
+      "macro_f1_corrected_mean": 0.6351154508282961,
+      "macro_f1_corrected_std": 0.024242056657241707,
+      "macro_f1_plain_mean": 0.8240201224337588,
+      "macro_f1_plain_std": 0.009040277933993571,
+      "fit_seconds_mean": 4.7048639297485355,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 11
+    },
+    {
+      "params": {
+        "C": 1.0,
+        "class_weight": "balanced",
+        "gamma": 0.01
+      },
+      "macro_f1_corrected_mean": 0.5929882755898958,
+      "macro_f1_corrected_std": 0.02255411915232712,
+      "macro_f1_plain_mean": 0.8129312934725433,
+      "macro_f1_plain_std": 0.007364997426409425,
+      "fit_seconds_mean": 5.524998569488526,
+      "is_baseline": false,
+      "is_best": false,
+      "rank": 12
+    }
+  ],
+  "fingerprint": "cd4e78760da4bd24",
+  "tuned_at": "2026-11-21T15:26:47",
+  "class_weights_min_max": [
+    1.0,
+    556.4654943596549
+  ]
+}

@@ -1,0 +1,25 @@
+2026-11-25 20:18:54 | INFO     | nids.training.data_access | Training data: 2017889 rows, 40 features, 15 classes
+2026-11-25 20:18:54 | INFO     | nids.training.data_access | Test data: 504473 rows, 40 features
+Random Forest: training on 8 families ...
+2026-11-25 20:23:02 | INFO     | nids.models.base | Random Forest fitted on 2017889 rows in 247.4 s
+Random Forest: training binary ...
+2026-11-25 20:27:21 | INFO     | nids.models.base | Random Forest fitted on 2017889 rows in 256.5 s
+XGBoost: training on 8 families ...
+2026-11-25 20:27:23 | INFO     | nids.models.xgboost | XGBoost device (auto): cpu
+2026-11-25 20:29:27 | INFO     | nids.models.base | XGBoost fitted on 2017889 rows in 124.1 s
+XGBoost: training binary ...
+2026-11-25 20:29:47 | INFO     | nids.models.base | XGBoost fitted on 2017889 rows in 17.4 s
+| model | task | variant | macro_f1 | detection_rate | false_alarm_rate |
+|---|---|---|---:|---:|---:|
+| Random Forest | 15 classes | trained on 15 classes | 0.9150 | 0.9958 | 0.0007 |
+| Random Forest | 8 families | trained on families | 0.9424 | 0.9959 | 0.0007 |
+| Random Forest | 8 families | 15-class model, collapsed | 0.9422 | 0.9958 | 0.0007 |
+| Random Forest | binary | trained binary | 0.9977 | 0.9959 | 0.0007 |
+| Random Forest | binary | 15-class model, collapsed | 0.9977 | 0.9958 | 0.0007 |
+| XGBoost | 15 classes | trained on 15 classes | 0.9120 | 0.9988 | 0.0007 |
+| XGBoost | 8 families | trained on families | 0.9451 | 0.9987 | 0.0007 |
+| XGBoost | 8 families | 15-class model, collapsed | 0.9463 | 0.9988 | 0.0007 |
+| XGBoost | binary | trained binary | 0.9987 | 0.9987 | 0.0006 |
+| XGBoost | binary | 15-class model, collapsed | 0.9987 | 0.9988 | 0.0007 |
+
+Report: F:\DM_Project\reports\experiments\granularity\granularity_report.md

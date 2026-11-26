@@ -1,0 +1,48 @@
+2026-11-25 21:07:44 | INFO     | nids.preprocessing.splitter | Split: 2017889 train rows, 504473 test rows (test_size=0.20, seed=42)
+Mining sample: 60,000 training flows; rule-classifier test sample: 30,000 test flows
+88 distinct items, 16.0 items per flow
+2026-11-25 21:07:48 | INFO     | nids.mining.association | FP-Growth: 96388 frequent itemsets (min support 0.0020)
+2026-11-25 21:07:51 | INFO     | nids.mining.association | class=BENIGN: 121 candidate rules, kept 5
+2026-11-25 21:07:51 | INFO     | nids.mining.association | class=Bot: 134 candidate rules, kept 5
+2026-11-25 21:07:51 | INFO     | nids.mining.association | class=DDoS: 243 candidate rules, kept 5
+2026-11-25 21:07:51 | INFO     | nids.mining.association | class=DoS GoldenEye: 90 candidate rules, kept 5
+2026-11-25 21:07:52 | INFO     | nids.mining.association | class=DoS Hulk: 197 candidate rules, kept 5
+2026-11-25 21:07:52 | INFO     | nids.mining.association | class=DoS Slowhttptest: 98 candidate rules, kept 5
+2026-11-25 21:07:52 | INFO     | nids.mining.association | class=DoS slowloris: 135 candidate rules, kept 5
+2026-11-25 21:07:52 | INFO     | nids.mining.association | class=FTP-Patator: 418 candidate rules, kept 5
+2026-11-25 21:07:52 | INFO     | nids.mining.association | class=Heartbleed: 45 candidate rules, kept 5
+2026-11-25 21:07:52 | INFO     | nids.mining.association | class=Infiltration: 89 candidate rules, kept 5
+2026-11-25 21:07:53 | INFO     | nids.mining.association | class=PortScan: 553 candidate rules, kept 5
+2026-11-25 21:07:53 | INFO     | nids.mining.association | class=SSH-Patator: 126 candidate rules, kept 5
+2026-11-25 21:07:53 | INFO     | nids.mining.association | class=Web Attack - Brute Force: 0 candidate rules, kept 0
+2026-11-25 21:07:53 | INFO     | nids.mining.association | class=Web Attack - Sql Injection: 0 candidate rules, kept 0
+2026-11-25 21:07:53 | INFO     | nids.mining.association | class=Web Attack - XSS: 0 candidate rules, kept 0
+| class | rule | class_coverage | confidence | lift |
+|---|---|---:|---:|---:|
+| BENIGN | {Bwd Packet Length Mean=mid, Init_Win_bytes_backward=low, Init_Win_bytes_forward=low} -> BENIGN | 0.428 | 1.000 | 7.339 |
+| BENIGN | {Init_Win_bytes_forward=low, port=DNS} -> BENIGN | 0.411 | 1.000 | 7.339 |
+| Bot | {Init_Win_bytes_backward=high, port=HTTP-alt} -> Bot | 0.380 | 1.000 | 38.412 |
+| Bot | {Flow IAT Mean=low, Init_Win_bytes_backward=high, port=HTTP-alt} -> Bot | 0.378 | 1.000 | 38.412 |
+| DDoS | {Init_Win_bytes_backward=mid, Init_Win_bytes_forward=mid, Total Length of Bwd Packets=high} -> DDoS | 0.450 | 1.000 | 7.339 |
+| DDoS | {Init_Win_bytes_forward=mid, Total Length of Bwd Packets=high, Total Length of Fwd Packets=low} -> DDoS | 0.450 | 1.000 | 7.339 |
+| DoS GoldenEye | {Bwd Packet Length Mean=high, Down/Up Ratio=0, Init_Win_bytes_forward=high} -> DoS GoldenEye | 0.484 | 0.991 | 7.278 |
+| DoS GoldenEye | {Bwd Packet Length Mean=high, Down/Up Ratio=0, PSH Flag=1} -> DoS GoldenEye | 0.487 | 0.991 | 7.275 |
+| DoS Hulk | {Bwd Packet Length Mean=high, Flow Bytes/s=low, Init_Win_bytes_backward=high} -> DoS Hulk | 0.509 | 1.000 | 7.339 |
+| DoS Hulk | {Init_Win_bytes_backward=high, Total Fwd Packets=mid, Total Length of Bwd Packets=high} -> DoS Hulk | 0.400 | 1.000 | 7.339 |
+| DoS Slowhttptest | {Flow Duration=high, PSH Flag=1, Total Backward Packets=0} -> DoS Slowhttptest | 0.539 | 0.998 | 14.322 |
+| DoS Slowhttptest | {PSH Flag=1, Total Backward Packets=0, Total Fwd Packets=high} -> DoS Slowhttptest | 0.539 | 0.998 | 14.322 |
+| DoS slowloris | {Flow IAT Mean=mid, PSH Flag=1, Total Backward Packets=0} -> DoS slowloris | 0.305 | 0.988 | 13.760 |
+| DoS slowloris | {Flow Packets/s=mid, PSH Flag=1, Total Backward Packets=0} -> DoS slowloris | 0.305 | 0.988 | 13.760 |
+| FTP-Patator | {Flow Duration=mid, Init_Win_bytes_forward=high, port=FTP} -> FTP-Patator | 0.668 | 1.000 | 12.642 |
+| FTP-Patator | {Flow Packets/s=mid, Init_Win_bytes_forward=high, port=FTP} -> FTP-Patator | 0.668 | 1.000 | 12.642 |
+| Heartbleed | {Bwd Packet Length Mean=high, port=444} -> Heartbleed | 1.000 | 1.000 | 6666.667 |
+| Heartbleed | {Bwd Packet Length Mean=high, Flow Packets/s=high, port=444} -> Heartbleed | 1.000 | 1.000 | 6666.667 |
+| Infiltration | {Fwd Packet Length Mean=high, port=444} -> Infiltration | 0.828 | 1.000 | 2068.966 |
+| Infiltration | {Fwd Packet Length Mean=high, Total Length of Fwd Packets=high, port=444} -> Infiltration | 0.828 | 1.000 | 2068.966 |
+| PortScan | {Flow Bytes/s=high, Fwd Packet Length Mean=0, PSH Flag=1} -> PortScan | 0.495 | 1.000 | 7.338 |
+| PortScan | {Flow Bytes/s=high, Fwd Packet Length Mean=0, Init_Win_bytes_forward=high} -> PortScan | 0.495 | 1.000 | 7.338 |
+| SSH-Patator | {Flow Packets/s=mid, port=SSH} -> SSH-Patator | 0.919 | 1.000 | 23.301 |
+| SSH-Patator | {Flow IAT Mean=mid, port=SSH} -> SSH-Patator | 0.919 | 1.000 | 23.301 |
+
+Rule classifier macro F1 on 30,000 test flows: 0.583
+Report: F:\DM_Project\reports\mining\association\association_report.md
